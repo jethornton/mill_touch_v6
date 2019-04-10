@@ -9,4 +9,9 @@ class MyMainWindow(VCPMainWindow):
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
 
-    # add any custom methods here
+
+
+
+    def on_exitAppBtn_clicked(self):
+        self.app.quit()
+

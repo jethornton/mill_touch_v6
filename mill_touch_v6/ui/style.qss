@@ -8,7 +8,7 @@ ActionButton[actionName="machine.estop.toggle"]:checked{
 }
 
 ActionButton[actionName="machine.power.toggle"]:checked{
-    background:rgb(138, 226, 52);
+    border-color: #00FF00;
 }
 
 ActionButton[actionName="program.run"]:enabled{
@@ -25,4 +25,19 @@ ActionButton[actionName="program.pause"]:enabled{
 
 ActionButton[actionName="program.abort"]:enabled{
     background: rgb(239, 41, 41);
+}
+
+.QWidget {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+QPushButton {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    min-width: 45px;
+    min-height: 45px;
+    border-color: #000000;
 }
