@@ -11,9 +11,15 @@ class MyMainWindow(VCPMainWindow):
 
         self.droNavBtnGrp.buttonClicked.connect(self.droChangePage)
         self.mainNavBtnGroup.buttonClicked.connect(self.mainChangePage)
+        self.sideBtnGroup.buttonClicked.connect(self.sideChangePage)
 
     def mainChangePage(self, button):
         self.mainStkWidget.setCurrentIndex(button.property('page'))
+        if button.property('buttonName'):
+            getattr(self, button.property('buttonName')).setChecked(True)
+
+    def sideChangePage(self, button):
+        self.sideStkWiget.setCurrentIndex(button.property('page'))
         if button.property('buttonName'):
             getattr(self, button.property('buttonName')).setChecked(True)
 

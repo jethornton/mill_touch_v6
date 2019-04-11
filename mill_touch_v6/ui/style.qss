@@ -4,7 +4,7 @@ QsciScintilla {
 }
 
 ActionButton[actionName="machine.estop.toggle"]:checked{
-    background: rgb(239, 41, 41);
+    border-color: #00EE00;
 }
 
 ActionButton[actionName="machine.power.toggle"]:checked{
@@ -12,19 +12,19 @@ ActionButton[actionName="machine.power.toggle"]:checked{
 }
 
 ActionButton[actionName="program.run"]:enabled{
-    background:rgb(138, 226, 52);
+    border-color: #00EE00;
 }
 
 ActionButton[actionName="program.step"]:enabled{
-    background:rgb(138, 226, 52);
+    border-color: #00EE00;
 }
 
 ActionButton[actionName="program.pause"]:enabled{
-    background:rgb(252, 233, 79);
+    border-color: #00EE00;
 }
 
 ActionButton[actionName="program.abort"]:enabled{
-    background: rgb(239, 41, 41);
+    border-color: #00EE00;
 }
 
 .QWidget {
