@@ -332,6 +332,9 @@ File</string>
                    <property name="checkable">
                     <bool>true</bool>
                    </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
                    <property name="autoExclusive">
                     <bool>true</bool>
                    </property>
@@ -1575,8 +1578,8 @@ Button</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="droNavBtnGrp"/>
-  <buttongroup name="mainNavBtnGroup"/>
   <buttongroup name="sideBtnGroup"/>
+  <buttongroup name="mainNavBtnGroup"/>
+  <buttongroup name="droNavBtnGrp"/>
  </buttongroups>
 </ui>
