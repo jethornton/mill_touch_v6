@@ -46,3 +46,6 @@ QPushButton:checked {
     border-color: #00EE00;
 }
 
+QPushButton:pressed {
+    background-color: #dcdcdc;
+}
