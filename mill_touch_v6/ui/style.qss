@@ -27,6 +27,11 @@ ActionButton[actionName="program.abort"]:enabled{
     border-color: #00EE00;
 }
 
+/* Set style for all the QPushButtons inside of the mdiWidget*/
+QWidget[objectName="mdiWidget"] > QPushButton {
+    font: 75 14pt "DejaVu Sans Mono";
+}
+
 .QWidget {
     border-style: solid;
     border-width: 1px;

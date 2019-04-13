@@ -1248,7 +1248,7 @@ Reletive</string>
              <widget class="QWidget" name="mdiPage_1">
               <layout class="QVBoxLayout" name="verticalLayout_20">
                <item>
-                <widget class="VCPWidget" name="widget">
+                <widget class="VCPWidget" name="mdiWidget">
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                  </property>
@@ -2173,10 +2173,10 @@ Button</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mainNavBtnGroup"/>
   <buttongroup name="droNavBtnGrp"/>
   <buttongroup name="sideNavBtnGroup"/>
-  <buttongroup name="mdiBtnGrp"/>
+  <buttongroup name="mainNavBtnGroup"/>
   <buttongroup name="mdiNavGroup"/>
+  <buttongroup name="mdiBtnGrp"/>
  </buttongroups>
 </ui>
