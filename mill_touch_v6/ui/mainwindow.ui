@@ -1237,6 +1237,32 @@ Reletive</string>
             <string>Page 1</string>
            </property>
           </widget>
+          <widget class="QPushButton" name="testBtn">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>275</y>
+             <width>82</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="testLabel">
+           <property name="geometry">
+            <rect>
+             <x>155</x>
+             <y>360</y>
+             <width>61</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
          </widget>
          <widget class="QWidget" name="page_4">
           <layout class="QGridLayout" name="gridLayout_4">
@@ -2173,10 +2199,10 @@ Button</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="droNavBtnGrp"/>
-  <buttongroup name="sideNavBtnGroup"/>
-  <buttongroup name="mainNavBtnGroup"/>
   <buttongroup name="mdiNavGroup"/>
+  <buttongroup name="sideNavBtnGroup"/>
   <buttongroup name="mdiBtnGrp"/>
+  <buttongroup name="droNavBtnGrp"/>
+  <buttongroup name="mainNavBtnGroup"/>
  </buttongroups>
 </ui>

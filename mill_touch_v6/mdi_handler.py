@@ -1,6 +1,16 @@
 # Setup Help Text
 import mill_touch_v6.mdi_text as mdiText
 
+from functools import partial
+
+def setupConnections(parent):
+    parent.mdiBtnGrp.buttonClicked.connect(partial(mdiHandleKeys, parent))
+    parent.mdiNavGroup.buttonClicked.connect(partial(mdiChangePage, parent))
+    parent.mdiBackspace.clicked.connect(partial(mdiHandleBackSpace, parent))
+    parent.mdiSetLabelsBtn.clicked.connect(partial(mdiSetLabels, parent))
+
+def mdiChangePage(parent, button):
+    parent.mdiStack.setCurrentIndex(button.property('page'))
 
 def mdiHandleKeys(parent, button):
     char = str(button.text())
