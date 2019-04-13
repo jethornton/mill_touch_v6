@@ -14,7 +14,7 @@ class MyMainWindow(VCPMainWindow):
         super(MyMainWindow, self).__init__(*args, **kwargs)
 
         navHandler.setupConnections(self)
-        mdiHandler.setupConnections(self)
+        mdiHandler.setupMDI(self)
 
     def on_exitAppBtn_clicked(self):
         self.app.quit()

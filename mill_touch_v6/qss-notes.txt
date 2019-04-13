@@ -1,0 +1,64 @@
+QAbstractSpinBox {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+    border: 2px solid black;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 6px;
+    font: 17pt "bebas kai";
+}
+
+
+QAbstractSpinBox:up-button {
+    background-color: transparent #19232D;
+    subcontrol-origin: border;
+    subcontrol-position: center right;
+    width: 50px;
+    border-left: 2px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QAbstractSpinBox::up-arrow,
+QAbstractSpinBox::up-arrow:disabled,
+QAbstractSpinBox::up-arrow:off {
+    image: url(:/images/up_arrow.png);
+    width: 40px;
+    height: 40px;
+}
+
+QAbstractSpinBox::up-arrow:hover {
+    image: url(:/images/up_arrow.png);
+}
+
+QAbstractSpinBox:down-button {
+    background-color: transparent #19232D;
+    subcontrol-origin: border;
+    subcontrol-position: center left;
+    width: 50px;
+    border-right: 2px solid black;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QAbstractSpinBox::down-arrow,
+QAbstractSpinBox::down-arrow:disabled,
+QAbstractSpinBox::down-arrow:off {
+    image: url(:/images/down_arrow.png);
+    width: 40px;
+    height: 40px;
+}
+
+QAbstractSpinBox::down-arrow:hover {
+    image: url(:/images/down_arrow.png);
+}
+
+QAbstractSpinBox:hover{
+    border: 1px solid #148CD2;
+    color: #F0F0F0;
+}
+
+QAbstractSpinBox:selected {
+    background: #1464A0;
+    color: #32414B;
+}

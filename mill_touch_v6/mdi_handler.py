@@ -3,11 +3,16 @@ import mill_touch_v6.mdi_text as mdiText
 
 from functools import partial
 
-def setupConnections(parent):
+def setupMDI(parent):
     parent.mdiBtnGrp.buttonClicked.connect(partial(mdiHandleKeys, parent))
     parent.mdiNavGroup.buttonClicked.connect(partial(mdiChangePage, parent))
     parent.mdiBackspace.clicked.connect(partial(mdiHandleBackSpace, parent))
     parent.mdiSetLabelsBtn.clicked.connect(partial(mdiSetLabels, parent))
+    parent.gcodeListPageUpBtn.clicked.connect(partial(gcodeListPageUp, parent))
+    parent.gcodeListPageDownBtn.clicked.connect(partial(gcodeListPageDown, parent))
+    titles = mdiText.gcode_titles()
+    for key in sorted(titles.iterkeys()):
+        parent.gcodeHelpListWidget.addItem(key + titles[key])
 
 def mdiChangePage(parent, button):
     parent.mdiStack.setCurrentIndex(button.property('page'))
@@ -55,4 +60,29 @@ def mdiHandleBackSpace(parent):
     if len(parent.mdiEntry.text()) > 0:
         text = parent.mdiEntry.text()[:-1]
         parent.mdiEntry.setText(text)
+
+def gcodeListPageUp(parent):
+    rows = parent.gcodeHelpListWidget.count()-1
+    currentRow = parent.gcodeHelpListWidget.currentRow()
+    if currentRow > 0:
+        if currentRow > 25:
+            parent.gcodeHelpListWidget.setCurrentRow(currentRow - 25)
+        else:
+            parent.gcodeHelpListWidget.setCurrentRow(0)
+    else:
+        parent.gcodeHelpListWidget.setCurrentRow(rows)
+
+def gcodeListPageDown(parent):
+    rows = parent.gcodeHelpListWidget.count()-1
+    currentRow = parent.gcodeHelpListWidget.currentRow()
+    if currentRow < rows:
+        if (currentRow + 25) < rows:
+            parent.gcodeHelpListWidget.setCurrentRow(currentRow + 25)
+        else:
+            parent.gcodeHelpListWidget.setCurrentRow(rows)
+    else:
+        parent.gcodeHelpListWidget.setCurrentRow(0)
+
+
+
 

@@ -1224,45 +1224,175 @@ Reletive</string>
           <number>0</number>
          </property>
          <widget class="QWidget" name="page_3">
-          <widget class="QLabel" name="label_13">
-           <property name="geometry">
-            <rect>
-             <x>145</x>
-             <y>165</y>
-             <width>61</width>
-             <height>15</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Page 1</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="testBtn">
-           <property name="geometry">
-            <rect>
-             <x>140</x>
-             <y>275</y>
-             <width>82</width>
-             <height>54</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="testLabel">
-           <property name="geometry">
-            <rect>
-             <x>155</x>
-             <y>360</y>
-             <width>61</width>
-             <height>15</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QGroupBox" name="gridGroupBox">
+             <property name="title">
+              <string>Spindle</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6"/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="gridGroupBox">
+             <property name="title">
+              <string>Overrides</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="0" column="1">
+               <widget class="ActionSlider" name="actionslider_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>spindle.override</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>Rapid
+Override</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="ActionSlider" name="actionslider_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.feed-override.set</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="ActionSlider" name="actionslider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.rapid-override.set</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_25">
+                <property name="text">
+                 <string>Jog
+Speed</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Spindle
+Override</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="VCPSettingsSlider" name="settings_slider">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="settingName" stdset="0">
+                 <string>machine.jog.linear-speed</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Feed
+Override</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="StatusLabel" name="statuslabel_18">
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:linear_units?string&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{}\\n{}'.format(ch[0], ch[1])&quot;, &quot;name&quot;: &quot;Jog Speed&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="StatusLabel" name="statuslabel_19">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Spindle Override&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="StatusLabel" name="statuslabel_16">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Feed Override&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="StatusLabel" name="statuslabel_17">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Rapid Override&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="gridGroupBox">
+             <property name="title">
+              <string>Jog Controls</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5"/>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="page_4">
           <layout class="QGridLayout" name="gridLayout_4">
@@ -1775,6 +1905,45 @@ Help</string>
             <string>Page 3</string>
            </property>
           </widget>
+          <widget class="QSpinBox" name="spinBox">
+           <property name="geometry">
+            <rect>
+             <x>155</x>
+             <y>310</y>
+             <width>106</width>
+             <height>24</height>
+            </rect>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_18">
+           <property name="geometry">
+            <rect>
+             <x>153</x>
+             <y>340</y>
+             <width>54</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Up</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_19">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>340</y>
+             <width>54</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Down</string>
+           </property>
+          </widget>
          </widget>
          <widget class="QWidget" name="page_13">
           <widget class="QLabel" name="label_22">
@@ -1944,8 +2113,8 @@ Button</string>
        <item>
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
-          <string>Push
-Button</string>
+          <string>Manual
+Control</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -2014,9 +2183,19 @@ Button</string>
    <header>qtpyvcp.widgets.input_widgets.mdientry_widget</header>
   </customwidget>
   <customwidget>
+   <class>ActionSlider</class>
+   <extends>QSlider</extends>
+   <header>qtpyvcp.widgets.input_widgets.action_slider</header>
+  </customwidget>
+  <customwidget>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
+  </customwidget>
+  <customwidget>
+   <class>VCPSettingsSlider</class>
+   <extends>QSlider</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
   <customwidget>
    <class>GcodeEditor</class>
