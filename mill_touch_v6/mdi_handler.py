@@ -8,6 +8,7 @@ def setupMDI(parent):
     parent.mdiNavGroup.buttonClicked.connect(partial(mdiChangePage, parent))
     parent.mdiBackspace.clicked.connect(partial(mdiHandleBackSpace, parent))
     parent.mdiSetLabelsBtn.clicked.connect(partial(mdiSetLabels, parent))
+    parent.mdiSendBtn.clicked.connect(partial(mdiClear, parent))
     parent.gcodeListPageUpBtn.clicked.connect(partial(gcodeListPageUp, parent))
     parent.gcodeListPageDownBtn.clicked.connect(partial(gcodeListPageDown, parent))
     titles = mdiText.gcode_titles()
