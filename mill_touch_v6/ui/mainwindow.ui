@@ -1247,79 +1247,37 @@ Reletive</string>
               <set>Qt::AlignCenter</set>
              </property>
              <layout class="QGridLayout" name="gridLayout_7">
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_20">
-                <property name="text">
-                 <string>Rapid
-Override</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="ActionSlider" name="actionslider">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.rapid-override.set</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_14">
-                <property name="text">
-                 <string>Feed
-Override</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="StatusLabel" name="statuslabel_16">
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Feed Override&quot;}]</string>
-                </property>
-               </widget>
-              </item>
               <item row="1" column="1">
                <widget class="ActionSlider" name="actionslider_2">
                 <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+                 <enum>Qt::Vertical</enum>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.feed-override.set</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="2">
-               <widget class="StatusLabel" name="statuslabel_17">
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Rapid Override&quot;}]</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
+              <item row="1" column="0">
                <widget class="ActionSlider" name="actionslider_3">
                 <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+                 <enum>Qt::Vertical</enum>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>spindle.override</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="2">
+              <item row="1" column="2">
+               <widget class="ActionSlider" name="actionslider">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.rapid-override.set</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
                <widget class="StatusLabel" name="statuslabel_19">
                 <property name="minimumSize">
                  <size>
@@ -1331,18 +1289,27 @@ Override</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Spindle Override&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.override&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Spindle\\n{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Spindle Override&quot;}]</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_13">
-                <property name="text">
-                 <string>Spindle
-Override</string>
-                </property>
+              <item row="0" column="1">
+               <widget class="StatusLabel" name="statuslabel_16">
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Feed\\n{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Feed Override&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="StatusLabel" name="statuslabel_17">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Rapid\\n{:g}%'.format(ch[0]*100)&quot;, &quot;name&quot;: &quot;Rapid Override&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -1489,20 +1456,6 @@ Override</string>
                        </property>
                        <property name="page" stdset="0">
                         <number>1</number>
-                       </property>
-                       <attribute name="buttonGroup">
-                        <string notr="true">mdiNavGroup</string>
-                       </attribute>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="pushButton_77">
-                       <property name="text">
-                        <string>G Code
-List</string>
-                       </property>
-                       <property name="page" stdset="0">
-                        <number>2</number>
                        </property>
                        <attribute name="buttonGroup">
                         <string notr="true">mdiNavGroup</string>
@@ -1974,6 +1927,61 @@ OFF</string>
               <set>Qt::AlignCenter</set>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="3">
+               <widget class="ActionButton" name="actionbutton_18">
+                <property name="text">
+                 <string>0.1</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">jogBtnGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="ActionButton" name="actionbutton_15">
+                <property name="text">
+                 <string>0.01</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">jogBtnGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="ActionButton" name="actionbutton_19">
+                <property name="text">
+                 <string>Inc</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.jog-mode.incremental</string>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">jogBtnGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="ActionButton" name="actionbutton_17">
+                <property name="text">
+                 <string>0.001</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">jogBtnGroup</string>
+                </attribute>
+               </widget>
+              </item>
               <item row="2" column="2">
                <widget class="ActionButton" name="actionbutton_11">
                 <property name="text">
@@ -2024,16 +2032,6 @@ OFF</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="2">
-               <widget class="ActionButton" name="actionbutton_14">
-                <property name="text">
-                 <string>Z+</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.jog.axis:z,pos</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="0">
                <widget class="ActionButton" name="actionbutton_16">
                 <property name="text">
@@ -2050,17 +2048,17 @@ OFF</string>
                 </attribute>
                </widget>
               </item>
-              <item row="3" column="0" colspan="3">
-               <widget class="VCPSettingsSlider" name="settings_slider">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+              <item row="1" column="2">
+               <widget class="ActionButton" name="actionbutton_14">
+                <property name="text">
+                 <string>Z+</string>
                 </property>
-                <property name="settingName" stdset="0">
-                 <string>machine.jog.linear-speed</string>
+                <property name="actionName" stdset="0">
+                 <string>machine.jog.axis:z,pos</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="3">
+              <item row="4" column="3">
                <widget class="StatusLabel" name="statuslabel_18">
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -2073,59 +2071,14 @@ OFF</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="3">
-               <widget class="ActionButton" name="actionbutton_17">
-                <property name="text">
-                 <string>0.001</string>
+              <item row="4" column="0" colspan="3">
+               <widget class="VCPSettingsSlider" name="settings_slider_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
                 </property>
-                <property name="checkable">
-                 <bool>true</bool>
+                <property name="settingName" stdset="0">
+                 <string>machine.jog.linear-speed</string>
                 </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">jogBtnGroup</string>
-                </attribute>
-               </widget>
-              </item>
-              <item row="1" column="3">
-               <widget class="ActionButton" name="actionbutton_15">
-                <property name="text">
-                 <string>0.01</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">jogBtnGroup</string>
-                </attribute>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="ActionButton" name="actionbutton_18">
-                <property name="text">
-                 <string>0.1</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">jogBtnGroup</string>
-                </attribute>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="ActionButton" name="actionbutton_19">
-                <property name="text">
-                 <string>Inc</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.jog-mode.incremental</string>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">jogBtnGroup</string>
-                </attribute>
                </widget>
               </item>
              </layout>
@@ -2566,10 +2519,10 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mainNavBtnGroup"/>
-  <buttongroup name="sideNavBtnGroup"/>
-  <buttongroup name="mdiBtnGrp"/>
   <buttongroup name="mdiNavGroup"/>
+  <buttongroup name="mainNavBtnGroup"/>
+  <buttongroup name="mdiBtnGrp"/>
+  <buttongroup name="sideNavBtnGroup"/>
   <buttongroup name="droNavBtnGrp"/>
   <buttongroup name="jogBtnGroup"/>
  </buttongroups>
