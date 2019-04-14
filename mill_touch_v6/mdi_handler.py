@@ -4,8 +4,8 @@ import mill_touch_v6.mdi_text as mdiText
 from functools import partial
 
 def setupMDI(parent):
-    parent.mdiBtnGrp.buttonClicked.connect(partial(mdiHandleKeys, parent))
-    parent.mdiNavGroup.buttonClicked.connect(partial(mdiChangePage, parent))
+    parent.mdiKeypad.buttonClicked.connect(partial(mdiKeypad, parent))
+    parent.mdiNavBtns.buttonClicked.connect(partial(mdiChangePage, parent))
     parent.mdiBackspace.clicked.connect(partial(mdiHandleBackSpace, parent))
     parent.mdiSetLabelsBtn.clicked.connect(partial(mdiSetLabels, parent))
     parent.mdiSendBtn.clicked.connect(partial(mdiClear, parent))
@@ -18,7 +18,7 @@ def setupMDI(parent):
 def mdiChangePage(parent, button):
     parent.mdiStack.setCurrentIndex(button.property('page'))
 
-def mdiHandleKeys(parent, button):
+def mdiKeypad(parent, button):
     char = str(button.text())
     text = parent.mdiEntry.text() or 'null'
     if text != 'null':

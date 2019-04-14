@@ -1,9 +1,10 @@
 from functools import partial
 
-def setupConnections(parent):
-    parent.mainNavBtnGroup.buttonClicked.connect(partial(mainChangePage, parent))
-    parent.sideNavBtnGroup.buttonClicked.connect(partial(sideChangePage, parent))
-    parent.droNavBtnGrp.buttonClicked.connect(partial(droChangePage, parent))
+def setupNav(parent):
+    parent.mainNavBtns.buttonClicked.connect(partial(mainChangePage, parent))
+    parent.sideNavBtns.buttonClicked.connect(partial(sideChangePage, parent))
+    parent.droNavBtns.buttonClicked.connect(partial(droChangePage, parent))
+    parent.holeNavBtns.buttonClicked.connect(partial(holeOpsChangePage, parent))
 
 def mainChangePage(parent, button):
     parent.mainStkWidget.setCurrentIndex(button.property('page'))
@@ -18,6 +19,10 @@ def sideChangePage(parent, button):
 def droChangePage(parent, button):
     parent.droStkWidget.setCurrentIndex(button.property('page'))
 
+def holeOpsChangePage(parent, button):
+    parent.holeStkWidget.setCurrentIndex(button.property('page'))
+    if button.property('buttonName'):
+        getattr(parent, button.property('buttonName')).setChecked(True)
 
 
 

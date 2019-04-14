@@ -7,14 +7,18 @@ LOG = logger.getLogger('qtpyvcp.' + __name__)
 # Setup Button Handler
 import mill_touch_v6.nav_handler as navHandler
 import mill_touch_v6.mdi_handler as mdiHandler
+import mill_touch_v6.g5x_handler as g5xHandler
+import mill_touch_v6.g92_handler as g92Handler
 
 class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
 
-        navHandler.setupConnections(self)
+        navHandler.setupNav(self)
         mdiHandler.setupMDI(self)
+        g5xHandler.setupG5x(self)
+        g92Handler.setupG5x(self)
 
     def on_exitAppBtn_clicked(self):
         self.app.quit()
