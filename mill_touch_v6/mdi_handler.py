@@ -12,7 +12,7 @@ def setupMDI(parent):
     parent.gcodeListPageDownBtn.clicked.connect(partial(gcodeListPageDown, parent))
     titles = mdiText.gcode_titles()
     for key in sorted(titles.iterkeys()):
-        parent.gcodeHelpListWidget.addItem(key + titles[key])
+        parent.gcodeHelpListWidget.addItem(key + ' ' + titles[key])
 
 def mdiChangePage(parent, button):
     parent.mdiStack.setCurrentIndex(button.property('page'))
