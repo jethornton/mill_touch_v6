@@ -1,5 +1,5 @@
 # Manual Tool Change
 net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
 net tool-changed iocontrol.0.tool-changed <= qtpyvcp.tool-changed.out
-net tool-number iocontrol.0.tool-prep-number => qtpyvcp.toolPrepare.in
+net tool-number iocontrol.0.tool-prep-number => qtpyvcp.tool_prepare.in
 net tool-change iocontrol.0.tool-change => qtpyvcp.tool-changed.enable
