@@ -519,118 +519,381 @@ Button</string>
             <widget class="QWidget" name="page_7">
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <widget class="QStackedWidget" name="holeStkWidget">
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="currentIndex">
-                 <number>0</number>
-                </property>
-                <widget class="QWidget" name="page_17">
-                 <widget class="QLabel" name="label_23">
-                  <property name="geometry">
-                   <rect>
-                    <x>300</x>
-                    <y>310</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 0</string>
-                  </property>
-                 </widget>
-                </widget>
-                <widget class="QWidget" name="page_18">
-                 <widget class="QLabel" name="label_22">
-                  <property name="geometry">
-                   <rect>
-                    <x>260</x>
-                    <y>300</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 1</string>
-                  </property>
-                 </widget>
-                </widget>
-                <widget class="QWidget" name="page_19">
-                 <widget class="QLabel" name="label_20">
-                  <property name="geometry">
-                   <rect>
-                    <x>325</x>
-                    <y>250</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 2</string>
-                  </property>
-                 </widget>
-                </widget>
-                <widget class="QWidget" name="page_20">
-                 <widget class="QLabel" name="label_15">
-                  <property name="geometry">
-                   <rect>
-                    <x>280</x>
-                    <y>270</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 3</string>
-                  </property>
-                 </widget>
-                </widget>
-                <widget class="QWidget" name="page_21">
-                 <widget class="QLabel" name="label_14">
-                  <property name="geometry">
-                   <rect>
-                    <x>330</x>
-                    <y>345</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 4</string>
-                  </property>
-                 </widget>
-                </widget>
-                <widget class="QWidget" name="page_22">
-                 <widget class="QLabel" name="label_13">
-                  <property name="geometry">
-                   <rect>
-                    <x>290</x>
-                    <y>335</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 5</string>
-                  </property>
-                 </widget>
-                </widget>
-                <widget class="QWidget" name="page_23">
-                 <widget class="QLabel" name="label_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>250</x>
-                    <y>310</y>
-                    <width>61</width>
-                    <height>15</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>index 6</string>
-                  </property>
-                 </widget>
-                </widget>
+               <widget class="QWidget" name="verticalWidget" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="QStackedWidget" name="holeOps2Stk">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <widget class="QWidget" name="page_17">
+                    <widget class="QLabel" name="label_23">
+                     <property name="geometry">
+                      <rect>
+                       <x>275</x>
+                       <y>150</y>
+                       <width>61</width>
+                       <height>26</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 0</string>
+                     </property>
+                    </widget>
+                    <zorder>label_23</zorder>
+                    <zorder>holeOps1Stk</zorder>
+                   </widget>
+                   <widget class="QWidget" name="page_18">
+                    <widget class="QLabel" name="label_22">
+                     <property name="geometry">
+                      <rect>
+                       <x>235</x>
+                       <y>185</y>
+                       <width>61</width>
+                       <height>21</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 1</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="page_19">
+                    <widget class="QLabel" name="label_20">
+                     <property name="geometry">
+                      <rect>
+                       <x>290</x>
+                       <y>155</y>
+                       <width>61</width>
+                       <height>15</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 2</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="page_20">
+                    <widget class="QLabel" name="label_15">
+                     <property name="geometry">
+                      <rect>
+                       <x>265</x>
+                       <y>145</y>
+                       <width>61</width>
+                       <height>15</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 3</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="page_21">
+                    <widget class="QLabel" name="label_14">
+                     <property name="geometry">
+                      <rect>
+                       <x>255</x>
+                       <y>185</y>
+                       <width>61</width>
+                       <height>21</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 4</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="page_22">
+                    <widget class="QLabel" name="label_13">
+                     <property name="geometry">
+                      <rect>
+                       <x>245</x>
+                       <y>170</y>
+                       <width>61</width>
+                       <height>26</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 5</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="page_23">
+                    <widget class="QLabel" name="label_6">
+                     <property name="geometry">
+                      <rect>
+                       <x>230</x>
+                       <y>165</y>
+                       <width>61</width>
+                       <height>21</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>index 6</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="horizontalWidget" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_9">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QStackedWidget" name="holeOps1Stk">
+                      <property name="currentIndex">
+                       <number>0</number>
+                      </property>
+                      <widget class="QWidget" name="page_24">
+                       <widget class="QLabel" name="label_25">
+                        <property name="geometry">
+                         <rect>
+                          <x>200</x>
+                          <y>95</y>
+                          <width>61</width>
+                          <height>26</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 0</string>
+                        </property>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="page_25">
+                       <widget class="QLabel" name="label_27">
+                        <property name="geometry">
+                         <rect>
+                          <x>180</x>
+                          <y>105</y>
+                          <width>61</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 1</string>
+                        </property>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="page_26">
+                       <widget class="QLabel" name="label_30">
+                        <property name="geometry">
+                         <rect>
+                          <x>215</x>
+                          <y>60</y>
+                          <width>61</width>
+                          <height>15</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 2</string>
+                        </property>
+                       </widget>
+                       <zorder>holeOps2Stk</zorder>
+                       <zorder>label_30</zorder>
+                      </widget>
+                      <widget class="QWidget" name="page_27">
+                       <widget class="QLabel" name="label_29">
+                        <property name="geometry">
+                         <rect>
+                          <x>185</x>
+                          <y>105</y>
+                          <width>61</width>
+                          <height>15</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 3</string>
+                        </property>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="page_28">
+                       <widget class="QLabel" name="label_28">
+                        <property name="geometry">
+                         <rect>
+                          <x>215</x>
+                          <y>80</y>
+                          <width>61</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 4</string>
+                        </property>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="page_29">
+                       <widget class="QLabel" name="label_26">
+                        <property name="geometry">
+                         <rect>
+                          <x>200</x>
+                          <y>90</y>
+                          <width>61</width>
+                          <height>26</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 5</string>
+                        </property>
+                       </widget>
+                      </widget>
+                      <widget class="QWidget" name="page_30">
+                       <widget class="QLabel" name="label_24">
+                        <property name="geometry">
+                         <rect>
+                          <x>190</x>
+                          <y>110</y>
+                          <width>61</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="text">
+                         <string>index 6</string>
+                        </property>
+                       </widget>
+                      </widget>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="gridWidget" native="true">
+                      <layout class="QGridLayout" name="gridLayout_9">
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="pushButton_56">
+                         <property name="text">
+                          <string>4</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QPushButton" name="pushButton_58">
+                         <property name="text">
+                          <string>9</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QPushButton" name="pushButton_63">
+                         <property name="text">
+                          <string>6</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="pushButton_57">
+                         <property name="text">
+                          <string>7</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0">
+                        <widget class="QPushButton" name="pushButton_68">
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1">
+                        <widget class="QPushButton" name="pushButton_69">
+                         <property name="text">
+                          <string>.</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="pushButton_65">
+                         <property name="text">
+                          <string>5</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_66">
+                         <property name="text">
+                          <string>2</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="2">
+                        <widget class="QPushButton" name="pushButton_70">
+                         <property name="text">
+                          <string>-</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="2">
+                        <widget class="QPushButton" name="pushButton_64">
+                         <property name="text">
+                          <string>3</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QPushButton" name="pushButton_62">
+                         <property name="text">
+                          <string>8</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_67">
+                         <property name="text">
+                          <string>1</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -3028,19 +3291,77 @@ Z</string>
           </layout>
          </widget>
          <widget class="QWidget" name="page_15">
-          <widget class="QLabel" name="label_24">
-           <property name="geometry">
-            <rect>
-             <x>185</x>
-             <y>260</y>
-             <width>61</width>
-             <height>15</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Page 6</string>
-           </property>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="FileSystemTable" name="filesystemtable">
+             <property name="hiddenColumns" stdset="0">
+              <string>1,2</string>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>200</number>
+             </attribute>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="horizontalWidget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="fileNavParent">
+                <property name="text">
+                 <string>Parent
+Directory</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="fileNavOpenDir">
+                <property name="text">
+                 <string>Open
+Directory</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="fileNavUp">
+                <property name="text">
+                 <string>Up</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="fileNavDown">
+                <property name="text">
+                 <string>Down</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="fileLoad">
+                <property name="text">
+                 <string>Load
+File</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>
@@ -3123,8 +3444,8 @@ Button</string>
        <item>
         <widget class="QPushButton" name="pushButton_13">
          <property name="text">
-          <string>Push
-Button</string>
+          <string>File
+Load</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -3270,6 +3591,11 @@ Rides</string>
    <extends>QWidget</extends>
    <header>qtpyvcp.widgets.containers.widget</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FileSystemTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.file_system</header>
   </customwidget>
   <customwidget>
    <class>MDIEntry</class>
@@ -3492,6 +3818,86 @@ Rides</string>
     <hint type="destinationlabel">
      <x>1007</x>
      <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavParent</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>viewParentDirectory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>876</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavUp</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>selectPrevious()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>964</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavDown</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>selectNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1051</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileLoad</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>loadSelectedFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1139</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavOpenDir</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>openSelectedItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>937</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>

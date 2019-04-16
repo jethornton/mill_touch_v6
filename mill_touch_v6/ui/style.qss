@@ -32,7 +32,7 @@ ActionButton[actionName="program.abort"]:enabled{
 }
 
 HalButton[objectName="tool_changed"]:enabled {
-    border-color: #00EE00;
+    border-color: #FF0000;
 }
 
 VCPSettingsSlider, ActionSlider {

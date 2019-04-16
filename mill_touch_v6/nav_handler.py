@@ -20,7 +20,8 @@ def droChangePage(parent, button):
     parent.droStkWidget.setCurrentIndex(button.property('page'))
 
 def holeOpsChangePage(parent, button):
-    parent.holeStkWidget.setCurrentIndex(button.property('page'))
+    parent.holeOps1Stk.setCurrentIndex(button.property('page'))
+    parent.holeOps2Stk.setCurrentIndex(button.property('page'))
     if button.property('buttonName'):
         getattr(parent, button.property('buttonName')).setChecked(True)
 
