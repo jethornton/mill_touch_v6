@@ -99,6 +99,9 @@ QWidget[objectName="spindleGroupBox"] > QPushButton {
     font: 75 14pt "DejaVu Sans Mono";
 }
 
+QWidget[objectName="holeOpKeypadCont"] > QPushButton {
+    font: 75 14pt "DejaVu Sans Mono";
+}
 
 .QWidget {
     border-style: solid;
