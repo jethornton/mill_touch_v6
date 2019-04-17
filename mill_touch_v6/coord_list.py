@@ -1,34 +1,10 @@
 from functools import partial
 
-def setupHoleOps(parent):
-    parent.holeOpKeypad.buttonClicked.connect(partial(holeOpsKeypad, parent))
-    parent.holeOpBkspBtn.clicked.connect(partial(holeOpsBackSpace, parent))
+def setupCoordList(parent):
+    #parent.holeOpKeypad.buttonClicked.connect(partial(holeOpsKeypad, parent))
     parent.coordListDownBtn.clicked.connect(partial(coordListDown, parent))
     parent.coordListUpBtn.clicked.connect(partial(coordListUp, parent))
     parent.coordListAppendBtn.clicked.connect(partial(coordListAppend, parent))
-    parent.coordListDelLineBtn.clicked.connect(partial(coordListDelLine, parent))
-    parent.coordListClearBtn.clicked.connect(partial(coordListClear, parent))
-
-
-
-def holeOpsKeypad(parent, button):
-    entryPoint = parent.holeOpBtnGrp.checkedButton().property('labelName')
-    drillLabel = getattr(parent, entryPoint)
-    char = str(button.text())
-    text = drillLabel.text() or 'null'
-    if text != 'null':
-        text += char
-    else:
-        text = char
-    drillLabel.setText(text)
-
-
-def holeOpsBackSpace(parent):
-    entryPoint = parent.holeOpBtnGrp.checkedButton().property('labelName')
-    drillLabel = getattr(parent, entryPoint)
-    if len(drillLabel.text()) > 0:
-        text = drillLabel.text()[:-1]
-        drillLabel.setText(text)
 
 
 def coordListDown(parent):
@@ -60,13 +36,6 @@ def coordListAppend(parent):
        coords += 'Z' + parent.zCoordLbl.text()
        parent.zCoordLbl.setText('')
     parent.holeOpCoordList.addItem(coords)
-
-def coordListDelLine(parent):
-    parent.holeOpCoordList.takeItem(parent.holeOpCoordList.currentRow())
-
-def coordListClear(parent):
-    parent.holeOpCoordList.clear()
-
 
 
 
