@@ -1,4 +1,5 @@
 from functools import partial
+import linuxcnc
 
 def setupGcodeBuilder(parent):
     parent.gcodePreambleBtn.clicked.connect(partial(gcodePreamble, parent))
@@ -6,11 +7,18 @@ def setupGcodeBuilder(parent):
     parent.gcodeDrillBtn.clicked.connect(partial(gcodeDrill, parent))
     parent.gcodeChamferBtn.clicked.connect(partial(gcodeChamfer, parent))
     parent.gcodeReamBtn.clicked.connect(partial(gcodeReam, parent))
+    parent.gcodeRigidTapBtn.clicked.connect(partial(gcodeRigidTap, parent))
+    parent.gcodeFloatingTapBtn.clicked.connect(partial(gcodeFloatingTap, parent))
+    parent.gcodeSomeThingBtn.clicked.connect(partial(gcodeSomeThing, parent))
+    parent.gcodeIntThreadMillBtn.clicked.connect(partial(gcodeIntThreadMill, parent))
+    parent.gcodeExtThreadMillBtn.clicked.connect(partial(gcodeExtThreadMill, parent))
+    parent.gcodeMdiBtn.clicked.connect(partial(gcodeMdi, parent))
+    parent.gcodePostAmbleBtn.clicked.connect(partial(gcodePostAmble, parent))
+    parent.gcodeSaveBtn.clicked.connect(partial(gcodeSave, parent))
+    parent.gcodeLoadBtn.clicked.connect(partial(gcodeLoad, parent))
 
     parent.gcodeMoveUpBtn.clicked.connect(partial(gcodeMoveUp, parent))
     parent.gcodeMoveDownBtn.clicked.connect(partial(gcodeMoveDown, parent))
-
-
 
     parent.gcodeDeleteAllBtn.clicked.connect(partial(gcodeDeleteAll, parent))
 
@@ -102,6 +110,41 @@ def gcodeReam(parent):
             else:
                 parent.gCodeList.addItem('{}'.format(coordinates))
         parent.gCodeList.addItem('G80 M5 M9')
+
+def gcodeRigidTap(parent):
+    pass
+
+def gcodeFloatingTap(parent):
+    pass
+
+def gcodeSomeThing(parent):
+    pass
+
+def gcodeIntThreadMill(parent):
+    pass
+
+def gcodeExtThreadMill(parent):
+    pass
+
+def gcodeMdi(parent):
+    parent.gCodeList.addItem(parent.mdiEntry.text())
+    parent.mdiEntry.setText('')
+
+def gcodePostAmble(parent):
+    pass
+
+def gcodeSave(parent):
+    pass
+
+def gcodeLoad(parent):
+    emcCommand = linuxcnc.command()
+    gcode = []
+    with open('/tmp/qtpyvcp.ngc','w') as f:
+        for i in range(parent.gCodeList.count()):
+            gcode.append(parent.gCodeList.item(i).text())
+        f.write('\n'.join(gcode))
+    emcCommand.reset_interpreter()
+    emcCommand.program_open('/tmp/qtpyvcp.ngc')
 
 
 def gcodeMoveDown(parent):

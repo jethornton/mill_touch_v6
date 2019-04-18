@@ -1061,7 +1061,7 @@ End</string>
                             <bool>true</bool>
                            </property>
                            <property name="labelName" stdset="0">
-                            <string>spotEndLbl</string>
+                            <string>spotZEndLbl</string>
                            </property>
                            <attribute name="buttonGroup">
                             <string notr="true">holeOpBtnGrp</string>
@@ -1078,7 +1078,7 @@ Retract</string>
                             <bool>true</bool>
                            </property>
                            <property name="labelName" stdset="0">
-                            <string>spotRetractLbl</string>
+                            <string>spotZRetractLbl</string>
                            </property>
                            <attribute name="buttonGroup">
                             <string notr="true">holeOpBtnGrp</string>
@@ -1189,6 +1189,9 @@ End</string>
                            <property name="labelName" stdset="0">
                             <string>drillZEndLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="1" column="0">
@@ -1203,6 +1206,9 @@ Retract</string>
                            <property name="labelName" stdset="0">
                             <string>drillZRetractLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="2" column="0">
@@ -1276,6 +1282,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>drillToolLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="0" column="1">
@@ -1292,6 +1301,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>drillFeedLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="1" column="1">
@@ -1308,6 +1320,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>drillRpmLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="2" column="1">
@@ -1396,6 +1411,9 @@ End</string>
                            <property name="labelName" stdset="0">
                             <string>chamferZEndLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="1" column="0">
@@ -1410,6 +1428,9 @@ Retract</string>
                            <property name="labelName" stdset="0">
                             <string>chamferZRetractLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="2" column="0">
@@ -1483,6 +1504,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>chamferToolLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="0" column="1">
@@ -1499,6 +1523,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>chamferFeedLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="1" column="1">
@@ -1515,6 +1542,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>chamferRpmLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="2" column="1">
@@ -1607,6 +1637,9 @@ End</string>
                            <property name="labelName" stdset="0">
                             <string>reamZEndLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="1" column="0">
@@ -1621,6 +1654,9 @@ Retract</string>
                            <property name="labelName" stdset="0">
                             <string>reamZRetractLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="2" column="0">
@@ -1694,6 +1730,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>reamToolLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="0" column="1">
@@ -1710,6 +1749,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>reamFeedLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="1" column="1">
@@ -1726,6 +1768,9 @@ Number</string>
                            <property name="labelName" stdset="0">
                             <string>reamRpmLbl</string>
                            </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
                           </widget>
                          </item>
                          <item row="2" column="1">
@@ -1926,10 +1971,10 @@ List</string>
                        <widget class="QWidget" name="gridWidget" native="true">
                         <property name="geometry">
                          <rect>
-                          <x>65</x>
-                          <y>20</y>
-                          <width>271</width>
-                          <height>266</height>
+                          <x>5</x>
+                          <y>25</y>
+                          <width>336</width>
+                          <height>261</height>
                          </rect>
                         </property>
                         <layout class="QGridLayout" name="gridLayout_11">
@@ -1965,7 +2010,7 @@ Drilling</string>
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QPushButton" name="pushButton_115">
+                          <widget class="QPushButton" name="gcodeRigidTapBtn">
                            <property name="text">
                             <string>Append
 Rigid Tap</string>
@@ -1980,6 +2025,15 @@ Preamble</string>
                            </property>
                           </widget>
                          </item>
+                         <item row="0" column="2">
+                          <widget class="QPushButton" name="gcodeIntThreadMillBtn">
+                           <property name="text">
+                            <string>Append
+Internal
+Thread Mill</string>
+                           </property>
+                          </widget>
+                         </item>
                          <item row="1" column="0">
                           <widget class="QPushButton" name="gcodeSpotBtn">
                            <property name="text">
@@ -1988,55 +2042,11 @@ Spot Drill</string>
                            </property>
                           </widget>
                          </item>
-                         <item row="0" column="2">
-                          <widget class="QPushButton" name="pushButton_110">
-                           <property name="text">
-                            <string>Append
-Internal
-Thread Mill</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="2" column="1">
-                          <widget class="QPushButton" name="pushButton_124">
-                           <property name="text">
-                            <string>Append
-Floating
-Tap</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="1" column="2">
-                          <widget class="QPushButton" name="pushButton_121">
-                           <property name="text">
-                            <string>Append
-Externall
-Thread Mill</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="3" column="1">
-                          <widget class="QPushButton" name="pushButton_123">
-                           <property name="text">
-                            <string>Append
-Some
-Thing</string>
-                           </property>
-                          </widget>
-                         </item>
                          <item row="2" column="2">
-                          <widget class="QPushButton" name="pushButton_122">
+                          <widget class="QPushButton" name="gcodeMdiBtn">
                            <property name="text">
                             <string>Append
 MDI</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="3" column="2">
-                          <widget class="QPushButton" name="pushButton_109">
-                           <property name="text">
-                            <string>Append
-Postamble</string>
                            </property>
                           </widget>
                          </item>
@@ -2045,6 +2055,57 @@ Postamble</string>
                            <property name="text">
                             <string>Append
 Chamfer</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="2">
+                          <widget class="QPushButton" name="gcodeExtThreadMillBtn">
+                           <property name="text">
+                            <string>Append
+Externall
+Thread Mill</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QPushButton" name="gcodeSomeThingBtn">
+                           <property name="text">
+                            <string>Append
+Some
+Thing</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QPushButton" name="gcodeFloatingTapBtn">
+                           <property name="text">
+                            <string>Append
+Floating
+Tap</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="2">
+                          <widget class="QPushButton" name="gcodePostAmbleBtn">
+                           <property name="text">
+                            <string>Append
+Postamble</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="3">
+                          <widget class="QPushButton" name="gcodeLoadBtn">
+                           <property name="text">
+                            <string>Load
+G code</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="3">
+                          <widget class="QPushButton" name="gcodeSaveBtn">
+                           <property name="text">
+                            <string>Save
+G code</string>
                            </property>
                           </widget>
                          </item>
@@ -2497,19 +2558,127 @@ MDI</string>
              </widget>
             </widget>
             <widget class="QWidget" name="page_11">
-             <widget class="QLabel" name="label_19">
-              <property name="geometry">
-               <rect>
-                <x>325</x>
-                <y>315</y>
-                <width>61</width>
-                <height>15</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>page 6</string>
-              </property>
-             </widget>
+             <layout class="QVBoxLayout" name="verticalLayout_16">
+              <item>
+               <widget class="QWidget" name="verticalWidget" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="ToolTable" name="tooltable"/>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="horizontalWidget" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_10">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <spacer name="horizontalSpacer_7">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblClear">
+                      <property name="text">
+                       <string>Clear
+Tool
+Table</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblDelete">
+                      <property name="text">
+                       <string>Delete
+Selected
+Line</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblAdd">
+                      <property name="text">
+                       <string>Add
+New
+Line</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblUp">
+                      <property name="text">
+                       <string>Nav
+Up</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblDown">
+                      <property name="text">
+                       <string>Nav
+Down</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblReload">
+                      <property name="text">
+                       <string>Reload
+Tool
+Table</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="toolTblSave">
+                      <property name="text">
+                       <string>Save
+Tool
+Table</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </widget>
           </item>
@@ -3188,6 +3357,19 @@ Changed</string>
             </property>
             <property name="rules" stdset="0">
              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Vel {}'.format(ch[0]*60)&quot;, &quot;name&quot;: &quot;Machine Velocity&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="StatusLabel" name="statuslabel_23">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Spindle {:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Spindle RPM&quot;}]</string>
             </property>
            </widget>
           </item>
@@ -5021,6 +5203,11 @@ Rides</string>
    <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
   <customwidget>
+   <class>ToolTable</class>
+   <extends>QTableView</extends>
+   <header>qtpyvcp.widgets.input_widgets.tool_table</header>
+  </customwidget>
+  <customwidget>
    <class>MDIButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
@@ -5296,6 +5483,118 @@ Rides</string>
     <hint type="destinationlabel">
      <x>1007</x>
      <y>444</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblAdd</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>addTool()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblClear</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>clearToolTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblDelete</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>deleteSelectedTool()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblDown</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>lower()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>633</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblReload</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>loadToolTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>692</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblSave</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>saveToolTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>751</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolTblUp</sender>
+   <signal>clicked()</signal>
+   <receiver>tooltable</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>574</x>
+     <y>610</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>303</y>
     </hint>
    </hints>
   </connection>
