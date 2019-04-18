@@ -5,6 +5,7 @@ def setupGcodeBuilder(parent):
     parent.gcodeSpotBtn.clicked.connect(partial(gcodeSpot, parent))
     parent.gcodeDrillBtn.clicked.connect(partial(gcodeDrill, parent))
     parent.gcodeChamferBtn.clicked.connect(partial(gcodeChamfer, parent))
+    parent.gcodeReamBtn.clicked.connect(partial(gcodeReam, parent))
 
     parent.gcodeMoveUpBtn.clicked.connect(partial(gcodeMoveUp, parent))
     parent.gcodeMoveDownBtn.clicked.connect(partial(gcodeMoveDown, parent))
@@ -75,6 +76,27 @@ def gcodeChamfer(parent):
             coordinates = parent.holeOpCoordList.item(i).text()
             zEnd = parent.chamferZEndLbl.text()
             zRetract = parent.chamferZRetractLbl.text()
+            if i == 0:
+                parent.gCodeList.addItem('G81 {} Z{} R{}'.format(coordinates, zEnd, zRetract))
+            else:
+                parent.gCodeList.addItem('{}'.format(coordinates))
+        parent.gCodeList.addItem('G80 M5 M9')
+
+def gcodeReam(parent):
+    parent.gCodeList.addItem('; Chamfer Op')
+    if parent.reamToolLbl.text():
+        parent.gCodeList.addItem('T{} M6 G43'.format(parent.reamToolLbl.text()))
+    if parent.chamferRpmLbl.text():
+        parent.gCodeList.addItem('M3 S{}'.format(parent.reamRpmLbl.text()))
+    if parent.reamCoolantBtn.isChecked():
+        parent.gCodeList.addItem('M8')
+    if parent.reamFeedLbl.text():
+        parent.gCodeList.addItem('F{}'.format(parent.reamFeedLbl.text()))
+    if parent.gCodeList.count() > 0: # toss out an error if not
+        for i in range(parent.holeOpCoordList.count()):
+            coordinates = parent.holeOpCoordList.item(i).text()
+            zEnd = parent.reamZEndLbl.text()
+            zRetract = parent.reamZRetractLbl.text()
             if i == 0:
                 parent.gCodeList.addItem('G81 {} Z{} R{}'.format(coordinates, zEnd, zRetract))
             else:

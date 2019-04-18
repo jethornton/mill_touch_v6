@@ -605,7 +605,7 @@ to the Z Retract position prior to starting the cycle.</string>
                      <property name="geometry">
                       <rect>
                        <x>15</x>
-                       <y>20</y>
+                       <y>15</y>
                        <width>401</width>
                        <height>246</height>
                       </rect>
@@ -628,17 +628,29 @@ to the Z Retract position prior to starting the cycle.</string>
                     </widget>
                    </widget>
                    <widget class="QWidget" name="page_20">
-                    <widget class="QLabel" name="label_15">
+                    <widget class="QLabel" name="label_37">
                      <property name="geometry">
                       <rect>
-                       <x>265</x>
-                       <y>145</y>
-                       <width>61</width>
-                       <height>15</height>
+                       <x>15</x>
+                       <y>15</y>
+                       <width>401</width>
+                       <height>246</height>
                       </rect>
                      </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Box</enum>
+                     </property>
                      <property name="text">
-                      <string>index 3</string>
+                      <string>Reaming uses the G81 Canned Cycle
+If the current Z position is below the Z Retract position,
+at the start of the cycle the Z axis does a rapid move
+to the Z Retract position prior to starting the cycle.</string>
+                     </property>
+                     <property name="textFormat">
+                      <enum>Qt::PlainText</enum>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </widget>
@@ -1530,15 +1542,207 @@ Enable</string>
                        <widget class="QLabel" name="label_29">
                         <property name="geometry">
                          <rect>
-                          <x>185</x>
-                          <y>105</y>
-                          <width>61</width>
-                          <height>15</height>
+                          <x>10</x>
+                          <y>5</y>
+                          <width>66</width>
+                          <height>16</height>
                          </rect>
                         </property>
                         <property name="text">
-                         <string>index 3</string>
+                         <string>Ream Op</string>
                         </property>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_7" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>165</x>
+                          <y>30</y>
+                          <width>151</width>
+                          <height>251</height>
+                         </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_8">
+                         <property name="formAlignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="reamZEndLbl"/>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="reamZRetractLbl"/>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="lineEdit_13"/>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QLineEdit" name="lineEdit_14"/>
+                         </item>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_89">
+                           <property name="text">
+                            <string>Z
+End</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>reamZEndLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_118">
+                           <property name="text">
+                            <string>Z
+Retract</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>reamZRetractLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_119">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QPushButton" name="pushButton_120">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_8" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>10</x>
+                          <y>30</y>
+                          <width>151</width>
+                          <height>251</height>
+                         </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_9">
+                         <property name="formAlignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_135">
+                           <property name="text">
+                            <string>Tool
+Number</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>reamToolLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="reamToolLbl"/>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_136">
+                           <property name="text">
+                            <string>Feed</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>reamFeedLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="reamFeedLbl"/>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_137">
+                           <property name="text">
+                            <string>RPM</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>reamRpmLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="reamRpmLbl"/>
+                         </item>
+                         <item row="3" column="0" colspan="2">
+                          <widget class="QPushButton" name="spotCoolantBtn_2">
+                           <property name="text">
+                            <string>Coolant
+Enable</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
                        </widget>
                       </widget>
                       <widget class="QWidget" name="page_28">
@@ -1745,7 +1949,7 @@ List</string>
                           <number>5</number>
                          </property>
                          <item row="0" column="1">
-                          <widget class="QPushButton" name="pushButton_111">
+                          <widget class="QPushButton" name="gcodeReamBtn">
                            <property name="text">
                             <string>Append
 Reaming</string>
