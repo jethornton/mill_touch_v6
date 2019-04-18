@@ -91,7 +91,7 @@ def gcodeChamfer(parent):
         parent.gCodeList.addItem('G80 M5 M9')
 
 def gcodeReam(parent):
-    parent.gCodeList.addItem('; Chamfer Op')
+    parent.gCodeList.addItem('; Ream Op')
     if parent.reamToolLbl.text():
         parent.gCodeList.addItem('T{} M6 G43'.format(parent.reamToolLbl.text()))
     if parent.chamferRpmLbl.text():
