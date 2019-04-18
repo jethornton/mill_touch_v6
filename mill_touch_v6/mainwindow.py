@@ -10,6 +10,7 @@ import mill_touch_v6.mdi_handler as mdiHandler
 import mill_touch_v6.g5x_handler as g5xHandler
 import mill_touch_v6.g92_handler as g92Handler
 import mill_touch_v6.hole_ops as holeOps
+import mill_touch_v6.gcode_builder as gcodeBuilder
 
 class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
@@ -21,6 +22,7 @@ class MyMainWindow(VCPMainWindow):
         g5xHandler.setupG5x(self)
         g92Handler.setupG5x(self)
         holeOps.setupHoleOps(self)
+        gcodeBuilder.setupGcodeBuilder(self)
 
     def on_exitAppBtn_clicked(self):
         self.app.quit()

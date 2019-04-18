@@ -548,7 +548,7 @@ Button</string>
                     <widget class="QLabel" name="label_23">
                      <property name="geometry">
                       <rect>
-                       <x>20</x>
+                       <x>15</x>
                        <y>15</y>
                        <width>401</width>
                        <height>246</height>
@@ -574,32 +574,56 @@ to the Z Retract position prior to starting the cycle.</string>
                     <zorder>holeOps1Stk</zorder>
                    </widget>
                    <widget class="QWidget" name="page_18">
-                    <widget class="QLabel" name="label_22">
+                    <widget class="QLabel" name="label_31">
                      <property name="geometry">
                       <rect>
-                       <x>235</x>
-                       <y>185</y>
-                       <width>61</width>
-                       <height>21</height>
+                       <x>15</x>
+                       <y>15</y>
+                       <width>401</width>
+                       <height>246</height>
                       </rect>
                      </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Box</enum>
+                     </property>
                      <property name="text">
-                      <string>index 1</string>
+                      <string>Drilling uses the G81 Canned Cycle
+If the current Z position is below the Z Retract position,
+at the start of the cycle the Z axis does a rapid move
+to the Z Retract position prior to starting the cycle.</string>
+                     </property>
+                     <property name="textFormat">
+                      <enum>Qt::PlainText</enum>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </widget>
                    <widget class="QWidget" name="page_19">
-                    <widget class="QLabel" name="label_20">
+                    <widget class="QLabel" name="label_36">
                      <property name="geometry">
                       <rect>
-                       <x>290</x>
-                       <y>155</y>
-                       <width>61</width>
-                       <height>15</height>
+                       <x>15</x>
+                       <y>20</y>
+                       <width>401</width>
+                       <height>246</height>
                       </rect>
                      </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Box</enum>
+                     </property>
                      <property name="text">
-                      <string>index 2</string>
+                      <string>Chamfer uses the G81 Canned Cycle
+If the current Z position is below the Z Retract position,
+at the start of the cycle the Z axis does a rapid move
+to the Z Retract position prior to starting the cycle.</string>
+                     </property>
+                     <property name="textFormat">
+                      <enum>Qt::PlainText</enum>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </widget>
@@ -797,7 +821,7 @@ Down</string>
                        <number>5</number>
                       </property>
                       <item row="3" column="0">
-                       <widget class="QPushButton" name="pushButton_119">
+                       <widget class="QPushButton" name="gcodeMoveDownBtn">
                         <property name="text">
                          <string>Move
 Down</string>
@@ -805,7 +829,7 @@ Down</string>
                        </widget>
                       </item>
                       <item row="1" column="0">
-                       <widget class="QPushButton" name="pushButton_118">
+                       <widget class="QPushButton" name="gcodeDeleteLineBtn">
                         <property name="text">
                          <string>Delete
 Line</string>
@@ -813,7 +837,7 @@ Line</string>
                        </widget>
                       </item>
                       <item row="0" column="0">
-                       <widget class="QPushButton" name="pushButton_117">
+                       <widget class="QPushButton" name="gcodeDeleteAllBtn">
                         <property name="text">
                          <string>Delete
 All</string>
@@ -821,7 +845,7 @@ All</string>
                        </widget>
                       </item>
                       <item row="2" column="0">
-                       <widget class="QPushButton" name="pushButton_120">
+                       <widget class="QPushButton" name="gcodeMoveUpBtn">
                         <property name="text">
                          <string>Move
 Up</string>
@@ -873,8 +897,8 @@ Up</string>
                        <widget class="QWidget" name="formWidget" native="true">
                         <property name="geometry">
                          <rect>
-                          <x>5</x>
-                          <y>35</y>
+                          <x>10</x>
+                          <y>30</y>
                           <width>151</width>
                           <height>251</height>
                          </rect>
@@ -960,7 +984,7 @@ Number</string>
                           <widget class="QLineEdit" name="spotRpmLbl"/>
                          </item>
                          <item row="3" column="0" colspan="2">
-                          <widget class="QPushButton" name="pushButton_76">
+                          <widget class="QPushButton" name="spotCoolantBtn">
                            <property name="text">
                             <string>Coolant
 Enable</string>
@@ -975,8 +999,8 @@ Enable</string>
                        <widget class="QWidget" name="formWidget_2" native="true">
                         <property name="geometry">
                          <rect>
-                          <x>160</x>
-                          <y>35</y>
+                          <x>165</x>
+                          <y>30</y>
                           <width>151</width>
                           <height>251</height>
                          </rect>
@@ -1004,10 +1028,10 @@ Enable</string>
                           <number>5</number>
                          </property>
                          <item row="0" column="1">
-                          <widget class="QLineEdit" name="spotEndLbl"/>
+                          <widget class="QLineEdit" name="spotZEndLbl"/>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QLineEdit" name="spotRetractLbl"/>
+                          <widget class="QLineEdit" name="spotZRetractLbl"/>
                          </item>
                          <item row="2" column="1">
                           <widget class="QLineEdit" name="lineEdit_7"/>
@@ -1088,33 +1112,419 @@ Retract</string>
                        <widget class="QLabel" name="label_27">
                         <property name="geometry">
                          <rect>
-                          <x>15</x>
-                          <y>20</y>
+                          <x>10</x>
+                          <y>5</y>
                           <width>61</width>
                           <height>21</height>
                          </rect>
                         </property>
                         <property name="text">
-                         <string>index 1</string>
+                         <string>Drill Op</string>
                         </property>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_3" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>165</x>
+                          <y>30</y>
+                          <width>151</width>
+                          <height>251</height>
+                         </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_4">
+                         <property name="formAlignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="drillZEndLbl"/>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="drillZRetractLbl"/>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="lineEdit_9"/>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QLineEdit" name="lineEdit_10"/>
+                         </item>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_116">
+                           <property name="text">
+                            <string>Z
+End</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>drillZEndLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_125">
+                           <property name="text">
+                            <string>Z
+Retract</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>drillZRetractLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_126">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QPushButton" name="pushButton_127">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_4" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>10</x>
+                          <y>30</y>
+                          <width>151</width>
+                          <height>251</height>
+                         </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_5">
+                         <property name="formAlignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_76">
+                           <property name="text">
+                            <string>Tool
+Number</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>drillToolLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="drillToolLbl"/>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_128">
+                           <property name="text">
+                            <string>Feed</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>drillFeedLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="drillFeedLbl"/>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_129">
+                           <property name="text">
+                            <string>RPM</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>drillRpmLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="drillRpmLbl"/>
+                         </item>
+                         <item row="3" column="0" colspan="2">
+                          <widget class="QPushButton" name="drillCoolantBtn">
+                           <property name="text">
+                            <string>Coolant
+Enable</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
                        </widget>
                       </widget>
                       <widget class="QWidget" name="page_26">
                        <widget class="QLabel" name="label_30">
                         <property name="geometry">
                          <rect>
-                          <x>215</x>
-                          <y>60</y>
-                          <width>61</width>
-                          <height>15</height>
+                          <x>10</x>
+                          <y>5</y>
+                          <width>101</width>
+                          <height>16</height>
                          </rect>
                         </property>
                         <property name="text">
-                         <string>index 2</string>
+                         <string>Chamfer Op</string>
                         </property>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_5" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>165</x>
+                          <y>30</y>
+                          <width>151</width>
+                          <height>251</height>
+                         </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_6">
+                         <property name="formAlignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="chamferZEndLbl"/>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="chamferZRetractLbl"/>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="lineEdit_11"/>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QLineEdit" name="lineEdit_12"/>
+                         </item>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_117">
+                           <property name="text">
+                            <string>Z
+End</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>chamferZEndLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_130">
+                           <property name="text">
+                            <string>Z
+Retract</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>chamferZRetractLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_131">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QPushButton" name="pushButton_132">
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_6" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>10</x>
+                          <y>30</y>
+                          <width>151</width>
+                          <height>251</height>
+                         </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_7">
+                         <property name="formAlignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_112">
+                           <property name="text">
+                            <string>Tool
+Number</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>chamferToolLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="chamferToolLbl"/>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_133">
+                           <property name="text">
+                            <string>Feed</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>chamferFeedLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="chamferFeedLbl"/>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_134">
+                           <property name="text">
+                            <string>RPM</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>chamferRpmLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="chamferRpmLbl"/>
+                         </item>
+                         <item row="3" column="0" colspan="2">
+                          <widget class="QPushButton" name="chamferCoolantBtn">
+                           <property name="text">
+                            <string>Coolant
+Enable</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
                        </widget>
                        <zorder>holeOps2Stk</zorder>
                        <zorder>label_30</zorder>
+                       <zorder>formWidget_5</zorder>
+                       <zorder>formWidget_6</zorder>
                       </widget>
                       <widget class="QWidget" name="page_27">
                        <widget class="QLabel" name="label_29">
@@ -1193,8 +1603,8 @@ Retract</string>
                        <widget class="QWidget" name="formWidget" native="true">
                         <property name="geometry">
                          <rect>
-                          <x>220</x>
-                          <y>30</y>
+                          <x>150</x>
+                          <y>20</y>
                           <width>166</width>
                           <height>191</height>
                          </rect>
@@ -1283,8 +1693,8 @@ Retract</string>
                        <widget class="QPushButton" name="coordListAppendBtn">
                         <property name="geometry">
                          <rect>
-                          <x>300</x>
-                          <y>235</y>
+                          <x>195</x>
+                          <y>230</y>
                           <width>82</width>
                           <height>54</height>
                          </rect>
@@ -1312,10 +1722,10 @@ List</string>
                        <widget class="QWidget" name="gridWidget" native="true">
                         <property name="geometry">
                          <rect>
-                          <x>64</x>
-                          <y>4</y>
+                          <x>65</x>
+                          <y>20</y>
                           <width>271</width>
-                          <height>291</height>
+                          <height>266</height>
                          </rect>
                         </property>
                         <layout class="QGridLayout" name="gridLayout_11">
@@ -1343,7 +1753,7 @@ Reaming</string>
                           </widget>
                          </item>
                          <item row="2" column="0">
-                          <widget class="QPushButton" name="pushButton_112">
+                          <widget class="QPushButton" name="gcodeDrillBtn">
                            <property name="text">
                             <string>Append
 Drilling</string>
@@ -1359,15 +1769,15 @@ Rigid Tap</string>
                           </widget>
                          </item>
                          <item row="0" column="0">
-                          <widget class="QPushButton" name="pushButton_114">
+                          <widget class="QPushButton" name="gcodePreambleBtn">
                            <property name="text">
-                            <string>Insert
+                            <string>Append
 Preamble</string>
                            </property>
                           </widget>
                          </item>
                          <item row="1" column="0">
-                          <widget class="QPushButton" name="pushButton_116">
+                          <widget class="QPushButton" name="gcodeSpotBtn">
                            <property name="text">
                             <string>Append
 Spot Drill</string>
@@ -1427,7 +1837,7 @@ Postamble</string>
                           </widget>
                          </item>
                          <item row="3" column="0">
-                          <widget class="QPushButton" name="pushButton_89">
+                          <widget class="QPushButton" name="gcodeChamferBtn">
                            <property name="text">
                             <string>Append
 Chamfer</string>
@@ -1817,14 +2227,68 @@ Drill</string>
              <widget class="QLabel" name="label_18">
               <property name="geometry">
                <rect>
-                <x>340</x>
-                <y>310</y>
-                <width>61</width>
-                <height>15</height>
+                <x>10</x>
+                <y>10</y>
+                <width>136</width>
+                <height>16</height>
                </rect>
               </property>
               <property name="text">
-               <string>page 5</string>
+               <string>G code Preamble</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="gcodePreambleLbl">
+              <property name="geometry">
+               <rect>
+                <x>125</x>
+                <y>10</y>
+                <width>551</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>G20 G17 G40 G49 G64 P0.005 G80 G90 G92.1 G94  </string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="pushButton_71">
+              <property name="geometry">
+               <rect>
+                <x>585</x>
+                <y>45</y>
+                <width>82</width>
+                <height>54</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Append
+from
+MDI</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="pushButton_75">
+              <property name="geometry">
+               <rect>
+                <x>495</x>
+                <y>45</y>
+                <width>82</width>
+                <height>54</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Bksp</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="pushButton_114">
+              <property name="geometry">
+               <rect>
+                <x>410</x>
+                <y>45</y>
+                <width>82</width>
+                <height>54</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Spacebar</string>
               </property>
              </widget>
             </widget>

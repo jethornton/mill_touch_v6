@@ -1,7 +1,6 @@
 from functools import partial
 
 def setupCoordList(parent):
-    #parent.holeOpKeypad.buttonClicked.connect(partial(holeOpsKeypad, parent))
     parent.coordListDownBtn.clicked.connect(partial(coordListDown, parent))
     parent.coordListUpBtn.clicked.connect(partial(coordListUp, parent))
     parent.coordListAppendBtn.clicked.connect(partial(coordListAppend, parent))
