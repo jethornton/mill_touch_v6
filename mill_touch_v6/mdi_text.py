@@ -165,6 +165,8 @@ def gcode_words():
         'G96':['D', 'S', '$'],
         'G97':['S', '$'],
         'M1':['P', 'Q'],
+        'M3':['S', '$'],
+        'M4':['S', '$'],
         'M19':['R', 'Q', 'P', '$'],
         'M50':['P'],
         'M51':['P', '$'],
@@ -316,21 +318,22 @@ P = X incremental offset from end point to second
 Q = Y incremental offset from end point to second
     control point
 
-G5 creates a cubic B-spline in the XY plane with the X
-and Y axes only.
-P and Q must both be specified for every G5 command.
+G5 creates a cubic B-spline in the XY plane with
+the X and Y axes only.
+P and Q must both be specified for every G5
+command.
 """
 
 G5_1 = """G5.1 Quadratic Spline
 G5.1 X Y I J
-I = X incremental offset from start point to control
-    point
-J = Y incremental offset from start point to control
-    point
-G5.1 creates a quadratic B-spline in the XY plane with
-the X and Y axis only. Not specifying I or J gives zero
-offset for the unspecified axis, so one or both must be
-given.
+I = X incremental offset from start point to
+    control point
+J = Y incremental offset from start point to
+    control point
+G5.1 creates a quadratic B-spline in the XY plane
+with the X and Y axis only. Not specifying I or J
+gives zero offset for the unspecified axis, so one
+or both must be given.
 """
 
 G5_2 = """G5.2 is for opening the data block defining a NURBS
@@ -353,16 +356,17 @@ R = radius of tool
 I = front angle (lathe)
 J = back angle (lathe)
 Q = orientation (lathe)
-G10 L1 sets the tool table for the P tool number to the
-values of the words.
+G10 L1 sets the tool table for the P tool number
+to the values of the words.
 """
 
 G10L2 = """G10 L2 Set Coordinate System
 G10 L2 P <axes R>
 P = coordinate system (0-9)
 R = rotation about the Z axis
-G10 L2 offsets the origin of the axes in the coordinate
-system specified to the value of the axis word.
+G10 L2 offsets the origin of the axes in the
+coordinate system specified to the value of the
+axis word.
 """
 
 G10L10 = """G10 L10 Set Tool Table
@@ -372,11 +376,12 @@ R = radius of tool
 I = front angle (lathe)
 J = back angle (lathe)
 Q = orientation (lathe)
-G10 L10 changes the tool table entry for tool P so that
-if the tool offset is reloaded, with the machine in its
-current position and with the current G5x and G52/G92
-offsets active, the current coordinates for the given
-axes will become the given values.
+G10 L10 changes the tool table entry for tool P so
+that if the tool offset is reloaded, with the
+machine in its current position and with the
+current G5x and G52/G92 offsets active, the
+current coordinates for the given axes will become
+the given values.
 """
 
 G10L11 = """G10 L11 Set Tool Table
@@ -386,21 +391,22 @@ R = radius of tool
 I = front angle (lathe)
 J = back angle (lathe)
 Q = orientation (lathe)
-G10 L11 is just like G10 L10 except that instead of
-setting the entry according to the current offsets, it
-is set so that the current coordinates would become the
-given value if the new tool offset is reloaded and the
-machine is placed in the G59.3 coordinate system without
-any G52/G92 offset active.
+G10 L11 is just like G10 L10 except that instead
+of setting the entry according to the current
+offsets, it is set so that the current coordinates
+would become the given value if the new tool
+offset is reloaded and the machine is placed in
+the G59.3 coordinate system without any G52/G92
+offset active.
 """
 
 G10L20 = """G10 L20 Set Coordinate System
 G10 L20 P- axes
 P - coordinate system (0-9)
-G10 L20 is similar to G10 L2 except that instead of
-setting the offset/entry to the given value, it is set
-to a calculated value that makes the current coordinates
-become the given value.
+G10 L20 is similar to G10 L2 except that instead
+of setting the offset/entry to the given value, it
+is set to a calculated value that makes the
+current coordinates become the given value.
 """
 
 G17 = """G17 Plane Select
@@ -437,23 +443,24 @@ G21 = """G21 Millimeter Units
 """
 
 G28 = """G28 Go to Predefined Position
-G28 uses the values stored in parameters 5161-5169 as
-the X Y Z A B C U V W final point to move to. The
-parameter values are absolute machine coordinates in the
-native machine units as specified in the ini file. All
-axes defined in the ini file will be moved when a G28 is
-issued. If no positions are stored with G28.1 then all
-axes will go to the machine origin.
+G28 uses the values stored in parameters 5161-5169
+as the X Y Z A B C U V W final point to move to.
+The parameter values are absolute machine
+coordinates in the native machine units as
+specified in the ini file. All axes defined in the
+ini file will be moved when a G28 is issued. If no
+positions are stored with G28.1 then all axes will
+go to the machine origin.
 
-G28 - makes a rapid move from the current position to
-the absolute position of the values in
+G28 - makes a rapid move from the current position
+to the absolute position of the values in
 parameters 5161-5166.
 
-G28 axes - makes a rapid move to the position specified
-by axes including any offsets, then will make a rapid
-move to the absolute position of the values in
-parameters 5161-5166 for all axes specified. Any axis
-not specified will not move.
+G28 axes - makes a rapid move to the position
+specified by axes including any offsets, then will
+make a rapid move to the absolute position of the
+values in parameters 5161-5166 for all axes
+specified. Any axis not specified will not move.
 """
 
 G28_1 = """G28.1 Set Predefined Position
@@ -461,27 +468,28 @@ G28.1 - stores the current absolute position into
 parameters 5161-5166.
 """
 G30 = """G30 Go to Predefined Position
-G30 uses the values stored in parameters 5181-5189 as
-the X Y Z A B C U V W final point to move to. The
-parameter values are absolute machine coordinates in
-the native machine units as specified in the ini file.
-All axes defined in the ini file will be moved when a
-G28 is issued. If no positions are stored with G28.1
-then all axes will go to the machine origin.
+G30 uses the values stored in parameters 5181-5189
+as the X Y Z A B C U V W final point to move to.
+The parameter values are absolute machine
+coordinates in the native machine units as
+specified in the ini file. All axes defined in the
+ini file will be moved when a G28 is issued. If no
+positions are stored with G28.1 then all axes will
+go to the machine origin.
 
-G30 parameters will be used to move the tool when a M6
-is programmed if TOOL_CHANGE_AT_G30=1 is in the [EMCIO]
-section of the ini file.
+G30 parameters will be used to move the tool when
+a M6 is programmed if TOOL_CHANGE_AT_G30=1 is in
+the [EMCIO] section of the ini file.
 
-G30 - makes a rapid move from the current position to
-the absolute position of the values in
+G30 - makes a rapid move from the current position
+to the absolute position of the values in
 parameters 5181-5189.
 
-G30 axes - makes a rapid move to the position specified
-by axes including any offsets, then will make a rapid
-move to the absolute position of the values in
-parameters 5181-5189 for all axes specified. Any axis
-not specified will not move.
+G30 axes - makes a rapid move to the position
+specified by axes including any offsets, then will
+make a rapid move to the absolute position of the
+values in parameters 5181-5189 for all axes
+specified. Any axis not specified will not move.
 """
 
 G30_1 = """G30.1 Set Predefined Position
@@ -494,38 +502,42 @@ G33 X Y Z K $
 K = Distance per revolution
 $ = Spindle to use, optional
 
-For spindle-synchronized motion in one direction, code
-G33 X- Y- Z- K- where K gives the distance moved in XYZ
-for each revolution of the spindle.
+For spindle-synchronized motion in one direction,
+code G33 X- Y- Z- K- where K gives the distance
+moved in XYZ for each revolution of the spindle.
 """
 
 G33_1 = """Rigid Tapping
 G33.1 X Y Z K I $
 K = distance per revolution
-I = optional spindle speed multiplier for faster return
+I = optional spindle speed multiplier for faster
+    return
 $ = optional spindle selector
 
-G33.1 moves from the current coordinate to the specified
-coordinate, synchronized with the selected spindle at
-the given ratio and starting from the current coordinate
-with a spindle index pulse.
+G33.1 moves from the current coordinate to the
+specified coordinate, synchronized with the
+selected spindle at the given ratio and starting
+from the current coordinate with a spindle index
+pulse.
 
-Note: To tap a straight hole a pre-position move to the
-desired X Y coordinates before issuing a G33.1.
+Note: To tap a straight hole a pre-position move
+to the desired X Y coordinates before issuing a
+G33.1.
 """
 
 G38_2 = """G38.2 Straight Probe
 G38.2 axes
 
-G38.2 - probe toward workpiece, stop on contact, signal
-error if failure
+G38.2 - probe toward workpiece, stop on contact,
+signal error if failure
 
-Program G38.2 axes to perform a straight probe operation.
-The axis words are optional, except that at least one of
-them must be used. The axis words together define the
-destination point that the probe will move towards,
-starting from the current location. If the probe is not
-tripped before the destination is reached G38.2 will
+Program G38.2 axes to perform a straight probe
+operation. The axis words are optional, except
+that at least one of them must be used. The axis
+words together define the destination point that
+the probe will move towards, starting from the
+current location. If the probe is not tripped
+before the destination is reached G38.2 will
 signal an error.
 """
 
@@ -535,12 +547,13 @@ G38.3 axes
 G38.3 - probe toward workpiece, stop on contact
 
 Program G38.2 axes to perform a straight probe
-operation. The axis words are optional, except that
-at least one of them must be used. The axis words
-together define the destination point that the probe
-will move towards, starting from the current location.
-If the probe is not tripped before the destination
-is reached G38.2 will signal an error.
+operation. The axis words are optional, except
+that at least one of them must be used. The axis
+words together define the destination point that
+the probe will move towards, starting from the
+current location. If the probe is not tripped
+before the destination is reached G38.2 will
+signal an error.
 """
 
 G38_4 = """G38.4 Straight Probe
@@ -550,12 +563,13 @@ G38.4 = probe away from workpiece, stop on loss of
 contact, signal error if failure
 
 Program G38.4 axes to perform a straight probe
-operation. The axis words are optional, except that
-at least one of them must be used. The axis words
-together define the destination point that the probe
-will move towards, starting from the current location.
-If the probe is not tripped before the destination
-is reached G38.4 will signal an error.
+operation. The axis words are optional, except
+that at least one of them must be used. The axis
+words together define the destination point that
+the probe will move towards, starting from the
+current location. If the probe is not tripped
+before the destination is reached G38.4 will
+signal an error.
 """
 
 G38_5 = """G38.5 Straight Probe
@@ -565,10 +579,11 @@ G38.5 = probe away from workpiece,
         stop on loss of contact
 
 Program G38.5 axes to perform a straight probe
-operation. The axis words are optional, except that
-at least one of them must be used. The axis words
-together define the destination point that the probe
-will move towards, starting from the current location.
+operation. The axis words are optional, except
+that at least one of them must be used. The axis
+words together define the destination point that
+the probe will move towards, starting from the
+current location.
 """
 
 G40 = """G40 Cutter Compensation Off
@@ -617,13 +632,14 @@ G43 H
 H = tool number (optional)
 
 G43 enables tool length compensation. G43 changes
-subsequent motions by offsetting the axis coordinates
-by the length of the offset. G43 does not cause any
-motion. The next time a compensated axis is moved, that
-axis's endpoint is the compensated location.
+subsequent motions by offsetting the axis
+coordinates by the length of the offset. G43 does
+not cause any motion. The next time a compensated
+axis is moved, that axis's endpoint is the
+compensated location.
 
-G43 without an H word uses the currently loaded tool
-from the last Tn M6.
+G43 without an H word uses the currently loaded
+tool from the last Tn M6.
 
 G43 Hn uses the offset for tool n.
 """
@@ -631,27 +647,30 @@ G43 Hn uses the offset for tool n.
 G43_1 = """G43.1 Dynamic Tool Length Offset
 G43.1 axes
 
-G43.1 axes - change subsequent motions by replacing
-the current offset(s) of axes. G43.1 does not cause
-any motion. The next time a compensated axis is moved,
-that axis's endpoint is the compensated location.
+G43.1 axes - change subsequent motions by
+replacing the current offset(s) of axes. G43.1
+does not cause any motion. The next time a
+compensated axis is moved, that axis's endpoint is
+the compensated location.
 """
 
 G43_2 = """G43.2 Apply additional Tool Length Offset
 G43.2 H
 H - tool number
 
-G43.2 applies an additional simultaneous tool offset.
+G43.2 applies an additional simultaneous tool
+offset.
 
-You can sum together an arbitrary number of offsets by
-calling G43.2 more times. There are no built-in
-assumptions about which numbers are geometry offsets
-and which are wear offsets, or that you should have
-only one of each.
+You can sum together an arbitrary number of
+offsets by calling G43.2 more times. There are no
+built-in assumptions about which numbers are
+geometry offsets and which are wear offsets, or
+that you should have only one of each.
 
-Like the other G43 commands, G43.2 does not cause any
-motion. The next time a compensated axis is moved, that
-axis's endpoint is the compensated location.
+Like the other G43 commands, G43.2 does not cause
+any motion. The next time a compensated axis is
+moved, that axis's endpoint is the compensated
+location.
 """
 
 G49 = """G49 Cancel Tool Length Compensation
@@ -661,18 +680,18 @@ G52 = """G52 Local Coordinate System Offset
 G53 axes
 
 G52 is used in a part program as a temporary
-"local coordinate system offset" within the workpiece
-coordinate system.
+"local coordinate system offset" within the
+workpiece coordinate system.
 """
 
 G53 = """G53 Move in Machine Coordinates
 G53 axes
 
-To move in the machine coordinate system, program G53 on
-the same line as a linear move. G53 is not modal and
-must be programmed on each line. G0 or G1 does not have
-to be programmed on the same line if one is currently
-active.
+To move in the machine coordinate system, program
+G53 on the same line as a linear move. G53 is not
+modal and must be programmed on each line. G0 or
+G1 does not have to be programmed on the same
+line if one is currently active.
 """
 
 G54 = """G54 Select Coordinate System
@@ -712,15 +731,15 @@ G59.3 = select coordinate system 9
 """
 
 G61 = """G61 Exact Path Mode
-G61 = Exact path mode, movement exactly as programed.
-Moves will slow or stop as needed to reach every
-programed point. If two sequential moves are exactly
-co-linear movement will not stop.
+G61 = Exact path mode, movement exactly as
+programed. Moves will slow or stop as needed to
+reach every programed point. If two sequential
+moves are exactly co-linear movement will not stop
 """
 
 G61_1 = """G61.1 Exact Stop Mode
-G61.1 - Exact stop mode, movement will stop at the end
-of each programed segment.
+G61.1 - Exact stop mode, movement will stop at the
+end of each programed segment.
 """
 
 G64 = """G64 Path Blending
@@ -728,18 +747,20 @@ G64 P Q
 P = motion blending tolerance
 Q = naive cam tolerance
 
-G64 - without P means to keep the best speed possible,
-no matter how far away from the programmed point you end
-up.
+G64 - without P means to keep the best speed
+possible, no matter how far away from the
+programmed point you end up.
 
-The P tolerance means that the actual path will be no
-more than P away from the programmed endpoint. The
-velocity will be reduced if needed to maintain the path.
+The P tolerance means that the actual path will be
+no more than P away from the programmed endpoint.
+The velocity will be reduced if needed to maintain
+the path.
 
-G64 P- Q- turns on the naive cam detector. When there
-are a series of linear XYZ feed moves at the same feed
-rate that are less than Q away from being collinear,
-they are collapsed into a single linear move.
+G64 P- Q- turns on the naive cam detector. When
+there are a series of linear XYZ feed moves at the
+same feed rate that are less than Q away from
+being collinear, they are collapsed into a single
+linear move.
 """
 
 G73 = """G73 Drilling Cycle with Chip Breaking
@@ -748,9 +769,9 @@ R = retract position along the Z axis
 Q = delta increment along the Z axis
 L = repeat
 
-The G73 cycle is drilling or milling with chip breaking.
-This cycle takes a Q number which represents a delta
-increment along the Z axis.
+The G73 cycle is drilling or milling with chip
+breaking. This cycle takes a Q number which
+represents a delta increment along the Z axis.
 
 Motion Sequence
 
@@ -759,13 +780,14 @@ The Z axis does a rapid move to the R position.
 
 Move to the X Y coordinates.
 
-Move the Z-axis only at the current feed rate downward
-by delta or to the Z position, whichever is less deep.
+Move the Z-axis only at the current feed rate
+downward by delta or to the Z position, whichever
+is less deep.
 
 Rapid up a bit.
 
-Repeat steps 2 and 3 until the Z position is reached at
-step 2.
+Repeat steps 2 and 3 until the Z position is
+reached at step 2.
 
 The Z axis does a rapid move to the R position.
 """
@@ -777,8 +799,8 @@ L = repeat
 P = dwell
 $ = spindle
 
-The G74 cycle is for tapping with floating chuck and
-dwell at the bottom of the hole.
+The G74 cycle is for tapping with floating chuck
+and dwell at the bottom of the hole.
 """
 
 G76 = """Lathe Threading Cycle
@@ -786,20 +808,25 @@ G76 P Z I J R K Q H E L $
 P = The thread pitch in distance per revolution.
 Z = The final position of threads.
 I = The thread peak offset from the drive line.
-J = A positive value specifying the initial cut depth.
-K = A positive value specifying the full thread depth.
+J = A positive value specifying the initial cut
+    depth.
+K = A positive value specifying the full thread
+    depth.
 
 Optional settings
-$ = spindle to which the motion will be synchronised.
-R = The depth degression. R1.0 selects constant depth
-    on successive threading passes.
-Q = The compound slide angle is the angle (in degrees)
-    describing to what extent successive passes should
-    be offset along the drive line.
+$ = spindle to which the motion will be
+    synchronised.
+R = The depth degression. R1.0 selects constant
+    depth on successive threading passes.
+Q = The compound slide angle is the angle
+    (in degrees) describing to what extent
+    successive passes should be offset along the
+    drive line.
 H = The number of spring passes.
-E = Specifies the distance along the drive line used
-    for the taper.
-L = Specifies which ends of the thread get the taper.
+E = Specifies the distance along the drive line
+    used for the taper.
+L = Specifies which ends of the thread get the
+    taper.
     L0 for no taper (the default)
     L1 for entry taper
     L2 for exit taper
@@ -889,12 +916,12 @@ for I, J & K offsets
 G92 = """G92 Coordinate System Offset
 G92 axes
 
-G92 makes the current point have the coordinates you
-want (without motion), where the axis words contain the
-axis numbers you want. All axis words are optional,
-except that at least one must be used. If an axis word
-is not used for a given axis, the offset for that axis
-will be zero.
+G92 makes the current point have the coordinates
+you want (without motion), where the axis words
+contain the axis numbers you want. All axis words
+are optional, except that at least one must be
+used. If an axis word is not used for a given
+axis, the offset for that axis will be zero.
 """
 
 G92_1 = """G92.1 Turn Off G92, Reset
@@ -913,30 +940,31 @@ saved in parameters 5211 to 5219.
 """
 
 G93 = """G93 Inverse Time Feed Mode
-G93 inverse time feed rate mode, an F word means the
-move should be completed in [one divided by the F
-number] minutes.
+G93 inverse time feed rate mode, an F word means
+the move should be completed in [one divided by
+the F number of minutes.
 
-When the inverse time feed rate mode is active, an F
-word must appear on every line which has a G1, G2, or G3
-motion, and an F word on a line that does not have
-G1, G2, or G3 is ignored.
+When the inverse time feed rate mode is active, an
+F word must appear on every line which has a G1,
+G2, or G3 motion, and an F word on a line that
+does not have G1, G2, or G3 is ignored.
 """
 
 G94 = """G94 Units per Minute Feed Mode
-G94 units per minute feed mode, an F word is interpreted
-to mean the controlled point should move at a certain
-number of inches per minute, millimeters per minute, or
-degrees per minute, depending upon what length units are
-being used and which axis or axes are moving.
+G94 units per minute feed mode, an F word is
+interpreted to mean the controlled point should
+move at a certain number of inches per minute,
+millimeters per minute, or degrees per minute,
+depending upon what length units are being used
+and which axis or axes are moving.
 """
 
 G95 = """G95 Units per Revolution Feed Mode
-G95 units per revolution mode, an F word is interpreted
-to mean the controlled point should move a certain
-number of inches per revolution of the spindle,
-depending on what length units are being used and which
-axis or axes are moving.
+G95 units per revolution mode, an F word is
+interpreted to mean the controlled point should
+move a certain number of inches per revolution of
+the spindle, depending on what length units are
+being used and which axis or axes are moving.
 """
 
 G96 = """G96 Spindle Constant Surface Speed Mode
@@ -951,9 +979,9 @@ G97 selects RPM mode.
 """
 
 G98 = """G98 Canned Cycle Return Level
-G98 - retract to the position that axis was in just
-before this series of one or more contiguous canned
-cycles was started.
+G98 - retract to the position that axis was in
+just before this series of one or more contiguous
+canned cycles was started.
 """
 
 G99 = """G99 Canned Cycle Return Level
