@@ -1732,7 +1732,7 @@ Number</string>
                           <widget class="QLineEdit" name="reamRpmLbl"/>
                          </item>
                          <item row="3" column="0" colspan="2">
-                          <widget class="QPushButton" name="spotCoolantBtn_2">
+                          <widget class="QPushButton" name="reamCoolantBtn">
                            <property name="text">
                             <string>Coolant
 Enable</string>
