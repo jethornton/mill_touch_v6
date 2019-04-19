@@ -4232,6 +4232,63 @@ Changed</string>
            <item>
             <widget class="QGroupBox" name="gridGroupBox">
              <property name="title">
+              <string>Mode</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_22">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="ActionButton" name="actionbutton_26">
+                <property name="text">
+                 <string>Mode
+Auto</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 2 else ''&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.mode.auto</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="ActionButton" name="actionbutton_25">
+                <property name="text">
+                 <string>Mode
+Manual</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 1 else ''&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.mode.manual</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="ActionButton" name="actionbutton_27">
+                <property name="text">
+                 <string>Mode
+MDI</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 3 else ''&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.mode.mdi</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="gridGroupBox">
+             <property name="title">
               <string>Overrides</string>
              </property>
              <property name="alignment">
