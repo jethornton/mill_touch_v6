@@ -1,5 +1,7 @@
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 
+from qtpyvcp.plugins import getPlugin
+
 # Setup logging
 from qtpyvcp.utilities import logger
 LOG = logger.getLogger('qtpyvcp.' + __name__)
@@ -26,11 +28,10 @@ class MyMainWindow(VCPMainWindow):
         gcodeBuilder.setupGcodeBuilder(self)
         sptmInside.sptmInsideSetup(self)
 
-        #db.open()
-        #print('Database is {}'.format(db.open()))
-        #if not dbStat:
-        #    self.statusbar.showMessage('Database Fucked Up!')
-
+        #print(getPlugin("notifications").messages)
+        #for item in getPlugin("notifications").messages:
+        #    if item['type'] == 'error':
+        #        print(item)
 
     def on_exitAppBtn_clicked(self):
         self.app.quit()
