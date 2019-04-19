@@ -94,7 +94,7 @@ def gcodeReam(parent):
     parent.gCodeList.addItem('; Ream Op')
     if parent.reamToolLbl.text():
         parent.gCodeList.addItem('T{} M6 G43'.format(parent.reamToolLbl.text()))
-    if parent.chamferRpmLbl.text():
+    if parent.reamRpmLbl.text():
         parent.gCodeList.addItem('M3 S{}'.format(parent.reamRpmLbl.text()))
     if parent.reamCoolantBtn.isChecked():
         parent.gCodeList.addItem('M8')
@@ -121,7 +121,69 @@ def gcodeSomeThing(parent):
     pass
 
 def gcodeIntThreadMill(parent):
-    pass
+    # make sure your using the hole size as the starting point
+    parent.gCodeList.addItem('; Single Point Thread Mill Op')
+    parent.gCodeList.addItem(';  {}'.format(parent.threadSizeLbl.text()))
+    if parent.sptmToolLbl.text():
+        parent.gCodeList.addItem('T{} M6 G43'.format(parent.sptmToolLbl.text()))
+    if parent.sptmRpmLbl.text():
+        parent.gCodeList.addItem('M3 S{}'.format(parent.sptmRpmLbl.text()))
+    if parent.sptmCoolantBtn.isChecked():
+        parent.gCodeList.addItem('M8')
+    parent.gCodeList.addItem('F{}'.format(parent.sptmFeedLbl.text()))
+    if parent.gCodeList.count() > 0: # toss out an error if not
+        for i in range(parent.holeOpCoordList.count()):
+            zClear = parent.sptmZclearLbl.text()
+            zStart = parent.sptmZstartLbl.text()
+            threadTPI = float(parent.threadTpiLbl.text())
+            threadPitch = 1.0 / threadTPI
+            threads = float(parent.sptmThreadsLbl.text())
+            threadsHeight = (threads + 1) * threadPitch
+            numPasses = int(parent.sptmPassesLbl.text())
+            majorDia = float(parent.threadMajorDiaLbl.text())
+            minorDia = float(parent.sptmHoleDiaLbl.text())
+            threadDepth = (majorDia - minorDia)
+            sptmCutterDia = float(parent.sptmDiaLbl.text())
+            threadCount = int(parent.sptmThreadsLbl.text())
+            coordinates = parent.holeOpCoordList.item(i).text()
+            parent.gCodeList.addItem('G0 Z{}'.format(zClear))
+            parent.gCodeList.addItem('G0 {}'.format(coordinates))
+            zEnd = float(zStart) + threadsHeight
+            parent.gCodeList.addItem('G1 Z{}'.format(zEnd))
+            parent.gCodeList.addItem('G91')
+            #parent.gCodeList.addItem('; Thread Passes {}'.format(numPasses))
+            for i in range(numPasses):
+                parent.gCodeList.addItem('; Thread Pass {}'.format(i))
+                passRatios = {1:[1.0], 2:[0.65,1.0], 3:[0.5,0.8,1.0], 4:[0.4,0.67,0.87,1.0]}
+                passDiameter = minorDia + (threadDepth * passRatios[numPasses][i])
+                parent.gCodeList.addItem('; Pass Diameter {}'.format(passDiameter))
+                # go to hole bottom
+                parent.gCodeList.addItem('G1 Z-{}'.format(threadsHeight))
+                # go to start of lead in arc
+                cutterClearance = 0.020
+                yStartLeadIn = -((minorDia - (cutterClearance * 2)) - sptmCutterDia) / 2
+                parent.gCodeList.addItem('G1 Y{:.4f}'.format(yStartLeadIn))
+                # lead in arc
+                leadInYEnd = ((passDiameter - sptmCutterDia) / 2) + abs(yStartLeadIn)
+                leadInZEnd = threadPitch / 2
+                leadInJOffset = leadInYEnd / 2
+                parent.gCodeList.addItem('G3 X0.0 Y{:.4f} Z{:.4f} J{:.4f}' \
+                    .format(leadInYEnd, leadInZEnd, leadInJOffset))
+                # spiral up
+                finalZ = threadPitch * threadCount
+                jOffset = -(passDiameter - sptmCutterDia) / 2
+                parent.gCodeList.addItem('G3 J{} Z{} P{}'. \
+                    format(jOffset, finalZ, threadCount))
+                # lead out arc
+                leadOutYEnd = -((passDiameter - sptmCutterDia) / 2) - abs(yStartLeadIn)
+                leadOutZEnd = threadPitch / 2
+                leadOutJOffset = -(leadInYEnd / 2)
+                parent.gCodeList.addItem('G3 X0.0 Y{:.4f} Z{:.4f} J{:.4f}' \
+                    .format(leadOutYEnd, leadOutZEnd, leadOutJOffset))
+                # go to center
+                yCenter = ((minorDia - (cutterClearance * 2)) - sptmCutterDia) / 2
+                parent.gCodeList.addItem('G1 Y{:.4f}'.format(yCenter))
+            parent.gCodeList.addItem('G90')
 
 def gcodeExtThreadMill(parent):
     pass

@@ -551,7 +551,7 @@ Button</string>
                        <x>15</x>
                        <y>15</y>
                        <width>401</width>
-                       <height>246</height>
+                       <height>156</height>
                       </rect>
                      </property>
                      <property name="frameShape">
@@ -570,8 +570,23 @@ to the Z Retract position prior to starting the cycle.</string>
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
-                    <zorder>label_23</zorder>
-                    <zorder>holeOps1Stk</zorder>
+                    <widget class="QPushButton" name="spotCoolantBtn">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>235</y>
+                       <width>54</width>
+                       <height>54</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Coolant
+Enable</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
                    </widget>
                    <widget class="QWidget" name="page_18">
                     <widget class="QLabel" name="label_31">
@@ -580,7 +595,7 @@ to the Z Retract position prior to starting the cycle.</string>
                        <x>15</x>
                        <y>15</y>
                        <width>401</width>
-                       <height>246</height>
+                       <height>191</height>
                       </rect>
                      </property>
                      <property name="frameShape">
@@ -599,6 +614,23 @@ to the Z Retract position prior to starting the cycle.</string>
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
+                    <widget class="QPushButton" name="drillCoolantBtn">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>235</y>
+                       <width>54</width>
+                       <height>54</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Coolant
+Enable</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
                    </widget>
                    <widget class="QWidget" name="page_19">
                     <widget class="QLabel" name="label_36">
@@ -607,7 +639,7 @@ to the Z Retract position prior to starting the cycle.</string>
                        <x>15</x>
                        <y>15</y>
                        <width>401</width>
-                       <height>246</height>
+                       <height>156</height>
                       </rect>
                      </property>
                      <property name="frameShape">
@@ -626,6 +658,23 @@ to the Z Retract position prior to starting the cycle.</string>
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
+                    <widget class="QPushButton" name="chamferCoolantBtn">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>230</y>
+                       <width>54</width>
+                       <height>54</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Coolant
+Enable</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
                    </widget>
                    <widget class="QWidget" name="page_20">
                     <widget class="QLabel" name="label_37">
@@ -634,7 +683,7 @@ to the Z Retract position prior to starting the cycle.</string>
                        <x>15</x>
                        <y>15</y>
                        <width>401</width>
-                       <height>246</height>
+                       <height>186</height>
                       </rect>
                      </property>
                      <property name="frameShape">
@@ -653,19 +702,36 @@ to the Z Retract position prior to starting the cycle.</string>
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                      </property>
                     </widget>
+                    <widget class="QPushButton" name="reamCoolantBtn">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>230</y>
+                       <width>54</width>
+                       <height>54</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Coolant
+Enable</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
                    </widget>
                    <widget class="QWidget" name="page_21">
                     <widget class="QLabel" name="label_14">
                      <property name="geometry">
                       <rect>
-                       <x>255</x>
-                       <y>185</y>
-                       <width>61</width>
+                       <x>10</x>
+                       <y>10</y>
+                       <width>71</width>
                        <height>21</height>
                       </rect>
                      </property>
                      <property name="text">
-                      <string>index 4</string>
+                      <string>Rigid Tap</string>
                      </property>
                     </widget>
                    </widget>
@@ -673,14 +739,586 @@ to the Z Retract position prior to starting the cycle.</string>
                     <widget class="QLabel" name="label_13">
                      <property name="geometry">
                       <rect>
-                       <x>245</x>
-                       <y>170</y>
-                       <width>61</width>
-                       <height>26</height>
+                       <x>5</x>
+                       <y>5</y>
+                       <width>226</width>
+                       <height>21</height>
                       </rect>
                      </property>
                      <property name="text">
-                      <string>index 5</string>
+                      <string>Internal Single Point Thread Milling</string>
+                     </property>
+                    </widget>
+                    <widget class="QGroupBox" name="gridGroupBox">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>25</y>
+                       <width>121</width>
+                       <height>106</height>
+                      </rect>
+                     </property>
+                     <property name="title">
+                      <string>Thread Form</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_13">
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <item row="0" column="0" colspan="2">
+                       <widget class="QLabel" name="threadFormLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QPushButton" name="threadFormBackBtn">
+                        <property name="text">
+                         <string>Back</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QPushButton" name="threadFormFwdBtn">
+                        <property name="text">
+                         <string>Fwd</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QGroupBox" name="gridGroupBox_2">
+                     <property name="geometry">
+                      <rect>
+                       <x>135</x>
+                       <y>25</y>
+                       <width>121</width>
+                       <height>106</height>
+                      </rect>
+                     </property>
+                     <property name="title">
+                      <string>Thread Class</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_14">
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <item row="1" column="0">
+                       <widget class="QPushButton" name="threadClassBackBtn">
+                        <property name="text">
+                         <string>Back</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QPushButton" name="threadClassFwdBtn">
+                        <property name="text">
+                         <string>Fwd</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0" colspan="2">
+                       <widget class="QLabel" name="threadClassLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QGroupBox" name="gridGroupBox_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>260</x>
+                       <y>25</y>
+                       <width>121</width>
+                       <height>106</height>
+                      </rect>
+                     </property>
+                     <property name="title">
+                      <string>Thread Size</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_15">
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <item row="1" column="0">
+                       <widget class="QPushButton" name="threadSizeBackBtn">
+                        <property name="text">
+                         <string>Back</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QPushButton" name="threadSizeFwdBtn">
+                        <property name="text">
+                         <string>Fwd</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0" colspan="2">
+                       <widget class="QLabel" name="threadSizeLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QGroupBox" name="gridGroupBox">
+                     <property name="geometry">
+                      <rect>
+                       <x>435</x>
+                       <y>25</y>
+                       <width>161</width>
+                       <height>216</height>
+                      </rect>
+                     </property>
+                     <property name="title">
+                      <string>Thread Info</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_19">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <item row="4" column="0">
+                       <widget class="QLabel" name="label_38">
+                        <property name="text">
+                         <string>Min Minor Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QLabel" name="label_20">
+                        <property name="text">
+                         <string>Min Major Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="1">
+                       <widget class="QLabel" name="threadMinPitchDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLabel" name="threadTpiLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_19">
+                        <property name="text">
+                         <string>Major Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_15">
+                        <property name="text">
+                         <string>TPI</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QLabel" name="threadMajorDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QLabel" name="label_22">
+                        <property name="text">
+                         <string>Max Minor Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="0">
+                       <widget class="QLabel" name="label_39">
+                        <property name="text">
+                         <string>Min Pitch Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <widget class="QLabel" name="threadMinMajorDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="1">
+                       <widget class="QLabel" name="threadMinMinorDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="1">
+                       <widget class="QLabel" name="threadMaxMinorDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="1">
+                       <widget class="QLabel" name="threadMaxPitchDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="0">
+                       <widget class="QLabel" name="label_40">
+                        <property name="text">
+                         <string>Max Pitch Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QGroupBox" name="gridGroupBox_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>110</x>
+                       <y>135</y>
+                       <width>121</width>
+                       <height>106</height>
+                      </rect>
+                     </property>
+                     <property name="title">
+                      <string>Thread Mill Size</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_20">
+                      <property name="leftMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>1</number>
+                      </property>
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <item row="0" column="0" colspan="2">
+                       <widget class="QLabel" name="sptmSizeLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QPushButton" name="sptmSizeBackBtn">
+                        <property name="text">
+                         <string>Back</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QPushButton" name="sptmSizeFwdBtn">
+                        <property name="text">
+                         <string>Fwd</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QGroupBox" name="gridGroupBox_5">
+                     <property name="geometry">
+                      <rect>
+                       <x>240</x>
+                       <y>135</y>
+                       <width>141</width>
+                       <height>156</height>
+                      </rect>
+                     </property>
+                     <property name="title">
+                      <string>Thread Mill Info</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_21">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <item row="4" column="1">
+                       <widget class="QLabel" name="sptmNeckDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QLabel" name="sptmCrestLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLabel" name="sptmDiaLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_43">
+                        <property name="text">
+                         <string>Crest</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="0">
+                       <widget class="QLabel" name="label_41">
+                        <property name="text">
+                         <string>Neck Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <widget class="QLabel" name="sptmMaxDepthLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QLabel" name="label_42">
+                        <property name="text">
+                         <string>Max Depth</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QLabel" name="label_45">
+                        <property name="text">
+                         <string>Flutes</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_44">
+                        <property name="text">
+                         <string>Dia</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="1">
+                       <widget class="QLabel" name="sptmFlutesLbl">
+                        <property name="frameShape">
+                         <enum>QFrame::Box</enum>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QPushButton" name="sptmCoolantBtn">
+                     <property name="geometry">
+                      <rect>
+                       <x>15</x>
+                       <y>230</y>
+                       <width>54</width>
+                       <height>54</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Coolant
+Enable</string>
                      </property>
                     </widget>
                    </widget>
@@ -994,17 +1632,6 @@ Number</string>
                          </item>
                          <item row="2" column="1">
                           <widget class="QLineEdit" name="spotRpmLbl"/>
-                         </item>
-                         <item row="3" column="0" colspan="2">
-                          <widget class="QPushButton" name="spotCoolantBtn">
-                           <property name="text">
-                            <string>Coolant
-Enable</string>
-                           </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
                          </item>
                         </layout>
                        </widget>
@@ -1328,17 +1955,6 @@ Number</string>
                          <item row="2" column="1">
                           <widget class="QLineEdit" name="drillRpmLbl"/>
                          </item>
-                         <item row="3" column="0" colspan="2">
-                          <widget class="QPushButton" name="drillCoolantBtn">
-                           <property name="text">
-                            <string>Coolant
-Enable</string>
-                           </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
-                         </item>
                         </layout>
                        </widget>
                       </widget>
@@ -1387,18 +2003,6 @@ Enable</string>
                          <property name="bottomMargin">
                           <number>5</number>
                          </property>
-                         <item row="0" column="1">
-                          <widget class="QLineEdit" name="chamferZEndLbl"/>
-                         </item>
-                         <item row="1" column="1">
-                          <widget class="QLineEdit" name="chamferZRetractLbl"/>
-                         </item>
-                         <item row="2" column="1">
-                          <widget class="QLineEdit" name="lineEdit_11"/>
-                         </item>
-                         <item row="3" column="1">
-                          <widget class="QLineEdit" name="lineEdit_12"/>
-                         </item>
                          <item row="0" column="0">
                           <widget class="QPushButton" name="pushButton_117">
                            <property name="text">
@@ -1415,6 +2019,9 @@ End</string>
                             <string notr="true">holeOpBtnGrp</string>
                            </attribute>
                           </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="chamferZEndLbl"/>
                          </item>
                          <item row="1" column="0">
                           <widget class="QPushButton" name="pushButton_130">
@@ -1433,6 +2040,9 @@ Retract</string>
                            </attribute>
                           </widget>
                          </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="chamferZRetractLbl"/>
+                         </item>
                          <item row="2" column="0">
                           <widget class="QPushButton" name="pushButton_131">
                            <property name="text">
@@ -1446,18 +2056,8 @@ Retract</string>
                            </property>
                           </widget>
                          </item>
-                         <item row="3" column="0">
-                          <widget class="QPushButton" name="pushButton_132">
-                           <property name="text">
-                            <string/>
-                           </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                           <property name="labelName" stdset="0">
-                            <string/>
-                           </property>
-                          </widget>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="lineEdit_11"/>
                          </item>
                         </layout>
                        </widget>
@@ -1550,23 +2150,8 @@ Number</string>
                          <item row="2" column="1">
                           <widget class="QLineEdit" name="chamferRpmLbl"/>
                          </item>
-                         <item row="3" column="0" colspan="2">
-                          <widget class="QPushButton" name="chamferCoolantBtn">
-                           <property name="text">
-                            <string>Coolant
-Enable</string>
-                           </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
-                         </item>
                         </layout>
                        </widget>
-                       <zorder>holeOps2Stk</zorder>
-                       <zorder>label_30</zorder>
-                       <zorder>formWidget_5</zorder>
-                       <zorder>formWidget_6</zorder>
                       </widget>
                       <widget class="QWidget" name="page_27">
                        <widget class="QLabel" name="label_29">
@@ -1776,17 +2361,6 @@ Number</string>
                          <item row="2" column="1">
                           <widget class="QLineEdit" name="reamRpmLbl"/>
                          </item>
-                         <item row="3" column="0" colspan="2">
-                          <widget class="QPushButton" name="reamCoolantBtn">
-                           <property name="text">
-                            <string>Coolant
-Enable</string>
-                           </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                          </widget>
-                         </item>
                         </layout>
                        </widget>
                       </widget>
@@ -1794,30 +2368,230 @@ Enable</string>
                        <widget class="QLabel" name="label_28">
                         <property name="geometry">
                          <rect>
-                          <x>215</x>
-                          <y>80</y>
+                          <x>5</x>
+                          <y>5</y>
                           <width>61</width>
                           <height>21</height>
                          </rect>
                         </property>
                         <property name="text">
-                         <string>index 4</string>
+                         <string>Rigid Tap</string>
                         </property>
                        </widget>
                       </widget>
                       <widget class="QWidget" name="page_29">
-                       <widget class="QLabel" name="label_26">
+                       <widget class="QWidget" name="formWidget" native="true">
                         <property name="geometry">
                          <rect>
-                          <x>200</x>
-                          <y>90</y>
-                          <width>61</width>
-                          <height>26</height>
+                          <x>10</x>
+                          <y>25</y>
+                          <width>160</width>
+                          <height>251</height>
                          </rect>
                         </property>
-                        <property name="text">
-                         <string>index 5</string>
+                        <layout class="QFormLayout" name="formLayout_10">
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="1" column="0">
+                          <widget class="QPushButton" name="pushButton_124">
+                           <property name="text">
+                            <string>Tool
+Number</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmToolLbl</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="sptmToolLbl"/>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_122">
+                           <property name="text">
+                            <string>Feed</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmFeedLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="sptmFeedLbl"/>
+                         </item>
+                         <item row="4" column="0">
+                          <widget class="QPushButton" name="pushButton_111">
+                           <property name="text">
+                            <string>RPM</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmRpmLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="4" column="1">
+                          <widget class="QLineEdit" name="sptmRpmLbl"/>
+                         </item>
+                         <item row="5" column="0">
+                          <widget class="QPushButton" name="pushButton_115">
+                           <property name="text">
+                            <string>Hole
+Dia</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmHoleDiaLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="5" column="1">
+                          <widget class="QLineEdit" name="sptmHoleDiaLbl"/>
+                         </item>
+                        </layout>
+                       </widget>
+                       <widget class="QWidget" name="formWidget_9" native="true">
+                        <property name="geometry">
+                         <rect>
+                          <x>175</x>
+                          <y>25</y>
+                          <width>160</width>
+                          <height>251</height>
+                         </rect>
                         </property>
+                        <layout class="QFormLayout" name="formLayout_11">
+                         <property name="horizontalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="verticalSpacing">
+                          <number>5</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>5</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>5</number>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QPushButton" name="pushButton_121">
+                           <property name="text">
+                            <string>Passes</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmPassesLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QLineEdit" name="sptmPassesLbl"/>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_123">
+                           <property name="text">
+                            <string>Z
+Clear</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmZclearLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="sptmZclearLbl"/>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QPushButton" name="pushButton_109">
+                           <property name="text">
+                            <string>Z
+Start</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmZstartLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QLineEdit" name="sptmZstartLbl"/>
+                         </item>
+                         <item row="4" column="0">
+                          <widget class="QPushButton" name="pushButton_110">
+                           <property name="text">
+                            <string>Threads</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>sptmThreadsLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="4" column="1">
+                          <widget class="QLineEdit" name="sptmThreadsLbl"/>
+                         </item>
+                        </layout>
                        </widget>
                       </widget>
                       <widget class="QWidget" name="page_30">
@@ -5617,17 +6391,17 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="g92Btns"/>
-  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="sideNavBtns"/>
   <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
   <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
  </buttongroups>
 </ui>
