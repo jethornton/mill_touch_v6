@@ -35,6 +35,12 @@ HalButton[objectName="tool_changed"]:enabled {
     border-color: #FF0000;
 }
 
+StatusLabel {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
 VCPSettingsSlider, ActionSlider {
     min-width: 50px;
     height: 50px;

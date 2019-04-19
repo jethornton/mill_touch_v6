@@ -80,6 +80,12 @@
           </property>
           <item>
            <widget class="QWidget" name="verticalWidget" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="spacing">
               <number>5</number>
@@ -3677,7 +3683,7 @@ Prog</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_5">
           <layout class="QGridLayout" name="gridLayout">
@@ -3786,8 +3792,14 @@ Absolute</string>
            </item>
            <item row="1" column="1">
             <widget class="StatusLabel" name="statuslabel_24">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="frameShape">
               <enum>QFrame::Box</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
              </property>
              <property name="text">
               <string>X</string>
@@ -3796,7 +3808,7 @@ Absolute</string>
               <set>Qt::AlignCenter</set>
              </property>
              <property name="rules" stdset="0">
-              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;X Axis Homed&quot;}]</string>
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 1 else ''&quot;, &quot;name&quot;: &quot;X Axis Homed&quot;}]</string>
              </property>
             </widget>
            </item>
@@ -4053,6 +4065,10 @@ Changed</string>
           </item>
           <item row="1" column="1">
            <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">border-color: rgb(115, 210, 22);
+</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::Box</enum>
             </property>
@@ -4196,7 +4212,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -5758,6 +5774,12 @@ File</string>
     </item>
     <item>
      <widget class="QWidget" name="verticalWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>75</width>
+        <height>0</height>
+       </size>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <property name="spacing">
         <number>5</number>
