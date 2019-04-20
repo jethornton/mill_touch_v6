@@ -86,28 +86,34 @@ VCPSettingsSlider::handle:vertical, ActionSlider::handle:vertical {
 
 /* Set style for all the QPushButtons inside of the mdiWidget*/
 QWidget[objectName="mdiWidget"] > QPushButton {
-    font: 75 14pt "DejaVu Sans Mono";
+    font: 75 12pt "DejaVu Sans Mono";
 }
 
 QWidget[objectName="g5xKeypad"] > QPushButton {
-    font: 75 14pt "DejaVu Sans Mono";
+    font: 75 12pt "DejaVu Sans Mono";
 }
 
 QWidget[objectName="g92Keypad"] > QPushButton {
-    font: 75 14pt "DejaVu Sans Mono";
+    font: 75 12pt "DejaVu Sans Mono";
 }
 
 QWidget[objectName="jogGroupBox"] > QPushButton {
-    font: 75 14pt "DejaVu Sans Mono";
+    font: 75 12pt "DejaVu Sans Mono";
 }
 
 QWidget[objectName="spindleGroupBox"] > QPushButton {
-    font: 75 14pt "DejaVu Sans Mono";
+    font: 75 12pt "DejaVu Sans Mono";
 }
 
 QWidget[objectName="holeOpKeypadCont"] > QPushButton {
-    font: 75 14pt "DejaVu Sans Mono";
+    font: 75 12pt "DejaVu Sans Mono";
 }
+
+QWidget[objectName="toolSetKeypad"] > QPushButton {
+    font: 75 12pt "DejaVu Sans Mono";
+}
+
+
 
 .QWidget {
     border-style: solid;
