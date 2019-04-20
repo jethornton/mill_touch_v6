@@ -6088,11 +6088,10 @@ Z</string>
                  <item row="5" column="0">
                   <widget class="MDIButton" name="mdibutton_13">
                    <property name="text">
-                    <string>Clear
-G92</string>
+                    <string/>
                    </property>
                    <property name="MDICommand" stdset="0">
-                    <string>G92.1</string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -6127,7 +6126,10 @@ G92</string>
                   <widget class="MDIButton" name="mdibutton_14">
                    <property name="text">
                     <string>Set
-X Y Z</string>
+Radius</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolSetLbl&gt;</string>
                    </property>
                   </widget>
                  </item>
@@ -6900,17 +6902,17 @@ Rides</string>
  </designerdata>
  <buttongroups>
   <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="sideNavBtns"/>
   <buttongroup name="holeOpKeypad"/>
   <buttongroup name="holeNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="mainNavBtns"/>
   <buttongroup name="droNavBtns"/>
   <buttongroup name="mdiKeypad"/>
-  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="sideNavBtns"/>
  </buttongroups>
 </ui>
