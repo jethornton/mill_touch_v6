@@ -4,6 +4,7 @@ def toolSetSetup(parent):
     parent.toolSetKeypad.buttonClicked.connect(partial(toolSetKeypad, parent))
     parent.toolSetBkspBtn.clicked.connect(partial(toolSetBksp, parent))
     parent.toolSetClearBtn.clicked.connect(partial(toolSetClear, parent))
+    parent.toolSetLbl.textChanged.connect(partial(toolRadius, parent))
 
 def toolSetKeypad(parent, button):
     char = str(button.text())
@@ -23,5 +24,7 @@ def toolSetBksp(parent):
         parent.toolSetLbl.setText(text)
 
 
-
+def toolRadius(parent):
+    dia = float(parent.toolSetLbl.text())
+    parent.toolRadiusLbl.setText(str(dia / 2))
 

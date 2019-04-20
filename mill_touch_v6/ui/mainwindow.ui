@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -5888,6 +5888,18 @@ Z</string>
           <layout class="QHBoxLayout" name="horizontalLayout_11">
            <item>
             <widget class="VCPWidget" name="widget">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>65</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="rules" stdset="0">
               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:enabled&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Enabled&quot;}]</string>
              </property>
@@ -6054,7 +6066,7 @@ Tool
               <item row="1" column="0" colspan="4">
                <widget class="QLabel" name="label_46">
                 <property name="text">
-                 <string>Set Loaded Tool To Fixture</string>
+                 <string>Set Loaded Tool</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -6223,17 +6235,6 @@ Y</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="7" column="3">
-                  <widget class="MDIButton" name="mdibutton_17">
-                   <property name="text">
-                    <string>Set
-Z</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10 L11 P#&lt;currentToolLbl&gt; Z#&lt;toolSetLbl&gt;</string>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="4" column="3">
                   <widget class="QPushButton" name="pushButton_148">
                    <property name="text">
@@ -6265,19 +6266,6 @@ X</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="3">
-                  <widget class="QLabel" name="toolSetLbl">
-                   <property name="frameShape">
-                    <enum>QFrame::Box</enum>
-                   </property>
-                   <property name="text">
-                    <string>0</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="6" column="2">
                   <widget class="QPushButton" name="toolSetBkspBtn">
                    <property name="text">
@@ -6301,7 +6289,7 @@ X</string>
                     <enum>QFrame::Box</enum>
                    </property>
                    <property name="text">
-                    <string>Offset</string>
+                    <string>Setting</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -6318,6 +6306,51 @@ Radius</string>
                     <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolSetLbl&gt;</string>
                    </property>
                   </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="MDIButton" name="mdibutton_26">
+                   <property name="text">
+                    <string>Set
+Dia</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolRadiusLbl&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="MDIButton" name="mdibutton_17">
+                   <property name="text">
+                    <string>Set
+Z
+Fixture</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L11 P#&lt;currentToolLbl&gt; Z#&lt;toolSetLbl&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="MDIButton" name="mdibutton_27">
+                   <property name="text">
+                    <string>Set
+Z
+Material</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L10 P#&lt;currentToolLbl&gt; Z#&lt;toolSetLbl&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="toolRadiusLbl">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2" colspan="2">
+                  <widget class="QLineEdit" name="toolSetLbl"/>
                  </item>
                 </layout>
                </widget>
