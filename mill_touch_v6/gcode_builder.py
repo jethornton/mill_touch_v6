@@ -19,7 +19,7 @@ def setupGcodeBuilder(parent):
 
     parent.gcodeMoveUpBtn.clicked.connect(partial(gcodeMoveUp, parent))
     parent.gcodeMoveDownBtn.clicked.connect(partial(gcodeMoveDown, parent))
-
+    parent.gcodeDeleteLineBtn.clicked.connect(partial(gcodeDeleteLine, parent))
     parent.gcodeDeleteAllBtn.clicked.connect(partial(gcodeDeleteAll, parent))
 
 
@@ -225,7 +225,8 @@ def gcodeMoveUp(parent):
     else:
         parent.gCodeList.setCurrentRow(rows)
 
-
+def gcodeDeleteLine(parent):
+    parent.gCodeList.takeItem(parent.gCodeList.currentRow())
 
 def gcodeDeleteAll(parent):
     parent.gCodeList.clear()
