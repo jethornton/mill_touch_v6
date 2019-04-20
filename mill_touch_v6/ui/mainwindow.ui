@@ -5887,8 +5887,11 @@ Z</string>
          <widget class="QWidget" name="page_15">
           <layout class="QHBoxLayout" name="horizontalLayout_11">
            <item>
-            <widget class="QWidget" name="verticalWidget" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_12">
+            <widget class="VCPWidget" name="widget">
+             <property name="rules" stdset="0">
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:enabled&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Enabled&quot;}]</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_18">
               <property name="spacing">
                <number>5</number>
               </property>
@@ -5907,7 +5910,7 @@ Z</string>
               <item>
                <widget class="MDIButton" name="mdibutton_25">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -5922,7 +5925,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_24">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -5937,7 +5940,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_23">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -5952,7 +5955,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_22">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -5967,7 +5970,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_21">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -5982,7 +5985,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_20">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -5997,7 +6000,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_19">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
@@ -6012,7 +6015,7 @@ Tool
               <item>
                <widget class="MDIButton" name="mdibutton_18">
                 <property name="enabled">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="text">
                  <string>Load
