@@ -14,6 +14,8 @@ import mill_touch_v6.g92_handler as g92Handler
 import mill_touch_v6.hole_ops as holeOps
 import mill_touch_v6.gcode_builder as gcodeBuilder
 import mill_touch_v6.sptm_inside as sptmInside
+import mill_touch_v6.tool_table as toolTable
+import mill_touch_v6.tool_set as toolSet
 
 class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
@@ -27,6 +29,8 @@ class MyMainWindow(VCPMainWindow):
         holeOps.setupHoleOps(self)
         gcodeBuilder.setupGcodeBuilder(self)
         sptmInside.sptmInsideSetup(self)
+        toolTable.toolTableSetup(self)
+        toolSet.toolSetSetup(self)
 
         #print(getPlugin("notifications").messages)
         #for item in getPlugin("notifications").messages:

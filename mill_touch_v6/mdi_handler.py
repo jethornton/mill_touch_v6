@@ -6,7 +6,7 @@ from functools import partial
 def setupMDI(parent):
     parent.mdiKeypad.buttonClicked.connect(partial(mdiKeypad, parent))
     parent.mdiNavBtns.buttonClicked.connect(partial(mdiChangePage, parent))
-    parent.mdiBackspace.clicked.connect(partial(mdiHandleBackSpace, parent))
+    parent.mdiBackspace.clicked.connect(partial(mdiBackSpace, parent))
     parent.mdiSetLabelsBtn.clicked.connect(partial(mdiSetLabels, parent))
     parent.mdiSendBtn.clicked.connect(partial(mdiClear, parent))
     parent.gcodeListPageUpBtn.clicked.connect(partial(gcodeListPageUp, parent))
@@ -57,7 +57,7 @@ def mdiClear(parent):
     parent.gcodeDescription.setText('')
     parent.gcodeHelpLabel.setText('')
 
-def mdiHandleBackSpace(parent):
+def mdiBackSpace(parent):
     if len(parent.mdiEntry.text()) > 0:
         text = parent.mdiEntry.text()[:-1]
         parent.mdiEntry.setText(text)
