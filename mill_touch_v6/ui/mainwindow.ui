@@ -3542,7 +3542,7 @@ Line</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="toolTblUp">
+                     <widget class="QPushButton" name="toolTblNavUp">
                       <property name="text">
                        <string>Nav
 Up</string>
@@ -3550,7 +3550,7 @@ Up</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="toolTblDown">
+                     <widget class="QPushButton" name="toolTblNavDown">
                       <property name="text">
                        <string>Nav
 Down</string>
@@ -6025,26 +6025,6 @@ Z</string>
                    </attribute>
                   </widget>
                  </item>
-                 <item row="3" column="0">
-                  <widget class="QPushButton" name="pushButton_140">
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <attribute name="buttonGroup">
-                    <string notr="true">toolSetKeypad</string>
-                   </attribute>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QPushButton" name="pushButton_145">
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <attribute name="buttonGroup">
-                    <string notr="true">toolSetKeypad</string>
-                   </attribute>
-                  </widget>
-                 </item>
                  <item row="3" column="2">
                   <widget class="QPushButton" name="pushButton_151">
                    <property name="text">
@@ -6085,51 +6065,10 @@ Z</string>
                    </attribute>
                   </widget>
                  </item>
-                 <item row="5" column="0">
-                  <widget class="MDIButton" name="mdibutton_13">
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="5" column="3">
                   <widget class="QPushButton" name="toolSetClearBtn">
                    <property name="text">
                     <string>Clear</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="0">
-                  <widget class="QPushButton" name="pushButton_146">
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <attribute name="buttonGroup">
-                    <string notr="true">toolSetKeypad</string>
-                   </attribute>
-                  </widget>
-                 </item>
-                 <item row="4" column="0">
-                  <widget class="QPushButton" name="pushButton_150">
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <attribute name="buttonGroup">
-                    <string notr="true">toolSetKeypad</string>
-                   </attribute>
-                  </widget>
-                 </item>
-                 <item row="6" column="0">
-                  <widget class="MDIButton" name="mdibutton_14">
-                   <property name="text">
-                    <string>Set
-Radius</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolSetLbl&gt;</string>
                    </property>
                   </widget>
                  </item>
@@ -6216,6 +6155,89 @@ X</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="MDIButton" name="mdibutton_14">
+                   <property name="text">
+                    <string>Set
+Radius</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolSetLbl&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="MDIButton" name="mdibutton_18">
+                   <property name="text">
+                    <string>Load
+Tool
+1</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>T1M6G43</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="MDIButton" name="mdibutton_19">
+                   <property name="text">
+                    <string>Load
+Tool
+2</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>T2M6G43</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="MDIButton" name="mdibutton_20">
+                   <property name="text">
+                    <string>Load
+Tool
+3</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>T3M6G43</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="MDIButton" name="mdibutton_21">
+                   <property name="text">
+                    <string>Load
+Tool
+4</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>T4M6G43</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="MDIButton" name="mdibutton_22">
+                   <property name="text">
+                    <string>Load
+Tool
+5</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>T5M6G43</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="MDIButton" name="mdibutton_23">
+                   <property name="text">
+                    <string>Load
+Tool
+6</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>T6M6G43</string>
                    </property>
                   </widget>
                  </item>
@@ -6819,10 +6841,10 @@ Rides</string>
    </hints>
   </connection>
   <connection>
-   <sender>toolTblDown</sender>
+   <sender>toolTblNavDown</sender>
    <signal>clicked()</signal>
    <receiver>tooltable</receiver>
-   <slot>scrollToBottom()</slot>
+   <slot>selectNext()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>633</x>
@@ -6867,10 +6889,10 @@ Rides</string>
    </hints>
   </connection>
   <connection>
-   <sender>toolTblUp</sender>
+   <sender>toolTblNavUp</sender>
    <signal>clicked()</signal>
    <receiver>tooltable</receiver>
-   <slot>raise()</slot>
+   <slot>selectPrevious()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>574</x>
@@ -6901,18 +6923,18 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeNavBtns"/>
   <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="jogBtnGroup"/>
   <buttongroup name="g92Btns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="sideNavBtns"/>
+  <buttongroup name="jogIncBtnGroup"/>
  </buttongroups>
 </ui>
