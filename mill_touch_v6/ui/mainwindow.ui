@@ -6326,7 +6326,7 @@ Z
 Fixture</string>
                    </property>
                    <property name="MDICommand" stdset="0">
-                    <string>G10 L11 P#&lt;currentToolLbl&gt; Z#&lt;toolSetLbl&gt;</string>
+                    <string>G10 L11 P#5400 Z0.0</string>
                    </property>
                   </widget>
                  </item>
@@ -6338,7 +6338,7 @@ Z
 Material</string>
                    </property>
                    <property name="MDICommand" stdset="0">
-                    <string>G10 L10 P#&lt;currentToolLbl&gt; Z#&lt;toolSetLbl&gt;</string>
+                    <string>G10 L20 P0 Z#&lt;toolSetLbl&gt;</string>
                    </property>
                   </widget>
                  </item>
