@@ -6514,8 +6514,11 @@ Load</string>
           <bool>true</bool>
          </property>
          <property name="page" stdset="0">
-          <number>5</number>
+          <number>6</number>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">sideNavBtns</string>
+         </attribute>
         </widget>
        </item>
        <item>
@@ -7012,6 +7015,86 @@ Rides</string>
     <hint type="destinationlabel">
      <x>444</x>
      <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileLoad</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>loadSelectedFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1138</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1002</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavDown</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>selectNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1070</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1002</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavOpenDir</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>openSelectedItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>934</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1002</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavParent</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>viewParentDirectory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>866</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1002</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileNavUp</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>selectPrevious()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1002</x>
+     <y>689</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1002</x>
+     <y>447</y>
     </hint>
    </hints>
   </connection>
