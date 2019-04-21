@@ -1,5 +1,6 @@
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
-
+from qtpy.QtCore import Slot
+from qtpy.QtWidgets import QAbstractButton
 from qtpyvcp.plugins import getPlugin
 
 # Setup logging
@@ -22,7 +23,7 @@ class MyMainWindow(VCPMainWindow):
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
 
-        navHandler.setupNav(self)
+        #navHandler.setupNav(self)
         mdiHandler.setupMDI(self)
         g5xHandler.setupG5x(self)
         g92Handler.setupG5x(self)
@@ -36,6 +37,24 @@ class MyMainWindow(VCPMainWindow):
         #for item in getPlugin("notifications").messages:
         #    if item['type'] == 'error':
         #        print(item)
+
+    @Slot(QAbstractButton)
+    def on_mainNavBtns_buttonClicked(self, button):
+        self.mainStkWidget.setCurrentIndex(button.property('page'))
+
+    @Slot(QAbstractButton)
+    def on_sideNavBtns_buttonClicked(self, button):
+        self.sideStkWiget.setCurrentIndex(button.property('page'))
+
+    @Slot(QAbstractButton)
+    def on_droNavBtns_buttonClicked(self, button):
+        self.droStkWidget.setCurrentIndex(button.property('page'))
+
+    @Slot(QAbstractButton)
+    def on_holeNavBtns_buttonClicked(self, button):
+        self.holeOps1Stk.setCurrentIndex(button.property('page'))
+        self.holeOps2Stk.setCurrentIndex(button.property('page'))
+
 
     def on_exitAppBtn_clicked(self):
         self.app.quit()
