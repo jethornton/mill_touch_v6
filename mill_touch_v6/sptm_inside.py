@@ -37,7 +37,6 @@ def threadFormInit(parent):
     parent.formMapper.addMapping(parent.threadFormLbl, 0, b'text')
     parent.formMapper.toLast()
     parent.formsLast = parent.formMapper.currentIndex()
-    print('current index {}'.format(parent.formMapper.currentIndex()))
     parent.formMapper.toFirst()
     threadClassInit(parent)
 
@@ -94,7 +93,6 @@ def threadSizeInit(parent, index = 0):
         min_major_dia, max_minor_dia, min_minor_dia, \
         max_pitch_dia, min_pitch_dia FROM internal_threads WHERE form \
         = '{}' AND class = '{}'".format(threadForm, threadClass)
-    print(sizeSelect)
     parent.sizeModel.setQuery(sizeSelect)
     parent.sizeMapper.setModel(parent.sizeModel)
     parent.sizeMapper.addMapping(parent.threadSizeLbl, 0, b'text')
