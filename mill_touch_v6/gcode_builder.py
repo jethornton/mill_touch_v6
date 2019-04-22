@@ -196,7 +196,11 @@ def gcodePostAmble(parent):
     pass
 
 def gcodeSave(parent):
-    pass
+    gcode = []
+    with open('/home/john/linuxcnc/nc_files/jt-save.ngc','w') as f:
+        for i in range(parent.gCodeList.count()):
+            gcode.append(parent.gCodeList.item(i).text())
+        f.write('\n'.join(gcode))
 
 def gcodeLoad(parent):
     emcCommand = linuxcnc.command()
