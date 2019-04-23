@@ -2905,6 +2905,15 @@ G code</string>
                            </property>
                           </widget>
                          </item>
+                         <item row="1" column="3">
+                          <widget class="QPushButton" name="gcodeProgEndBtn">
+                           <property name="text">
+                            <string>Append
+Program
+End</string>
+                           </property>
+                          </widget>
+                         </item>
                         </layout>
                        </widget>
                       </widget>
@@ -3365,7 +3374,7 @@ MDI</string>
                <string>G code Postamble</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="gcodePostambleLbl">
               <property name="geometry">
                <rect>
                 <x>195</x>
@@ -3374,25 +3383,34 @@ MDI</string>
                 <height>23</height>
                </rect>
               </property>
+              <property name="text">
+               <string>G53 G0 Z0</string>
+              </property>
              </widget>
-             <widget class="QTextEdit" name="gcodePostambleLbl">
+             <widget class="QLabel" name="label_48">
               <property name="geometry">
                <rect>
-                <x>190</x>
-                <y>255</y>
-                <width>436</width>
-                <height>121</height>
+                <x>35</x>
+                <y>330</y>
+                <width>106</width>
+                <height>16</height>
                </rect>
               </property>
-              <property name="html">
-               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;G53 G0 Z0 M2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <property name="text">
+               <string>Program End</string>
               </property>
-              <property name="acceptRichText">
-               <bool>false</bool>
+             </widget>
+             <widget class="QLineEdit" name="gcodeProgEndLbl">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>330</y>
+                <width>113</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>M2</string>
               </property>
              </widget>
             </widget>

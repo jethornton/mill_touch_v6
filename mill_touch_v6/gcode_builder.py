@@ -1,5 +1,8 @@
 from functools import partial
 import linuxcnc
+import os, time
+
+HOME = os.path.expanduser("~")
 
 def setupGcodeBuilder(parent):
     parent.gcodePreambleBtn.clicked.connect(partial(gcodePreamble, parent))
@@ -13,7 +16,8 @@ def setupGcodeBuilder(parent):
     parent.gcodeIntThreadMillBtn.clicked.connect(partial(gcodeIntThreadMill, parent))
     parent.gcodeExtThreadMillBtn.clicked.connect(partial(gcodeExtThreadMill, parent))
     parent.gcodeMdiBtn.clicked.connect(partial(gcodeMdi, parent))
-    parent.gcodePostAmbleBtn.clicked.connect(partial(gcodePostAmble, parent))
+    parent.gcodePostambleBtn.clicked.connect(partial(gcodePostamble, parent))
+    parent.gcodeProgEndBtn.clicked.connect(partial(gcodeProgEnd, parent))
     parent.gcodeSaveBtn.clicked.connect(partial(gcodeSave, parent))
     parent.gcodeLoadBtn.clicked.connect(partial(gcodeLoad, parent))
 
@@ -192,21 +196,25 @@ def gcodeMdi(parent):
     parent.gCodeList.addItem(parent.mdiEntry.text())
     parent.mdiEntry.setText('')
 
-def gcodePostAmble(parent):
-    pass
+def gcodePostamble(parent):
+    parent.gCodeList.addItem(parent.gcodePostambleLbl.text())
+
+def gcodeProgEnd(parent):
+    parent.gCodeList.addItem(parent.gcodeProgEndLbl.text())
 
 def gcodeSave(parent):
     gcode = []
-    fileName = 'jt-save.ngc'
+    fileName = str(time.time()).split('.')[0] + '.ngc'
+    filePath = os.path.join(HOME, 'linuxcnc', 'nc_files', fileName)
     try:
-        with open('/home/john/linuxcnc/nc_files/jt-save.ngc','w') as f:
+        with open(filePath,'w') as f:
             for i in range(parent.gCodeList.count()):
                 gcode.append(parent.gCodeList.item(i).text())
             f.write('\n'.join(gcode))
     except (OSError, IOError) as error:
         parent.statusbar.showMessage(error, 6000)
     else:
-        parent.statusbar.showMessage('File Saved as {}'.format(fileName), 6000)
+        parent.statusbar.showMessage('File Saved as {}'.format(filePath), 6000)
 
 def gcodeLoad(parent):
     emcCommand = linuxcnc.command()
