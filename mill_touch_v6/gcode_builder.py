@@ -197,10 +197,16 @@ def gcodePostAmble(parent):
 
 def gcodeSave(parent):
     gcode = []
-    with open('/home/john/linuxcnc/nc_files/jt-save.ngc','w') as f:
-        for i in range(parent.gCodeList.count()):
-            gcode.append(parent.gCodeList.item(i).text())
-        f.write('\n'.join(gcode))
+    fileName = 'jt-save.ngc'
+    try:
+        with open('/home/john/linuxcnc/nc_files/jt-save.ngc','w') as f:
+            for i in range(parent.gCodeList.count()):
+                gcode.append(parent.gCodeList.item(i).text())
+            f.write('\n'.join(gcode))
+    except (OSError, IOError) as error:
+        parent.statusbar.showMessage(error, 6000)
+    else:
+        parent.statusbar.showMessage('File Saved as {}'.format(fileName), 6000)
 
 def gcodeLoad(parent):
     emcCommand = linuxcnc.command()
@@ -211,6 +217,7 @@ def gcodeLoad(parent):
         f.write('\n'.join(gcode))
     emcCommand.reset_interpreter()
     emcCommand.program_open('/tmp/qtpyvcp.ngc')
+    parent.statusbar.showMessage('File Loaded', 6000)
 
 
 def gcodeMoveDown(parent):
