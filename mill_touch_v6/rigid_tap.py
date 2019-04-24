@@ -50,19 +50,37 @@ def rtSizeInit(parent):
     parent.rtSizeMapper.toLast()
     parent.rtSizeLast = parent.rtSizeMapper.currentIndex()
     parent.rtSizeMapper.toFirst()
+    rtInfoInit(parent)
 
 def rtSizeFwd(parent):
     if parent.rtSizeMapper.currentIndex() != parent.rtSizeLast:
         parent.rtSizeMapper.toNext()
     else:
         parent.rtSizeMapper.toFirst()
+    rtInfoInit(parent)
 
 def rtSizeBack(parent):
     if parent.rtSizeMapper.currentIndex() != 0:
         parent.rtSizeMapper.toPrevious()
     else:
         parent.rtSizeMapper.toLast()
+    rtInfoInit(parent)
 
+def rtInfoInit(parent):
+    parent.rtInfoMapper = QDataWidgetMapper(parent)
+    parent.rtInfoModel = QSqlQueryModel(parent)
+    size = parent.rtSizeLbl.text()
+    infoSelect = "SELECT * FROM tap WHERE size = '{}'".format(size)
+    parent.rtInfoModel.setQuery(infoSelect)
+    parent.rtInfoMapper.setModel(parent.rtInfoModel)
+    parent.rtInfoMapper.addMapping(parent.rtPitchLbl, 2, b'text')
+    parent.rtInfoMapper.addMapping(parent.rtMajorDiaLbl, 3, b'text')
+    parent.rtInfoMapper.addMapping(parent.rtTapDrillLbl, 4, b'text')
+    parent.rtInfoMapper.addMapping(parent.rtClearCloseLbl, 5, b'text')
+    parent.rtInfoMapper.addMapping(parent.rtClearFreeLbl, 6, b'text')
+    parent.rtInfoMapper.toLast()
+    parent.rtInfoLast = parent.rtInfoMapper.currentIndex()
+    parent.rtInfoMapper.toFirst()
 
 
 
