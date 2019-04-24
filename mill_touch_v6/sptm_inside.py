@@ -1,20 +1,10 @@
 from functools import partial
 
-from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel, QSqlQuery
+from PyQt5.QtSql import QSqlQueryModel, QSqlQuery
 from PyQt5.QtWidgets import QDataWidgetMapper
 
-import os
-current_path = os.path.dirname(os.path.realpath(__file__)) + '/'
 
 def sptmInsideSetup(parent):
-
-    db = QSqlDatabase.addDatabase('QSQLITE')
-    db.setDatabaseName(current_path + 'threads.db')
-    if db.open():
-        print("Connection success !")
-    else:
-        print("Connection failed !\n{}".format(db.lastError().text()))
-
     threadFormInit(parent)
     threadClassInit(parent)
     sptmSizeInit(parent)

@@ -1,20 +1,9 @@
 from functools import partial
 
-from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel, QSqlQuery
+from PyQt5.QtSql import QSqlQueryModel, QSqlQuery
 from PyQt5.QtWidgets import QDataWidgetMapper
 
-import os
-current_path = os.path.dirname(os.path.realpath(__file__)) + '/'
-
 def toolTableSetup(parent):
-
-    db = QSqlDatabase.addDatabase('QSQLITE')
-    db.setDatabaseName(current_path + 'tools.db')
-    if db.open():
-        print("Connection success !")
-    else:
-        print("Connection failed !\n{}".format(db.lastError().text()))
-
     toolTypeInit(parent)
 
 def toolTypeInit(parent):
