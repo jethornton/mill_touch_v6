@@ -12,8 +12,7 @@ LOG = logger.getLogger('qtpyvcp.' + __name__)
 import os
 current_path = os.path.dirname(os.path.realpath(__file__)) + '/'
 
-
-# Setup Button Handler
+# Setup Handlers
 import mill_touch_v6.mdi_handler as mdiHandler
 import mill_touch_v6.g5x_handler as g5xHandler
 import mill_touch_v6.g92_handler as g92Handler
@@ -51,13 +50,6 @@ class MyMainWindow(VCPMainWindow):
         for name in dir(source):
             if isinstance(getattr(cls, name), signal):
                 print(name)
-
-
-
-        #print(getPlugin("notifications").messages)
-        #for item in getPlugin("notifications").messages:
-        #    if item['type'] == 'error':
-        #        print(item)
 
     @Slot(QAbstractButton)
     def on_mainNavBtns_buttonClicked(self, button):
