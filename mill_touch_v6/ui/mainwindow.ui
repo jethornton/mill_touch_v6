@@ -3971,7 +3971,13 @@ Table</string>
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_42"/>
+            <widget class="QWidget" name="page_42">
+             <layout class="QVBoxLayout" name="verticalLayout_21">
+              <item>
+               <widget class="NotificationWidget" name="notificationwidget"/>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -6824,183 +6830,7 @@ File</string>
          </widget>
          <widget class="QWidget" name="page_36"/>
          <widget class="QWidget" name="page_37">
-          <layout class="QVBoxLayout" name="verticalLayout_12">
-           <item>
-            <widget class="QStackedWidget" name="notifyStkWidget">
-             <property name="currentIndex">
-              <number>0</number>
-             </property>
-             <widget class="QWidget" name="page_38">
-              <layout class="QVBoxLayout" name="verticalLayout_19">
-               <item>
-                <widget class="QListWidget" name="errorList"/>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QWidget" name="page_39">
-              <widget class="QListWidget" name="warningList">
-               <property name="geometry">
-                <rect>
-                 <x>50</x>
-                 <y>80</y>
-                 <width>256</width>
-                 <height>192</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_3">
-               <property name="geometry">
-                <rect>
-                 <x>150</x>
-                 <y>305</y>
-                 <width>61</width>
-                 <height>15</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-             </widget>
-             <widget class="QWidget" name="page_40">
-              <widget class="QListWidget" name="debugList">
-               <property name="geometry">
-                <rect>
-                 <x>50</x>
-                 <y>70</y>
-                 <width>256</width>
-                 <height>192</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_9">
-               <property name="geometry">
-                <rect>
-                 <x>135</x>
-                 <y>40</y>
-                 <width>61</width>
-                 <height>15</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-             </widget>
-             <widget class="QWidget" name="page_41">
-              <widget class="QListWidget" name="infoList">
-               <property name="geometry">
-                <rect>
-                 <x>55</x>
-                 <y>75</y>
-                 <width>256</width>
-                 <height>192</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_10">
-               <property name="geometry">
-                <rect>
-                 <x>125</x>
-                 <y>40</y>
-                 <width>61</width>
-                 <height>15</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_12">
-               <property name="geometry">
-                <rect>
-                 <x>150</x>
-                 <y>325</y>
-                 <width>61</width>
-                 <height>15</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-             </widget>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="horizontalWidget" native="true">
-             <layout class="QHBoxLayout" name="horizontalLayout_12">
-              <property name="spacing">
-               <number>5</number>
-              </property>
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="pushButton_150">
-                <property name="text">
-                 <string>Errors</string>
-                </property>
-                <property name="page" stdset="0">
-                 <number>0</number>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">notifyNavBtns</string>
-                </attribute>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_146">
-                <property name="text">
-                 <string>Warnings</string>
-                </property>
-                <property name="page" stdset="0">
-                 <number>1</number>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">notifyNavBtns</string>
-                </attribute>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_145">
-                <property name="text">
-                 <string>Debug</string>
-                </property>
-                <property name="page" stdset="0">
-                 <number>2</number>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">notifyNavBtns</string>
-                </attribute>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_140">
-                <property name="text">
-                 <string>Info</string>
-                </property>
-                <property name="page" stdset="0">
-                 <number>3</number>
-                </property>
-                <attribute name="buttonGroup">
-                 <string notr="true">notifyNavBtns</string>
-                </attribute>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
+          <layout class="QVBoxLayout" name="verticalLayout_12"/>
          </widget>
         </widget>
        </item>
@@ -7047,7 +6877,8 @@ File</string>
        <item>
         <widget class="QPushButton" name="pushButton_20">
          <property name="text">
-          <string>Errors</string>
+          <string>Push
+Button</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -7299,6 +7130,11 @@ Rides</string>
    <class>ActionButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.action_button</header>
+  </customwidget>
+  <customwidget>
+   <class>NotificationWidget</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.display_widgets.notification_widget</header>
   </customwidget>
  </customwidgets>
  <resources/>
