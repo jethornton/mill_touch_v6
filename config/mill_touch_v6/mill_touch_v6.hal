@@ -18,11 +18,11 @@ addf sim-hardware.update servo-thread
 addf motion-command-handler servo-thread
 addf motion-controller servo-thread
 addf stepgen.update-freq servo-thread
-net spindle-cmd-rpm     <= spindle.0.speed-out
-net spindle-cmd-rpm-abs <= spindle.0.speed-out-abs
-net spindle-cmd-rps     <= spindle.0.speed-out-rps
-net spindle-cmd-rps-abs <= spindle.0.speed-out-rps-abs
-net spindle-at-speed    => spindle.0.at-speed
+#net spindle-cmd-rpm     <= spindle.0.speed-out
+#net spindle-cmd-rpm-abs <= spindle.0.speed-out-abs
+#net spindle-cmd-rps     <= spindle.0.speed-out-rps
+#net spindle-cmd-rps-abs <= spindle.0.speed-out-rps-abs
+#net spindle-at-speed    => spindle.0.at-speed
 
 net xstep           => parport.0.pin-02-out
 setp parport.0.pin-02-out-reset 1
