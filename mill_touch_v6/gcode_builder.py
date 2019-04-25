@@ -116,7 +116,26 @@ def gcodeReam(parent):
         parent.gCodeList.addItem('G80 M5 M9')
 
 def gcodeRigidTap(parent):
-    pass
+    parent.gCodeList.addItem('; Rigid Tap Op')
+    if parent.rtToolLbl.text():
+        parent.gCodeList.addItem('T{} M6 G43'.format(parent.rtToolLbl.text()))
+    if parent.rtRpmLbl.text():
+        parent.gCodeList.addItem('M3 S{}'.format(parent.rtRpmLbl.text()))
+    if parent.rtCoolantBtn.isChecked():
+        parent.gCodeList.addItem('M8')
+    if parent.rtFeedLbl.text():
+        parent.gCodeList.addItem('F{}'.format(parent.rtFeedLbl.text()))
+    if parent.gCodeList.count() > 0: # toss out an error if not
+        for i in range(parent.holeOpCoordList.count()):
+            coordinates = parent.holeOpCoordList.item(i).text()
+            rtDepth = parent.rtDepthLbl.text()
+            rtRetract = parent.rtRetractLbl.text()
+            rtPitch = parent.rtPitchLbl.text()
+            parent.gCodeList.addItem('G0 Z{}'.format(rtRetract))
+            parent.gCodeList.addItem('G0 {}'.format(coordinates))
+            parent.gCodeList.addItem('G33.1 Z{} K{}'.format(rtDepth, rtPitch))
+        parent.gCodeList.addItem('M5 M9')
+
 
 def gcodeFloatingTap(parent):
     pass

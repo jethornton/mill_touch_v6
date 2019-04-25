@@ -618,7 +618,7 @@ Enable</string>
                        <x>15</x>
                        <y>15</y>
                        <width>401</width>
-                       <height>191</height>
+                       <height>156</height>
                       </rect>
                      </property>
                      <property name="frameShape">
@@ -685,7 +685,7 @@ to the Z Retract position prior to starting the cycle.</string>
                      <property name="geometry">
                       <rect>
                        <x>10</x>
-                       <y>230</y>
+                       <y>235</y>
                        <width>54</width>
                        <height>54</height>
                       </rect>
@@ -706,7 +706,7 @@ Enable</string>
                        <x>15</x>
                        <y>15</y>
                        <width>401</width>
-                       <height>186</height>
+                       <height>156</height>
                       </rect>
                      </property>
                      <property name="frameShape">
@@ -728,8 +728,8 @@ to the Z Retract position prior to starting the cycle.</string>
                     <widget class="QPushButton" name="reamCoolantBtn">
                      <property name="geometry">
                       <rect>
-                       <x>20</x>
-                       <y>230</y>
+                       <x>10</x>
+                       <y>235</y>
                        <width>54</width>
                        <height>54</height>
                       </rect>
@@ -1013,11 +1013,11 @@ Enable</string>
                       </item>
                      </layout>
                     </widget>
-                    <widget class="QPushButton" name="sptmCoolantBtn_2">
+                    <widget class="QPushButton" name="rtCoolantBtn">
                      <property name="geometry">
                       <rect>
-                       <x>15</x>
-                       <y>230</y>
+                       <x>10</x>
+                       <y>235</y>
                        <width>54</width>
                        <height>54</height>
                       </rect>
@@ -1603,8 +1603,8 @@ Enable</string>
                     <widget class="QPushButton" name="sptmCoolantBtn">
                      <property name="geometry">
                       <rect>
-                       <x>15</x>
-                       <y>230</y>
+                       <x>10</x>
+                       <y>235</y>
                        <width>54</width>
                        <height>54</height>
                       </rect>
@@ -1619,14 +1619,14 @@ Enable</string>
                     <widget class="QLabel" name="label_6">
                      <property name="geometry">
                       <rect>
-                       <x>230</x>
-                       <y>165</y>
-                       <width>61</width>
+                       <x>5</x>
+                       <y>5</y>
+                       <width>241</width>
                        <height>21</height>
                       </rect>
                      </property>
                      <property name="text">
-                      <string>index 6</string>
+                      <string>External Single Point Thread Milling</string>
                      </property>
                     </widget>
                    </widget>
@@ -2585,13 +2585,13 @@ Number</string>
                           <widget class="QPushButton" name="pushButton_154">
                            <property name="text">
                             <string>Z
-Clear</string>
+Retract</string>
                            </property>
                            <property name="checkable">
                             <bool>true</bool>
                            </property>
                            <property name="labelName" stdset="0">
-                            <string>rtZclearLbl</string>
+                            <string>rtRetractLbl</string>
                            </property>
                            <attribute name="buttonGroup">
                             <string notr="true">holeOpBtnGrp</string>
@@ -2599,7 +2599,7 @@ Clear</string>
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QLineEdit" name="rtZclearLbl"/>
+                          <widget class="QLineEdit" name="rtRetractLbl"/>
                          </item>
                          <item row="2" column="0">
                           <widget class="QPushButton" name="pushButton_155">
@@ -2611,7 +2611,7 @@ Depth</string>
                             <bool>true</bool>
                            </property>
                            <property name="labelName" stdset="0">
-                            <string>rtZstartLbl</string>
+                            <string>rtDepthLbl</string>
                            </property>
                            <attribute name="buttonGroup">
                             <string notr="true">holeOpBtnGrp</string>
@@ -2619,7 +2619,7 @@ Depth</string>
                           </widget>
                          </item>
                          <item row="2" column="1">
-                          <widget class="QLineEdit" name="rtZstartLbl"/>
+                          <widget class="QLineEdit" name="rtDepthLbl"/>
                          </item>
                         </layout>
                        </widget>
@@ -2708,26 +2708,6 @@ Number</string>
                          </item>
                          <item row="4" column="1">
                           <widget class="QLineEdit" name="rtRpmLbl"/>
-                         </item>
-                         <item row="5" column="0">
-                          <widget class="QPushButton" name="pushButton_160">
-                           <property name="text">
-                            <string>Hole
-Dia</string>
-                           </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                           <property name="labelName" stdset="0">
-                            <string>rtHoleDiaLbl</string>
-                           </property>
-                           <attribute name="buttonGroup">
-                            <string notr="true">holeOpBtnGrp</string>
-                           </attribute>
-                          </widget>
-                         </item>
-                         <item row="5" column="1">
-                          <widget class="QLineEdit" name="rtHoleDiaLbl"/>
                          </item>
                         </layout>
                        </widget>
@@ -7710,19 +7690,19 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="toolSetKeypad"/>
   <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="notifyNavBtns"/>
   <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="holeOpKeypad"/>
   <buttongroup name="holeNavBtns"/>
   <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="g92Btns"/>
   <buttongroup name="sideNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="notifyNavBtns"/>
+  <buttongroup name="droNavBtns"/>
  </buttongroups>
 </ui>
