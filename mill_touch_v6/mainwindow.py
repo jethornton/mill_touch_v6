@@ -23,7 +23,6 @@ import mill_touch_v6.rigid_tap as rigidTap
 import mill_touch_v6.sptm_inside as sptmInside
 import mill_touch_v6.tool_table as toolTable
 import mill_touch_v6.tool_set as toolSet
-import mill_touch_v6.error_handler as errorHandler
 
 class MyMainWindow(VCPMainWindow):
     """Main window class for the VCP."""
@@ -45,7 +44,6 @@ class MyMainWindow(VCPMainWindow):
         sptmInside.sptmInsideSetup(self)
         toolTable.toolTableSetup(self)
         toolSet.toolSetSetup(self)
-        errorHandler.errorSetup(self)
 
     def get_signals(self, source):
         cls = source if isinstance(source, type) else type(source)
