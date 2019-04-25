@@ -25,6 +25,9 @@ def toolSetBksp(parent):
 
 
 def toolRadius(parent):
-    dia = float(parent.toolSetLbl.text())
-    parent.toolRadiusLbl.setText(str(dia / 2))
+    try:
+        dia = float(parent.toolSetLbl.text())
+        parent.toolRadiusLbl.setText('R {}'.format(dia / 2))
+    except:
+        parent.toolRadiusLbl.setText('N/A')
 
