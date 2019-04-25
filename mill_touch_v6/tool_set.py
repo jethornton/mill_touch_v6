@@ -29,5 +29,5 @@ def toolRadius(parent):
         dia = float(parent.toolSetLbl.text())
         parent.toolRadiusLbl.setText('R {}'.format(dia / 2))
     except:
-        parent.toolRadiusLbl.setText('N/A')
+        parent.toolRadiusLbl.setText('Error')
 
