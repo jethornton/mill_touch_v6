@@ -25,6 +25,7 @@ data_plugins:
   status:
     kwargs:
       cycle_time: 75
+
   position:
     kwargs:
       # whether to report actual or commanded pos
@@ -35,6 +36,10 @@ data_plugins:
       metric_format: "%9.3f"
       # format used for imperial units
       imperial_format: "%8.4f"
+
+  clock:
+    provider: qtpyvcp.plugins.clock:Clock
+
 
 windows:
 
