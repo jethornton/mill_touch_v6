@@ -4725,7 +4725,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>7</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -6835,23 +6835,6 @@ File</string>
           </layout>
          </widget>
          <widget class="QWidget" name="page_36">
-          <widget class="MDIButton" name="mdibutton_13">
-           <property name="geometry">
-            <rect>
-             <x>90</x>
-             <y>80</y>
-             <width>54</width>
-             <height>54</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Probe
-Hole</string>
-           </property>
-           <property name="MDICommand" stdset="0">
-            <string>o&lt;p-hole&gt; call</string>
-           </property>
-          </widget>
           <widget class="ProbeSim" name="probesim">
            <property name="geometry">
             <rect>
@@ -6859,6 +6842,45 @@ Hole</string>
              <y>270</y>
              <width>184</width>
              <height>71</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="SubCallButton" name="subcallbutton">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>85</y>
+             <width>54</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>test</string>
+           </property>
+           <property name="filename" stdset="0">
+            <string>test.ngc</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="x_location">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>40</y>
+             <width>113</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="y_location">
+           <property name="geometry">
+            <rect>
+             <x>85</x>
+             <y>105</y>
+             <width>48</width>
+             <height>24</height>
             </rect>
            </property>
           </widget>
@@ -7139,6 +7161,11 @@ Rides</string>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
+  </customwidget>
+  <customwidget>
+   <class>SubCallButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.subcall_button</header>
   </customwidget>
   <customwidget>
    <class>VCPSettingsSlider</class>
