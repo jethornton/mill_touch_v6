@@ -4725,7 +4725,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -5509,6 +5509,9 @@ OFF</string>
                 <property name="checkable">
                  <bool>true</bool>
                 </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog.set-increment:0.1</string>
                 </property>
@@ -5541,6 +5544,9 @@ OFF</string>
                 <property name="checkable">
                  <bool>true</bool>
                 </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog-mode.incremental</string>
                 </property>
@@ -5558,7 +5564,7 @@ OFF</string>
                  <bool>true</bool>
                 </property>
                 <property name="checked">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog.set-increment:0.001</string>
@@ -5627,7 +5633,7 @@ OFF</string>
                  <bool>true</bool>
                 </property>
                 <property name="checked">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog-mode.continuous</string>
@@ -6828,7 +6834,35 @@ File</string>
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="page_36"/>
+         <widget class="QWidget" name="page_36">
+          <widget class="MDIButton" name="mdibutton_13">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>80</y>
+             <width>54</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Probe
+Hole</string>
+           </property>
+           <property name="MDICommand" stdset="0">
+            <string>o&lt;p-hole&gt; call</string>
+           </property>
+          </widget>
+          <widget class="ProbeSim" name="probesim">
+           <property name="geometry">
+            <rect>
+             <x>85</x>
+             <y>270</y>
+             <width>184</width>
+             <height>71</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
          <widget class="QWidget" name="page_37">
           <layout class="QVBoxLayout" name="verticalLayout_12"/>
          </widget>
@@ -6894,8 +6928,8 @@ Button</string>
        <item>
         <widget class="QPushButton" name="pushButton_19">
          <property name="text">
-          <string>Push
-Button</string>
+          <string>Probe
+Routines</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -7095,6 +7129,11 @@ Rides</string>
    <class>HalButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.hal_widgets.hal_button</header>
+  </customwidget>
+  <customwidget>
+   <class>ProbeSim</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.input_widgets.probesim_widget</header>
   </customwidget>
   <customwidget>
    <class>StatusLabel</class>
@@ -7526,19 +7565,18 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mdiNavBtns"/>
   <buttongroup name="mdiKeypad"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="notifyNavBtns"/>
   <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="g92Btns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="holeOpKeypad"/>
   <buttongroup name="sideNavBtns"/>
   <buttongroup name="droNavBtns"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
  </buttongroups>
 </ui>
