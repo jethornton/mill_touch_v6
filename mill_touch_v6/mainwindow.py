@@ -17,6 +17,7 @@ import mill_touch_v6.mdi_handler as mdiHandler
 import mill_touch_v6.g5x_handler as g5xHandler
 import mill_touch_v6.g92_handler as g92Handler
 import mill_touch_v6.hole_ops as holeOps
+import mill_touch_v6.probe_handler as probeHandler
 import mill_touch_v6.gcode_builder as gcodeBuilder
 import mill_touch_v6.rigid_tap as rigidTap
 import mill_touch_v6.sptm_inside as sptmInside
@@ -38,6 +39,7 @@ class MyMainWindow(VCPMainWindow):
         g5xHandler.setupG5x(self)
         g92Handler.setupG5x(self)
         holeOps.setupHoleOps(self)
+        probeHandler.setupProbe(self)
         gcodeBuilder.setupGcodeBuilder(self)
         rigidTap.rtSetup(self)
         sptmInside.sptmInsideSetup(self)
