@@ -4725,7 +4725,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>7</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -5402,50 +5402,6 @@ Help</string>
               <set>Qt::AlignCenter</set>
              </property>
              <layout class="QGridLayout" name="gridLayout_6">
-              <item row="0" column="1">
-               <widget class="ActionButton" name="actionbutton_20">
-                <property name="text">
-                 <string>Spindle
-CW</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>spindle.forward</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="ActionButton" name="actionbutton_24">
-                <property name="text">
-                 <string>Spindle
-Faster</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>spindle.faster</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="ActionButton" name="actionbutton_23">
-                <property name="text">
-                 <string>Spindle
-Slower</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>spindle.slower</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="ActionButton" name="actionbutton_22">
-                <property name="text">
-                 <string>Spindle
-CCW</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>spindle.reverse</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="0" rowspan="2">
                <widget class="ActionButton" name="actionbutton_21">
                 <property name="sizePolicy">
@@ -5463,7 +5419,18 @@ OFF</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="3">
+              <item row="1" column="2">
+               <widget class="ActionButton" name="actionbutton_23">
+                <property name="text">
+                 <string>Spindle
+Slower</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>spindle.slower</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
                <widget class="StatusLabel" name="statuslabel_3">
                 <property name="frameShape">
                  <enum>QFrame::Box</enum>
@@ -5473,6 +5440,39 @@ OFF</string>
                 </property>
                 <property name="rules" stdset="0">
                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Spindle RPM&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="ActionButton" name="actionbutton_24">
+                <property name="text">
+                 <string>Spindle
+Faster</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>spindle.faster</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="ActionButton" name="actionbutton_20">
+                <property name="text">
+                 <string>Spindle
+CW</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>spindle.forward</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="ActionButton" name="actionbutton_22">
+                <property name="text">
+                 <string>Spindle
+CCW</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>spindle.reverse</string>
                 </property>
                </widget>
               </item>
@@ -6835,55 +6835,269 @@ File</string>
           </layout>
          </widget>
          <widget class="QWidget" name="page_36">
-          <widget class="ProbeSim" name="probesim">
-           <property name="geometry">
-            <rect>
-             <x>85</x>
-             <y>270</y>
-             <width>184</width>
-             <height>71</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="SubCallButton" name="subcallbutton">
-           <property name="geometry">
-            <rect>
-             <x>220</x>
-             <y>85</y>
-             <width>54</width>
-             <height>54</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>test</string>
-           </property>
-           <property name="filename" stdset="0">
-            <string>test.ngc</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="x_location">
-           <property name="geometry">
-            <rect>
-             <x>60</x>
-             <y>40</y>
-             <width>113</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>4</string>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="y_location">
-           <property name="geometry">
-            <rect>
-             <x>85</x>
-             <y>105</y>
-             <width>48</width>
-             <height>24</height>
-            </rect>
-           </property>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_19">
+           <item>
+            <widget class="QWidget" name="gridWidget" native="true">
+             <layout class="QGridLayout" name="gridLayout_10">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <item row="3" column="1">
+               <widget class="QDoubleSpinBox" name="probMaxTravel">
+                <property name="decimals">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <double>0.500000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Probe Diameter</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <spacer name="horizontalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="5" column="1">
+               <widget class="QDoubleSpinBox" name="probeOffset">
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="value">
+                 <double>0.250000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="probeFeedNorm">
+                <property name="maximum">
+                 <number>300</number>
+                </property>
+                <property name="value">
+                 <number>5</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDoubleSpinBox" name="probeDiam">
+                <property name="decimals">
+                 <number>5</number>
+                </property>
+                <property name="value">
+                 <double>0.078740000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>Feed Normal</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_54">
+                <property name="text">
+                 <string>Backup</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_60">
+                <property name="text">
+                 <string>Final Offset</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Max Travel</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QDoubleSpinBox" name="probeBackup">
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="value">
+                 <double>0.125000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QDoubleSpinBox" name="probeFeedSlow">
+                <property name="decimals">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <double>0.200000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Feed Slow</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QDoubleSpinBox" name="probeMaxRadius">
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="value">
+                 <double>0.250000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_61">
+                <property name="text">
+                 <string>Max Hole Radius</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="horizontalWidget" native="true">
+             <layout class="QGridLayout" name="gridLayout_30">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item row="3" column="0">
+               <widget class="SubCallButton" name="subcallbutton">
+                <property name="text">
+                 <string>Probe
+Left</string>
+                </property>
+                <property name="filename" stdset="0">
+                 <string>qtpy-left.ngc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="SubCallButton" name="subcallbutton_4">
+                <property name="text">
+                 <string>Probe
+Front</string>
+                </property>
+                <property name="filename" stdset="0">
+                 <string>qtpy-front.ngc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="SubCallButton" name="subcallbutton_2">
+                <property name="text">
+                 <string>Probe
+Right</string>
+                </property>
+                <property name="filename" stdset="0">
+                 <string>qtpy-right.ngc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="SubCallButton" name="subcallbutton_3">
+                <property name="text">
+                 <string>Probe
+Back</string>
+                </property>
+                <property name="filename" stdset="0">
+                 <string>qtpy-back.ngc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="SubCallButton" name="subcallbutton_6">
+                <property name="text">
+                 <string>Probe
+Hole</string>
+                </property>
+                <property name="filename" stdset="0">
+                 <string>qtpy-hole.ngc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="SubCallButton" name="subcallbutton_5">
+                <property name="text">
+                 <string>Probe
+Top</string>
+                </property>
+                <property name="filename" stdset="0">
+                 <string>qtpy-top.ngc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0" colspan="2">
+               <widget class="ProbeSim" name="probesim"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="page_37">
           <layout class="QVBoxLayout" name="verticalLayout_12"/>
@@ -7592,18 +7806,18 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="g92Btns"/>
   <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="mainNavBtns"/>
   <buttongroup name="sideNavBtns"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="holeNavBtns"/>
   <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="jogIncBtnGroup"/>
  </buttongroups>
 </ui>

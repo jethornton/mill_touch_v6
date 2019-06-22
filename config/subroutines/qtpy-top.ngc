@@ -1,0 +1,22 @@
+o<qtpy-top> sub
+
+#<probeFeedNorm> = #1 (5)
+#<probMaxTravel> = #2 (0.500)
+#<probeFeedSlow> = #3 (0.2)
+#<probeBackup> = #4 (0.125)
+#<probeOffset> = #5 (0.250)
+#<probeDiam> = #6 (0.07874)
+
+
+G20
+G91
+G38.2 F#<probeFeedNorm> Z-#<probMaxTravel>
+G90
+G0 Z[#5063 + #<probeBackup>]
+G4P2
+G91
+G38.2 F#<probeFeedSlow> Z-[#<probeBackup>*2.0]
+G90
+G0 Z[#5063 + #<probeOffset>]
+(debug,Probe tip is #<probeOffset> above)
+o<qtpy-top> endsub

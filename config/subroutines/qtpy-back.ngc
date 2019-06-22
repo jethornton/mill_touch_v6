@@ -1,0 +1,20 @@
+o<qtpy-back> sub
+
+#<probeFeedNorm> = #1 (5)
+#<probMaxTravel> = #2 (0.500)
+#<probeFeedSlow> = #3 (0.2)
+#<probeBackup> = #4 (0.125)
+#<probeOffset> = #5 (0.250)
+#<probeDiam> = #6 (0.07874)
+
+G20
+G91
+G38.2 F#<probeFeedNorm> Y#<probMaxTravel>
+G90
+G0 Y[#5062 - #<probeBackup>]
+G91
+G38.2 F#<probeFeedSlow> Y[#<probeBackup> * 1.5]
+G90
+G0 Y[#5062 - [#<probeOffset> + [#<probeDiam>/2.0]]]
+(debug,Spindle center is -#<probeOffset> from the edge)
+o<qtpy-back> endsub
