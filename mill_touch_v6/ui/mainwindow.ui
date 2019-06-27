@@ -5510,7 +5510,10 @@ CCW</string>
                  <bool>true</bool>
                 </property>
                 <property name="checked">
-                 <bool>true</bool>
+                 <bool>false</bool>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.increment&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;True if ch[0] == 0.1 else False&quot;, &quot;name&quot;: &quot;Increment&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog.set-increment:0.1</string>
@@ -5527,6 +5530,9 @@ CCW</string>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.increment&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;True if ch[0] == 0.01 else False&quot;, &quot;name&quot;: &quot;Increment&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog.set-increment:0.01</string>
@@ -5547,6 +5553,9 @@ CCW</string>
                 <property name="checked">
                  <bool>true</bool>
                 </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.mode-incremental&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;name&quot;: &quot;Jog Mode&quot;}]</string>
+                </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog-mode.incremental</string>
                 </property>
@@ -5565,6 +5574,9 @@ CCW</string>
                 </property>
                 <property name="checked">
                  <bool>false</bool>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.increment&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;True if ch[0] == 0.001 else False&quot;, &quot;name&quot;: &quot;Increment&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog.set-increment:0.001</string>
@@ -5634,6 +5646,9 @@ CCW</string>
                 </property>
                 <property name="checked">
                  <bool>false</bool>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.mode-incremental&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;False if ch[0] else True&quot;, &quot;name&quot;: &quot;Jog Mode&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog-mode.continuous</string>
@@ -8118,20 +8133,20 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="g92Btns"/>
   <buttongroup name="droNavBtns"/>
   <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="probeKeypad"/>
+  <buttongroup name="toolSetKeypad"/>
   <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="jogIncBtnGroup"/>
  </buttongroups>
 </ui>
