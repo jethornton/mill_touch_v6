@@ -8134,19 +8134,19 @@ Rides</string>
  </designerdata>
  <buttongroups>
   <buttongroup name="g92Btns"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="jogBtnGroup"/>
   <buttongroup name="toolSetKeypad"/>
   <buttongroup name="probeBtnGrp"/>
   <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="sideNavBtns"/>
   <buttongroup name="holeNavBtns"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="mdiNavBtns"/>
   <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
  </buttongroups>
 </ui>
