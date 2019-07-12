@@ -2,7 +2,7 @@
 Installing Mill Touch
 =====================
 
-Mill Touch uses `QtPyVCP<https://qtpyvcp.kcjengr.com/>`_ so that must be
+Mill Touch uses `QtPyVCP <https://qtpyvcp.kcjengr.com/>`_ so that must be
 installed first.
 
 To install you may need some dependencies installed.
