@@ -20,12 +20,17 @@ To clone and install Mill Touch
   cd mill_touch_v6
   pip install -e .
 
-To create the directories that LinuxCNC uses run the Axis simulator.
+Copy the .xsessionrc file to your home directory and either log out and back in
+or reboot. (you may need to set show hidden files to see it in the file browser)
 
-to test copy the config to linuxcnc/configs
+To create the directories that LinuxCNC uses run the Axis simulator once.
 
-to use with your config in the ini file set
+To test copy the mill_touch_v6 directory from the config directory to
+linuxcnc/configs
+
+To use with your config in the ini file set
 
     DISPLAY = qtpyvcp
     VCP = mill_touch_v6
 
+`QtPyVCP INI options `<https://qtpyvcp.kcjengr.com/configuration/ini_options.html>_
