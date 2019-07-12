@@ -8,15 +8,17 @@ installed first.
 To install you may need some dependencies installed.
 
 
-Requires python-pyqt5.qtsql
+Requires python-pyqt5.qtsql to be installed for the database to work
+::
 
-    sudo apt install python-pyqt5.qtsql
+  sudo apt install python-pyqt5.qtsql
 
-to clone and install
+To clone and install Mill Touch
+::
 
-    git clone https://github.com/jethornton/mill_touch_v6.git
-    cd mill_touch_v6
-    pip install -e .
+  git clone https://github.com/jethornton/mill_touch_v6.git
+  cd mill_touch_v6
+  pip install -e .
 
 to test copy the config to linuxcnc/configs
 
