@@ -8,7 +8,8 @@ installed first.
 To install you may need some dependencies installed.
 
 
-Requires python-pyqt5.qtsql to be installed for the database to work
+Requires python-pyqt5.qtsql and python-pyqt5.qsci to be installed for the
+database to work
 ::
 
   sudo apt install python-pyqt5.qtsql python-pyqt5.qsci
