@@ -34,4 +34,4 @@ To use with your config in the ini file set
     DISPLAY = qtpyvcp
     VCP = mill_touch_v6
 
-`QtPyVCP INI options `<https://qtpyvcp.kcjengr.com/configuration/ini_options.html>_
+`QtPyVCP INI options <https://qtpyvcp.kcjengr.com/configuration/ini_options.html>`_
