@@ -40,6 +40,11 @@ data_plugins:
   clock:
     provider: qtpyvcp.plugins.clock:Clock
 
+  notifications:
+    provider: qtpyvcp.plugins.notifications:Notifications
+    kwargs:
+      enabled: False
+
 
 windows:
 

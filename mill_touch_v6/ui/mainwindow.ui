@@ -422,6 +422,17 @@ Viewer</string>
                   </spacer>
                  </item>
                  <item>
+                  <widget class="HalButton" name="et_toggle">
+                   <property name="text">
+                    <string>start
+stop</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QPushButton" name="plotClear">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -4725,7 +4736,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -5480,17 +5491,51 @@ CCW</string>
             </widget>
            </item>
            <item>
-            <spacer name="verticalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
+            <widget class="QWidget" name="horizontalWidget" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Elapsed
+Time</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="HalLCDNumber" name="rt_hours">
+                <property name="digitCount">
+                 <number>3</number>
+                </property>
+                <property name="numberFormat" stdset="0">
+                 <string>%0.3f</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="HalLCDNumber" name="rt_minutes">
+                <property name="digitCount">
+                 <number>2</number>
+                </property>
+                <property name="numberFormat" stdset="0">
+                 <string>%0.2f</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="HalLCDNumber" name="rt_seconds">
+                <property name="digitCount">
+                 <number>2</number>
+                </property>
+                <property name="numberFormat" stdset="0">
+                 <string>%0.2f</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </item>
            <item>
             <widget class="QGroupBox" name="jogGroupBox">
@@ -7699,6 +7744,11 @@ Rides</string>
    <header>qtpyvcp.widgets.hal_widgets.hal_button</header>
   </customwidget>
   <customwidget>
+   <class>HalLCDNumber</class>
+   <extends>QLCDNumber</extends>
+   <header>qtpyvcp.widgets.hal_widgets.hal_lcd</header>
+  </customwidget>
+  <customwidget>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
@@ -8133,20 +8183,20 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="sideNavBtns"/>
   <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="probeBtnGrp"/>
  </buttongroups>
 </ui>
