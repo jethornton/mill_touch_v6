@@ -5487,6 +5487,17 @@ CCW</string>
                 </property>
                </widget>
               </item>
+              <item row="1" column="4">
+               <widget class="ActionButton" name="actionbutton_28">
+                <property name="text">
+                 <string>Spindle
+1800</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>spindle.0.forward:1800</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -7718,10 +7729,9 @@ Rides</string>
  <layoutdefault spacing="5" margin="5"/>
  <customwidgets>
   <customwidget>
-   <class>VCPWidget</class>
-   <extends>QWidget</extends>
-   <header>qtpyvcp.widgets.containers.widget</header>
-   <container>1</container>
+   <class>HalButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.hal_widgets.hal_button</header>
   </customwidget>
   <customwidget>
    <class>FileSystemTable</class>
@@ -7739,9 +7749,10 @@ Rides</string>
    <header>qtpyvcp.widgets.input_widgets.action_slider</header>
   </customwidget>
   <customwidget>
-   <class>HalButton</class>
-   <extends>QPushButton</extends>
-   <header>qtpyvcp.widgets.hal_widgets.hal_button</header>
+   <class>VCPWidget</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.containers.widget</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>HalLCDNumber</class>
@@ -8183,20 +8194,20 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="holeNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="droNavBtns"/>
   <buttongroup name="mdiKeypad"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
   <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="probeKeypad"/>
  </buttongroups>
 </ui>
