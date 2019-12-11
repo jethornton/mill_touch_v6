@@ -5502,53 +5502,6 @@ CCW</string>
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="horizontalWidget" native="true">
-             <layout class="QHBoxLayout" name="horizontalLayout_13">
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="text">
-                 <string>Elapsed
-Time</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="HalLCDNumber" name="rt_hours">
-                <property name="digitCount">
-                 <number>3</number>
-                </property>
-                <property name="numberFormat" stdset="0">
-                 <string>%0.3f</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="HalLCDNumber" name="rt_minutes">
-                <property name="digitCount">
-                 <number>2</number>
-                </property>
-                <property name="numberFormat" stdset="0">
-                 <string>%0.2f</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="HalLCDNumber" name="rt_seconds">
-                <property name="digitCount">
-                 <number>2</number>
-                </property>
-                <property name="numberFormat" stdset="0">
-                 <string>%0.2f</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
             <widget class="QGroupBox" name="jogGroupBox">
              <property name="title">
               <string>Jog Controls</string>
@@ -7755,11 +7708,6 @@ Rides</string>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>HalLCDNumber</class>
-   <extends>QLCDNumber</extends>
-   <header>qtpyvcp.widgets.hal_widgets.hal_lcd</header>
-  </customwidget>
-  <customwidget>
    <class>StatusLabel</class>
    <extends>QLabel</extends>
    <header>qtpyvcp.widgets.display_widgets.status_label</header>
@@ -8194,20 +8142,20 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mdiNavBtns"/>
   <buttongroup name="droNavBtns"/>
   <buttongroup name="mdiKeypad"/>
   <buttongroup name="sideNavBtns"/>
-  <buttongroup name="jogBtnGroup"/>
   <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="probeBtnGrp"/>
   <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
   <buttongroup name="probeKeypad"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="toolSetKeypad"/>
  </buttongroups>
 </ui>
