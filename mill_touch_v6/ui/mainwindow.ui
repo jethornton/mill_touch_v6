@@ -4764,7 +4764,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -4800,6 +4800,18 @@ Changed</string>
               </property>
               <item row="2" column="1">
                <widget class="StatusLabel" name="statuslabel_36">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
                   <family>DejaVu Sans</family>
@@ -4841,6 +4853,18 @@ Changed</string>
               </item>
               <item row="1" column="1">
                <widget class="StatusLabel" name="statuslabel_35">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
                   <family>DejaVu Sans</family>
@@ -4863,6 +4887,18 @@ Changed</string>
               </item>
               <item row="0" column="1">
                <widget class="StatusLabel" name="statuslabel_34">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
                   <family>DejaVu Sans</family>
@@ -4955,6 +4991,20 @@ Changed</string>
               <property name="spacing">
                <number>5</number>
               </property>
+              <item row="0" column="1">
+               <widget class="ActionButton" name="actionbutton_27">
+                <property name="text">
+                 <string>Mode
+MDI</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 3 else ''&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.mode.mdi</string>
+                </property>
+               </widget>
+              </item>
               <item row="0" column="0">
                <widget class="ActionButton" name="actionbutton_26">
                 <property name="text">
@@ -4983,17 +5033,13 @@ Manual</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="ActionButton" name="actionbutton_27">
+              <item row="0" column="3">
+               <widget class="QPushButton" name="droToggleBtn">
                 <property name="text">
-                 <string>Mode
-MDI</string>
+                 <string/>
                 </property>
-                <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 3 else ''&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.mode.mdi</string>
+                <property name="checkable">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -6929,15 +6975,27 @@ Material</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="toolRadiusLbl">
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="1" column="2" colspan="2">
                   <widget class="QLineEdit" name="toolSetLbl"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLineEdit" name="toolRadiusLbl">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
