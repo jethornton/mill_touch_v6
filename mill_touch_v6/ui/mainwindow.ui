@@ -4239,16 +4239,60 @@ Prog</string>
          </property>
          <widget class="QWidget" name="page_5">
           <layout class="QGridLayout" name="gridLayout">
-           <item row="1" column="0">
-            <widget class="QLabel" name="label">
+           <item row="2" column="3">
+            <widget class="StatusLabel" name="statuslabel_7">
+             <property name="font">
+              <font>
+               <family>DejaVu Sans</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="frameShape">
               <enum>QFrame::Box</enum>
              </property>
-             <property name="text">
-              <string>Reletive</string>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="rules" stdset="0">
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="StatusLabel" name="statuslabel_4">
+             <property name="font">
+              <font>
+               <family>DejaVu Sans</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+             <property name="rules" stdset="0">
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="StatusLabel" name="statuslabel">
+             <property name="font">
+              <font>
+               <family>DejaVu Sans</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="rules" stdset="0">
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
              </property>
             </widget>
            </item>
@@ -4285,60 +4329,35 @@ Absolute</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
-            <widget class="StatusLabel" name="statuslabel">
-             <property name="font">
-              <font>
-               <family>DejaVu Sans</family>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
+           <item row="1" column="3">
+            <widget class="StatusLabel" name="statuslabel_26">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
+             </property>
+             <property name="text">
+              <string>Z</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
              <property name="rules" stdset="0">
-              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Z Axis Homed&quot;}]</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="2">
-            <widget class="StatusLabel" name="statuslabel_4">
-             <property name="font">
-              <font>
-               <family>DejaVu Sans</family>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
+           <item row="1" column="2">
+            <widget class="StatusLabel" name="statuslabel_25">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
+             </property>
+             <property name="text">
+              <string>Y</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
              <property name="rules" stdset="0">
-              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="StatusLabel" name="statuslabel_7">
-             <property name="font">
-              <font>
-               <family>DejaVu Sans</family>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="rules" stdset="0">
-              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Y Axis Homed&quot;}]</string>
              </property>
             </widget>
            </item>
@@ -4364,35 +4383,16 @@ Absolute</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="2">
-            <widget class="StatusLabel" name="statuslabel_25">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
              </property>
              <property name="text">
-              <string>Y</string>
+              <string>Reletive</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
-             </property>
-             <property name="rules" stdset="0">
-              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Y Axis Homed&quot;}]</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="StatusLabel" name="statuslabel_26">
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="text">
-              <string>Z</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="rules" stdset="0">
-              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Z Axis Homed&quot;}]</string>
              </property>
             </widget>
            </item>
@@ -4769,17 +4769,179 @@ Changed</string>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
            <item>
-            <spacer name="verticalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
-             <property name="sizeHint" stdset="0">
+             <property name="minimumSize">
               <size>
-               <width>20</width>
-               <height>40</height>
+               <width>0</width>
+               <height>150</height>
               </size>
              </property>
-            </spacer>
+             <property name="title">
+              <string>Reletive Position</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_26">
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>8</number>
+              </property>
+              <item row="2" column="1">
+               <widget class="StatusLabel" name="statuslabel_36">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="text">
+                 <string>Z</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Z Axis Homed&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="StatusLabel" name="statuslabel_31">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="StatusLabel" name="statuslabel_35">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="text">
+                 <string>Y</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Y Axis Homed&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="StatusLabel" name="statuslabel_34">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>1</number>
+                </property>
+                <property name="text">
+                 <string>X</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 1 else ''&quot;, &quot;name&quot;: &quot;X Axis Homed&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="StatusLabel" name="statuslabel_32">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="StatusLabel" name="statuslabel_33">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
            </item>
            <item>
             <widget class="QGroupBox" name="gridGroupBox">
@@ -8142,20 +8304,20 @@ Rides</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="g92Btns"/>
+  <buttongroup name="mainNavBtns"/>
   <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="droNavBtns"/>
   <buttongroup name="mdiKeypad"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeNavBtns"/>
   <buttongroup name="probeKeypad"/>
+  <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
   <buttongroup name="jogBtnGroup"/>
   <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="holeOpKeypad"/>
  </buttongroups>
 </ui>
