@@ -46,12 +46,20 @@ class MyMainWindow(VCPMainWindow):
         toolTable.toolTableSetup(self)
         toolSet.toolSetSetup(self)
 
+        self.droToggleBtn.clicked.connect(self.toggleDRO)
+
     def get_signals(self, source):
         cls = source if isinstance(source, type) else type(source)
         signal = type(QtCore.pyqtSignal())
         for name in dir(source):
             if isinstance(getattr(cls, name), signal):
                 print(name)
+
+    def toggleDRO(self):
+        if self.droToggleBtn.isChecked():
+          self.droToggleBtn.setText("Absolute")
+        else:
+          self.droToggleBtn.setText("Relative")
 
     @Slot(QAbstractButton)
     def on_mainNavBtns_buttonClicked(self, button):
@@ -60,6 +68,10 @@ class MyMainWindow(VCPMainWindow):
     @Slot(QAbstractButton)
     def on_sideNavBtns_buttonClicked(self, button):
         self.sideStkWiget.setCurrentIndex(button.property('page'))
+
+    @Slot(QAbstractButton)
+    def on_droSmallNavBtns_buttonClicked(self, button):
+        self.droSmallStkWidget.setCurrentIndex(button.property('page'))
 
     @Slot(QAbstractButton)
     def on_droNavBtns_buttonClicked(self, button):
