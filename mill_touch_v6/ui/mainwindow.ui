@@ -116,6 +116,22 @@
               </spacer>
              </item>
              <item>
+              <widget class="QPushButton" name="pushButton_166">
+               <property name="text">
+                <string>Help</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="page" stdset="0">
+                <number>8</number>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">mainNavBtns</string>
+               </attribute>
+              </widget>
+             </item>
+             <item>
               <widget class="QPushButton" name="pushButton_119">
                <property name="text">
                 <string>Error
@@ -3989,7 +4005,40 @@ Table</string>
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_39"/>
+            <widget class="QWidget" name="page_39">
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QStackedWidget" name="stackedWidget">
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <widget class="QWidget" name="page_40"/>
+                <widget class="QWidget" name="page_41"/>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_2" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_167">
+                   <property name="text">
+                    <string>MDI</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_171">
+                   <property name="text">
+                    <string>Over
+Rides</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -4767,7 +4816,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -7921,7 +7970,120 @@ Top</string>
           </layout>
          </widget>
          <widget class="QWidget" name="page_37">
-          <layout class="QVBoxLayout" name="verticalLayout_12"/>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>Homing Options</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_35">
+              <item row="2" column="0">
+               <widget class="ActionButton" name="actionbutton_32">
+                <property name="text">
+                 <string>Home
+Z</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z\\nHomed' if ch[0] else 'Home\\nZ'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00FF00' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.home.axis.2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="ActionButton" name="actionbutton_33">
+                <property name="text">
+                 <string>Y
+Not
+Homed</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nY' if ch[0] else 'Y\\nNot\\nHomed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.unhome.axis:1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="ActionButton" name="actionbutton_31">
+                <property name="text">
+                 <string>Home
+Y</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y\\nHomed' if ch[0] else 'Home\\nY'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00FF00' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.home.axis.1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="ActionButton" name="actionbutton_29">
+                <property name="text">
+                 <string>Home
+X</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X\\nHomed' if ch[0] else 'Home\\nX'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00FF00' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.home.axis.0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="ActionButton" name="actionbutton_30">
+                <property name="text">
+                 <string>X
+Not
+Homed</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nX' if ch[0] else 'X\\nNot\\nHomed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.unhome.axis:0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="ActionButton" name="actionbutton_34">
+                <property name="text">
+                 <string>Z
+Not
+Homed</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nZ' if ch[0] else 'Z\\nNot\\nHomed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.unhome.axis:2</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>
@@ -7968,8 +8130,7 @@ Top</string>
        <item>
         <widget class="QPushButton" name="pushButton_20">
          <property name="text">
-          <string>Push
-Button</string>
+          <string>Homing</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
