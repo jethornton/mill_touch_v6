@@ -4767,7 +4767,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -6946,7 +6946,7 @@ Tool
               <item row="1" column="0" colspan="4">
                <widget class="QLabel" name="label_46">
                 <property name="text">
-                 <string>Set Loaded Tool</string>
+                 <string>Set Tool Table for Loaded Tool</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -6990,6 +6990,25 @@ Tool
                  <property name="horizontalSpacing">
                   <number>5</number>
                  </property>
+                 <item row="1" column="0">
+                  <widget class="QLineEdit" name="toolRadiusLbl">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
                  <item row="5" column="3">
                   <widget class="QPushButton" name="pushButton_152">
                    <property name="text">
@@ -7163,19 +7182,6 @@ X</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="3">
-                  <widget class="QLabel" name="label_4">
-                   <property name="frameShape">
-                    <enum>QFrame::Box</enum>
-                   </property>
-                   <property name="text">
-                    <string>Setting</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="7" column="0">
                   <widget class="MDIButton" name="mdibutton_14">
                    <property name="text">
@@ -7184,17 +7190,6 @@ Radius</string>
                    </property>
                    <property name="MDICommand" stdset="0">
                     <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolSetLbl&gt;</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="6" column="0">
-                  <widget class="MDIButton" name="mdibutton_26">
-                   <property name="text">
-                    <string>Set
-Dia</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolRadiusLbl&gt;</string>
                    </property>
                   </widget>
                  </item>
@@ -7210,6 +7205,9 @@ Fixture</string>
                    </property>
                   </widget>
                  </item>
+                 <item row="1" column="2" colspan="2">
+                  <widget class="QLineEdit" name="toolSetLbl"/>
+                 </item>
                  <item row="4" column="0">
                   <widget class="MDIButton" name="mdibutton_27">
                    <property name="text">
@@ -7222,25 +7220,40 @@ Material</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="2" colspan="2">
-                  <widget class="QLineEdit" name="toolSetLbl"/>
+                 <item row="6" column="0">
+                  <widget class="MDIButton" name="mdibutton_26">
+                   <property name="text">
+                    <string>Set
+Dia</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L1P#&lt;currentToolLbl&gt;R#&lt;toolRadiusLbl&gt;</string>
+                   </property>
+                  </widget>
                  </item>
-                 <item row="1" column="0">
-                  <widget class="QLineEdit" name="toolRadiusLbl">
-                   <property name="enabled">
-                    <bool>false</bool>
+                 <item row="0" column="2" colspan="2">
+                  <widget class="QLabel" name="label_4">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
                    </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
+                   <property name="text">
+                    <string>Setting</string>
                    </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>60</width>
-                     <height>16777215</height>
-                    </size>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_10">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
+                   <property name="text">
+                    <string>Radius</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
                  </item>
