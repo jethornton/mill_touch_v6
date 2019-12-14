@@ -5289,6 +5289,14 @@ Coordinates</string>
               </property>
               <item row="0" column="1">
                <widget class="ActionButton" name="actionbutton_27">
+                <property name="font">
+                 <font>
+                  <family>Bebas Kai</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Mode
 MDI</string>
@@ -5303,6 +5311,14 @@ MDI</string>
               </item>
               <item row="0" column="0">
                <widget class="ActionButton" name="actionbutton_26">
+                <property name="font">
+                 <font>
+                  <family>Bebas Kai</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Mode
 Auto</string>
@@ -5317,6 +5333,14 @@ Auto</string>
               </item>
               <item row="0" column="2">
                <widget class="ActionButton" name="actionbutton_25">
+                <property name="font">
+                 <font>
+                  <family>Bebas Kai</family>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Mode
 Manual</string>
@@ -5326,16 +5350,6 @@ Manual</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.mode.manual</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QPushButton" name="droToggleBtn">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -8264,8 +8278,8 @@ Control</string>
        <item>
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
-          <string>Over
-Rides</string>
+          <string>DRO
+Modes</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
