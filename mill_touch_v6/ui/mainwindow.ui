@@ -506,6 +506,18 @@ stop</string>
                   </spacer>
                  </item>
                  <item>
+                  <widget class="ActionButton" name="runFromLine">
+                   <property name="text">
+                    <string>Run
+From
+Line</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>program.run:#&lt;currrentLineLbl&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QPushButton" name="pushButton_17">
                    <property name="text">
                     <string>Push
@@ -3646,6 +3658,19 @@ Drill</string>
                <string>Machine Status</string>
               </property>
              </widget>
+             <widget class="StatusLabel" name="statuslabel_43">
+              <property name="geometry">
+               <rect>
+                <x>95</x>
+                <y>310</y>
+                <width>141</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:active_queue?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
             </widget>
             <widget class="QWidget" name="page_10">
              <widget class="QLabel" name="label_18">
@@ -4843,41 +4868,10 @@ Changed</string>
              <property name="currentIndex">
               <number>0</number>
              </property>
-             <widget class="QWidget" name="stackedWidgetPage1" native="true">
+             <widget class="QWidget" name="stackedWidgetPage1">
               <layout class="QGridLayout" name="gridLayout_26">
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_3">
-                 <property name="font">
-                  <font>
-                   <family>Bebas Kai</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Relative
-Coordinates</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="StatusLabel" name="statuslabel_34">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>40</width>
-                   <height>0</height>
-                  </size>
-                 </property>
+               <item row="1" column="2">
+                <widget class="StatusLabel" name="statuslabel_32">
                  <property name="font">
                   <font>
                    <family>Bebas Kai</family>
@@ -4886,23 +4880,14 @@ Coordinates</string>
                    <bold>true</bold>
                   </font>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true"/>
-                 </property>
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
-                 </property>
-                 <property name="lineWidth">
-                  <number>1</number>
-                 </property>
-                 <property name="text">
-                  <string>X</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 1 else ''&quot;, &quot;name&quot;: &quot;X Axis Homed&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
                  </property>
                 </widget>
                </item>
@@ -4925,78 +4910,6 @@ Coordinates</string>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
                  </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="StatusLabel" name="statuslabel_35">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>40</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Bebas Kai</family>
-                   <pointsize>28</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::Box</enum>
-                 </property>
-                 <property name="text">
-                  <string>Y</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Y Axis Homed&quot;}]</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="2">
-                <widget class="StatusLabel" name="statuslabel_32">
-                 <property name="font">
-                  <font>
-                   <family>Bebas Kai</family>
-                   <pointsize>28</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::Box</enum>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QPushButton" name="pushButton_164">
-                 <property name="text">
-                  <string>Change
-to
-Absolute</string>
-                 </property>
-                 <property name="page" stdset="0">
-                  <number>1</number>
-                 </property>
-                 <attribute name="buttonGroup">
-                  <string notr="true">droNavBtns</string>
-                 </attribute>
                 </widget>
                </item>
                <item row="2" column="1">
@@ -5053,6 +4966,125 @@ Absolute</string>
                  </property>
                  <property name="rules" stdset="0">
                   <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="StatusLabel" name="statuslabel_34">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>40</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bebas Kai</family>
+                   <pointsize>28</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>1</number>
+                 </property>
+                 <property name="text">
+                  <string>X</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00' if ch[0] == 1 else ''&quot;, &quot;name&quot;: &quot;X Axis Homed&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="pushButton_164">
+                 <property name="text">
+                  <string>Change
+to
+Absolute</string>
+                 </property>
+                 <property name="page" stdset="0">
+                  <number>1</number>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">droNavBtns</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="font">
+                  <font>
+                   <family>Bebas Kai</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Relative
+Coordinates</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="StatusLabel" name="statuslabel_35">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>40</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bebas Kai</family>
+                   <pointsize>28</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="text">
+                  <string>Y</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #00EE00;' if ch[0] else ''&quot;, &quot;name&quot;: &quot;Y Axis Homed&quot;}]</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="currrentLineLbl">
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -8797,21 +8829,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="jogBtnGroup"/>
   <buttongroup name="toolSetKeypad"/>
   <buttongroup name="holeNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="probeKeypad"/>
   <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="droNavBtns"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
  </buttongroups>
 </ui>
