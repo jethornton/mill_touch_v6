@@ -3671,6 +3671,19 @@ Drill</string>
                <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:active_queue?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
               </property>
              </widget>
+             <widget class="StatusLabel" name="statuslabel_44">
+              <property name="geometry">
+               <rect>
+                <x>95</x>
+                <y>340</y>
+                <width>141</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:active_queue?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+              </property>
+             </widget>
             </widget>
             <widget class="QWidget" name="page_10">
              <widget class="QLabel" name="label_18">
@@ -6132,7 +6145,7 @@ CCW</string>
                  <bool>true</bool>
                 </property>
                 <property name="checked">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                 <property name="rules" stdset="0">
                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.increment&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Checked&quot;, &quot;expression&quot;: &quot;True if ch[0] == 0.001 else False&quot;, &quot;name&quot;: &quot;Increment&quot;}]</string>
@@ -8829,21 +8842,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="droSmallNavBtns"/>
   <buttongroup name="sideNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
  </buttongroups>
 </ui>
