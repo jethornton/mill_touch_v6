@@ -13,6 +13,7 @@ import os
 current_path = os.path.dirname(os.path.realpath(__file__)) + '/'
 
 # Setup Handlers
+import mill_touch_v6.plot_handler as plotHandler
 import mill_touch_v6.mdi_handler as mdiHandler
 import mill_touch_v6.g5x_handler as g5xHandler
 import mill_touch_v6.g92_handler as g92Handler
@@ -35,6 +36,7 @@ class MyMainWindow(VCPMainWindow):
         else:
             print("Connection failed !\n{}".format(db.lastError().text()))
 
+        plotHandler.setupBtns(self)
         mdiHandler.setupMDI(self)
         g5xHandler.setupG5x(self)
         g92Handler.setupG5x(self)

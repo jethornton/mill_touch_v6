@@ -425,6 +425,30 @@ Viewer</string>
                   </widget>
                  </item>
                  <item>
+                  <widget class="QPushButton" name="plotCenter">
+                   <property name="text">
+                    <string>Center
+Plot</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="plotRollPanBtn">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>Roll</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <spacer name="horizontalSpacer_3">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
@@ -4854,7 +4878,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -8462,8 +8486,8 @@ Modes</string>
    <slot>setViewP()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>70</y>
+     <x>167</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8478,8 +8502,8 @@ Modes</string>
    <slot>setViewX()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>144</y>
+     <x>226</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8494,8 +8518,8 @@ Modes</string>
    <slot>setViewY()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>218</y>
+     <x>285</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8510,8 +8534,8 @@ Modes</string>
    <slot>setViewZ()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>292</y>
+     <x>344</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8526,8 +8550,8 @@ Modes</string>
    <slot>setViewZ2()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>366</y>
+     <x>403</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8542,8 +8566,8 @@ Modes</string>
    <slot>zoomIn()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>440</y>
+     <x>462</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8558,8 +8582,8 @@ Modes</string>
    <slot>zoomOut()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>514</y>
+     <x>521</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8574,8 +8598,8 @@ Modes</string>
    <slot>clearLivePlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>588</y>
+     <x>785</x>
+     <y>87</y>
     </hint>
     <hint type="destinationlabel">
      <x>408</x>
@@ -8594,8 +8618,8 @@ Modes</string>
      <y>677</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1007</x>
-     <y>273</y>
+     <x>1164</x>
+     <y>304</y>
     </hint>
    </hints>
   </connection>
@@ -8606,12 +8630,12 @@ Modes</string>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1135</x>
-     <y>625</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1007</x>
-     <y>341</y>
+     <x>921</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>
@@ -8622,12 +8646,12 @@ Modes</string>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1136</x>
-     <y>625</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1007</x>
-     <y>341</y>
+     <x>921</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>
@@ -8638,12 +8662,12 @@ Modes</string>
    <slot>addTool()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>515</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8654,12 +8678,12 @@ Modes</string>
    <slot>clearToolTable()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>391</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8670,12 +8694,12 @@ Modes</string>
    <slot>deleteSelectedTool()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>453</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8686,12 +8710,12 @@ Modes</string>
    <slot>selectNext()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>633</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8702,12 +8726,12 @@ Modes</string>
    <slot>loadToolTable()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>692</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8718,12 +8742,12 @@ Modes</string>
    <slot>saveToolTable()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>751</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8734,12 +8758,12 @@ Modes</string>
    <slot>selectPrevious()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>574</x>
-     <y>610</y>
+     <x>198</x>
+     <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>303</y>
+     <x>198</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -8750,12 +8774,12 @@ Modes</string>
    <slot>loadSelectedFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1138</x>
-     <y>689</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1002</x>
-     <y>447</y>
+     <x>921</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>
@@ -8766,12 +8790,12 @@ Modes</string>
    <slot>selectNext()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1070</x>
-     <y>689</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1002</x>
-     <y>447</y>
+     <x>921</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>
@@ -8782,12 +8806,12 @@ Modes</string>
    <slot>openSelectedItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>934</x>
-     <y>689</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1002</x>
-     <y>447</y>
+     <x>921</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>
@@ -8798,12 +8822,12 @@ Modes</string>
    <slot>viewParentDirectory()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>866</x>
-     <y>689</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1002</x>
-     <y>447</y>
+     <x>921</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>
@@ -8814,12 +8838,44 @@ Modes</string>
    <slot>selectPrevious()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1002</x>
-     <y>689</y>
+     <x>921</x>
+     <y>287</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1002</x>
-     <y>447</y>
+     <x>921</x>
+     <y>263</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plotRollPanBtn</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>enable_panning(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>553</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plotCenter</sender>
+   <signal>clicked()</signal>
+   <receiver>vtkbackplot</receiver>
+   <slot>setViewPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>553</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>373</y>
     </hint>
    </hints>
   </connection>
@@ -8842,21 +8898,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="holeNavBtns"/>
   <buttongroup name="holeOpKeypad"/>
   <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mainNavBtns"/>
   <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="probeKeypad"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
  </buttongroups>
 </ui>
