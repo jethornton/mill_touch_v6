@@ -4878,7 +4878,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -6899,7 +6899,7 @@ Z</string>
          <widget class="QWidget" name="page_15">
           <layout class="QHBoxLayout" name="horizontalLayout_11">
            <item>
-            <widget class="VCPWidget" name="widget">
+            <widget class="VCPWidget" name="toolLoad">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -7099,7 +7099,7 @@ Tool
                </spacer>
               </item>
               <item row="3" column="0" colspan="4">
-               <widget class="QWidget" name="toolSetKeypad_2" native="true">
+               <widget class="QWidget" name="toolKeypad" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>260</width>
@@ -8898,21 +8898,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="mainNavBtns"/>
   <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="droNavBtns"/>
   <buttongroup name="probeKeypad"/>
+  <buttongroup name="g5xBtnGrp"/>
  </buttongroups>
 </ui>
