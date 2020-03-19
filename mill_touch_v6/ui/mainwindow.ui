@@ -7146,6 +7146,9 @@ Tool
                    <property name="text">
                     <string>-</string>
                    </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
+                   </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
                    </attribute>
@@ -7155,6 +7158,9 @@ Tool
                   <widget class="QPushButton" name="pushButton_149">
                    <property name="text">
                     <string>.</string>
+                   </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
@@ -7166,6 +7172,9 @@ Tool
                    <property name="text">
                     <string>8</string>
                    </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
+                   </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
                    </attribute>
@@ -7175,6 +7184,9 @@ Tool
                   <widget class="QPushButton" name="pushButton_143">
                    <property name="text">
                     <string>7</string>
+                   </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
@@ -7186,6 +7198,9 @@ Tool
                    <property name="text">
                     <string>6</string>
                    </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
+                   </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
                    </attribute>
@@ -7195,6 +7210,9 @@ Tool
                   <widget class="QPushButton" name="pushButton_141">
                    <property name="text">
                     <string>9</string>
+                   </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
@@ -7206,6 +7224,9 @@ Tool
                    <property name="text">
                     <string>5</string>
                    </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
+                   </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
                    </attribute>
@@ -7215,6 +7236,9 @@ Tool
                   <widget class="QPushButton" name="pushButton_151">
                    <property name="text">
                     <string>2</string>
+                   </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
@@ -7226,6 +7250,9 @@ Tool
                    <property name="text">
                     <string>1</string>
                    </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
+                   </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
                    </attribute>
@@ -7236,6 +7263,9 @@ Tool
                    <property name="text">
                     <string>4</string>
                    </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
+                   </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
                    </attribute>
@@ -7245,6 +7275,9 @@ Tool
                   <widget class="QPushButton" name="pushButton_139">
                    <property name="text">
                     <string>0</string>
+                   </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
@@ -7270,6 +7303,9 @@ Y</string>
                   <widget class="QPushButton" name="pushButton_148">
                    <property name="text">
                     <string>3</string>
+                   </property>
+                   <property name="buttonFont" stdset="0">
+                    <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
                     <string notr="true">toolSetKeypad</string>
@@ -8898,21 +8934,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="mdiKeypad"/>
   <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="probeKeypad"/>
   <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="sideNavBtns"/>
   <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="droSmallNavBtns"/>
   <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
  </buttongroups>
 </ui>

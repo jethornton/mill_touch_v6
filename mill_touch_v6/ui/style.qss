@@ -114,6 +114,11 @@ QWidget[objectName="toolSetKeypad"] > QPushButton {
 }
 
 
+/* if a QPushButton has a dynamic property buttonFont
+and it's set to 20 set the font*/
+QPushButton[buttonFont="20"] {
+    font: 20pt "Bebas Kai";
+}
 
 .QWidget {
     border-style: solid;
