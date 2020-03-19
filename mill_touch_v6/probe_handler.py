@@ -21,7 +21,7 @@ def handleKeys(parent, button):
 def backSpace(parent):
     entryPoint = parent.probeBtnGrp.checkedButton().property('labelName')
     probeLabel = getattr(parent, entryPoint)
-    if len(drillLabel.text()) > 0:
+    if len(probeLabel.text()) > 0:
         text = probeLabel.text()[:-1]
         probeLabel.setText(text)
 
