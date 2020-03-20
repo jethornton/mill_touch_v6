@@ -84,11 +84,7 @@ VCPSettingsSlider::handle:vertical, ActionSlider::handle:vertical {
     border-radius: 3px;
 }
 
-/* Set style for all the QPushButtons inside of the mdiWidget*/
-QWidget[objectName="mdiWidget"] > QPushButton {
-    font: 20pt "Bebas Kai";
-}
-
+/*
 QWidget[objectName="g5xKeypad"] > QPushButton {
     font: 20pt "Bebas Kai";
 }
@@ -112,12 +108,37 @@ QWidget[objectName="holeOpKeypadCont"] > QPushButton {
 QWidget[objectName="toolSetKeypad"] > QPushButton {
     font: 20pt "Bebas Kai";
 }
-
+*/
 
 /* if a QPushButton has a dynamic property buttonFont
-and it's set to 20 set the font*/
+set the font*/
+
+QPushButton[buttonFont="10"] {
+    font: 10pt "Bebas Kai";
+}
+
+QPushButton[buttonFont="12"] {
+    font: 12pt "Bebas Kai";
+}
+
+QPushButton[buttonFont="14"] {
+    font: 14pt "Bebas Kai";
+}
+
+QPushButton[buttonFont="16"] {
+    font: 16pt "Bebas Kai";
+}
+
+QPushButton[buttonFont="18"] {
+    font: 18pt "Bebas Kai";
+}
+
 QPushButton[buttonFont="20"] {
     font: 20pt "Bebas Kai";
+}
+
+QPushButton[buttonFont="30"] {
+    font: 30pt "Bebas Kai";
 }
 
 .QWidget {
