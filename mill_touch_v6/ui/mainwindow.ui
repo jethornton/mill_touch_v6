@@ -6466,16 +6466,6 @@ CCW</string>
               <property name="spacing">
                <number>5</number>
               </property>
-              <item row="0" column="0">
-               <widget class="StatusLabel" name="statuslabel_27">
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Set {} Coordinate System Offsets'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
-                </property>
-               </widget>
-              </item>
               <item row="1" column="0">
                <widget class="QLineEdit" name="g5xOffsetLbl">
                 <property name="readOnly">
@@ -6800,6 +6790,16 @@ G5x</string>
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="StatusLabel" name="statuslabel_27">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Set {} Coordinate System Offsets'.format(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                </property>
                </widget>
               </item>
              </layout>
@@ -8589,6 +8589,105 @@ Homed</string>
             </widget>
            </item>
            <item>
+            <widget class="QGroupBox" name="coordSystemGb">
+             <property name="title">
+              <string>Coordinate Systems</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_36">
+              <item row="2" column="0">
+               <widget class="MDIButton" name="mdibutton_29">
+                <property name="text">
+                 <string>G54</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G54</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="MDIButton" name="mdibutton_13">
+                <property name="text">
+                 <string>G55</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G55</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="MDIButton" name="mdibutton_30">
+                <property name="text">
+                 <string>G56</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G56</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="MDIButton" name="mdibutton_32">
+                <property name="text">
+                 <string>G57</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G57</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="MDIButton" name="mdibutton_34">
+                <property name="text">
+                 <string>G58</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G58</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="MDIButton" name="mdibutton_31">
+                <property name="text">
+                 <string>G59</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G59</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="MDIButton" name="mdibutton_33">
+                <property name="text">
+                 <string>G59.1</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G59.1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="MDIButton" name="mdibutton_35">
+                <property name="text">
+                 <string>G59.2</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G59.2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="MDIButton" name="mdibutton_28">
+                <property name="text">
+                 <string>G59.3</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G59.3</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <spacer name="verticalSpacer_4">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -8648,7 +8747,8 @@ Homed</string>
        <item>
         <widget class="QPushButton" name="pushButton_20">
          <property name="text">
-          <string>Homing</string>
+          <string>Homing
+Coord</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -9333,21 +9433,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="droNavBtns"/>
-  <buttongroup name="probeBtnGrp"/>
   <buttongroup name="probeKeypad"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="g92Btns"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="probeBtnGrp"/>
  </buttongroups>
 </ui>
