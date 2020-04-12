@@ -8510,20 +8510,25 @@ Z</string>
                 <property name="actionName" stdset="0">
                  <string>machine.home.axis.2</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>12</string>
+                </property>
                </widget>
               </item>
               <item row="1" column="1">
                <widget class="ActionButton" name="actionbutton_33">
                 <property name="text">
                  <string>Y
-Not
-Homed</string>
+Not Homed</string>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nY' if ch[0] else 'Y\\nNot\\nHomed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nY' if ch[0] else 'Y\\nNot Homed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?1&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.unhome.axis:1</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>12</string>
                 </property>
                </widget>
               </item>
@@ -8539,6 +8544,9 @@ Y</string>
                 <property name="actionName" stdset="0">
                  <string>machine.home.axis.1</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>12</string>
+                </property>
                </widget>
               </item>
               <item row="0" column="0">
@@ -8553,20 +8561,25 @@ X</string>
                 <property name="actionName" stdset="0">
                  <string>machine.home.axis.0</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>12</string>
+                </property>
                </widget>
               </item>
               <item row="0" column="1">
                <widget class="ActionButton" name="actionbutton_30">
                 <property name="text">
                  <string>X
-Not
-Homed</string>
+Not Homed</string>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nX' if ch[0] else 'X\\nNot\\nHomed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nX' if ch[0] else 'X\\nNot Homed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?0&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.unhome.axis:0</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>12</string>
                 </property>
                </widget>
               </item>
@@ -8574,14 +8587,16 @@ Homed</string>
                <widget class="ActionButton" name="actionbutton_34">
                 <property name="text">
                  <string>Z
-Not
-Homed</string>
+Not Homed</string>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nZ' if ch[0] else 'Z\\nNot\\nHomed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Unhome\\nZ' if ch[0] else 'Z\\nNot Homed'&quot;, &quot;name&quot;: &quot;New Rule&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:homed?2&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'border-color: #FF0000' if ch[0] else ''&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.unhome.axis:2</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>12</string>
                 </property>
                </widget>
               </item>
@@ -8605,6 +8620,9 @@ Homed</string>
                 <property name="MDICommand" stdset="0">
                  <string>G54</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
+                </property>
                </widget>
               </item>
               <item row="2" column="1">
@@ -8614,6 +8632,9 @@ Homed</string>
                 </property>
                 <property name="MDICommand" stdset="0">
                  <string>G55</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
                 </property>
                </widget>
               </item>
@@ -8625,6 +8646,9 @@ Homed</string>
                 <property name="MDICommand" stdset="0">
                  <string>G56</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
+                </property>
                </widget>
               </item>
               <item row="1" column="0">
@@ -8634,6 +8658,9 @@ Homed</string>
                 </property>
                 <property name="MDICommand" stdset="0">
                  <string>G57</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
                 </property>
                </widget>
               </item>
@@ -8645,6 +8672,9 @@ Homed</string>
                 <property name="MDICommand" stdset="0">
                  <string>G58</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
+                </property>
                </widget>
               </item>
               <item row="1" column="2">
@@ -8654,6 +8684,9 @@ Homed</string>
                 </property>
                 <property name="MDICommand" stdset="0">
                  <string>G59</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
                 </property>
                </widget>
               </item>
@@ -8665,6 +8698,9 @@ Homed</string>
                 <property name="MDICommand" stdset="0">
                  <string>G59.1</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
+                </property>
                </widget>
               </item>
               <item row="0" column="1">
@@ -8675,6 +8711,9 @@ Homed</string>
                 <property name="MDICommand" stdset="0">
                  <string>G59.2</string>
                 </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
+                </property>
                </widget>
               </item>
               <item row="0" column="2">
@@ -8684,6 +8723,9 @@ Homed</string>
                 </property>
                 <property name="MDICommand" stdset="0">
                  <string>G59.3</string>
+                </property>
+                <property name="buttonFont" stdset="0">
+                 <string>16</string>
                 </property>
                </widget>
               </item>
