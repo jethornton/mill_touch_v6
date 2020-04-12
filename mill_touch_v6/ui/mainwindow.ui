@@ -8593,6 +8593,9 @@ Homed</string>
              <property name="title">
               <string>Coordinate Systems</string>
              </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
              <layout class="QGridLayout" name="gridLayout_36">
               <item row="2" column="0">
                <widget class="MDIButton" name="mdibutton_29">
