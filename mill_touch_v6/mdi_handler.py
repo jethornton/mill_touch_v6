@@ -52,8 +52,8 @@ def mdiSetLabels(parent):
         print('No Match')
 
 def mdiClear(parent):
-    for index in range(1,8):
-        getattr(parent, 'gcodeParameter_' + str(index)).setText('')
+    #for index in range(1,8):
+    #    getattr(parent, 'gcodeParameter_' + str(index)).setText('')
     parent.gcodeDescription.setText('')
     parent.gcodeHelpLabel.setText('')
 
