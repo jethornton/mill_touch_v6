@@ -3109,22 +3109,34 @@ Start</string>
                          </item>
                          <item row="0" column="2">
                           <widget class="QCheckBox" name="xCoordRetain">
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox::indicator { width: 30px; height: 30px;}</string>
+                           </property>
                            <property name="text">
-                            <string>Retain</string>
+                            <string>Retain
+X Value</string>
                            </property>
                           </widget>
                          </item>
                          <item row="2" column="2">
                           <widget class="QCheckBox" name="yCoordRetain">
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox::indicator { width: 30px; height: 30px;}</string>
+                           </property>
                            <property name="text">
-                            <string>Retain</string>
+                            <string>Retain
+Y Value</string>
                            </property>
                           </widget>
                          </item>
                          <item row="3" column="2">
                           <widget class="QCheckBox" name="zCoordRetain">
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox::indicator { width: 30px; height: 30px;}</string>
+                           </property>
                            <property name="text">
-                            <string>Retain</string>
+                            <string>Retain
+Z Value</string>
                            </property>
                           </widget>
                          </item>
