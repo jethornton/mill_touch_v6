@@ -3022,38 +3022,19 @@ Start</string>
                        </widget>
                       </widget>
                       <widget class="QWidget" name="page_32">
-                       <widget class="QLabel" name="label_32">
+                       <widget class="QGroupBox" name="formGroupBox">
                         <property name="geometry">
                          <rect>
-                          <x>20</x>
-                          <y>15</y>
-                          <width>116</width>
-                          <height>16</height>
+                          <x>75</x>
+                          <y>0</y>
+                          <width>266</width>
+                          <height>216</height>
                          </rect>
                         </property>
-                        <property name="text">
+                        <property name="title">
                          <string>Coordinate Entry</string>
                         </property>
-                       </widget>
-                       <widget class="QWidget" name="formWidget" native="true">
-                        <property name="geometry">
-                         <rect>
-                          <x>150</x>
-                          <y>20</y>
-                          <width>166</width>
-                          <height>191</height>
-                         </rect>
-                        </property>
-                        <layout class="QFormLayout" name="formLayout_3">
-                         <property name="formAlignment">
-                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                         </property>
-                         <property name="horizontalSpacing">
-                          <number>5</number>
-                         </property>
-                         <property name="verticalSpacing">
-                          <number>5</number>
-                         </property>
+                        <layout class="QGridLayout" name="gridLayout_37">
                          <property name="leftMargin">
                           <number>5</number>
                          </property>
@@ -3066,6 +3047,47 @@ Start</string>
                          <property name="bottomMargin">
                           <number>5</number>
                          </property>
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item row="2" column="0">
+                          <widget class="QPushButton" name="pushButton_85">
+                           <property name="text">
+                            <string>Y</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>yCoordLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLineEdit" name="yCoordLbl"/>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QPushButton" name="pushButton_86">
+                           <property name="text">
+                            <string>Z</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>true</bool>
+                           </property>
+                           <property name="labelName" stdset="0">
+                            <string>zCoordLbl</string>
+                           </property>
+                           <attribute name="buttonGroup">
+                            <string notr="true">holeOpBtnGrp</string>
+                           </attribute>
+                          </widget>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QLineEdit" name="zCoordLbl"/>
+                         </item>
                          <item row="0" column="0">
                           <widget class="QPushButton" name="pushButton_84">
                            <property name="text">
@@ -3085,43 +3107,26 @@ Start</string>
                          <item row="0" column="1">
                           <widget class="QLineEdit" name="xCoordLbl"/>
                          </item>
-                         <item row="2" column="0">
-                          <widget class="QPushButton" name="pushButton_85">
+                         <item row="0" column="2">
+                          <widget class="QCheckBox" name="xCoordRetain">
                            <property name="text">
-                            <string>Y</string>
+                            <string>Retain</string>
                            </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                           <property name="labelName" stdset="0">
-                            <string>yCoordLbl</string>
-                           </property>
-                           <attribute name="buttonGroup">
-                            <string notr="true">holeOpBtnGrp</string>
-                           </attribute>
                           </widget>
                          </item>
-                         <item row="3" column="0">
-                          <widget class="QPushButton" name="pushButton_86">
+                         <item row="2" column="2">
+                          <widget class="QCheckBox" name="yCoordRetain">
                            <property name="text">
-                            <string>Z</string>
+                            <string>Retain</string>
                            </property>
-                           <property name="checkable">
-                            <bool>true</bool>
-                           </property>
-                           <property name="labelName" stdset="0">
-                            <string>zCoordLbl</string>
-                           </property>
-                           <attribute name="buttonGroup">
-                            <string notr="true">holeOpBtnGrp</string>
-                           </attribute>
                           </widget>
                          </item>
-                         <item row="2" column="1">
-                          <widget class="QLineEdit" name="yCoordLbl"/>
-                         </item>
-                         <item row="3" column="1">
-                          <widget class="QLineEdit" name="zCoordLbl"/>
+                         <item row="3" column="2">
+                          <widget class="QCheckBox" name="zCoordRetain">
+                           <property name="text">
+                            <string>Retain</string>
+                           </property>
+                          </widget>
                          </item>
                         </layout>
                        </widget>
@@ -9478,21 +9483,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="jogIncBtnGroup"/>
   <buttongroup name="mdiKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
   <buttongroup name="holeOpKeypad"/>
   <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="g5xBtnGrp"/>
  </buttongroups>
 </ui>

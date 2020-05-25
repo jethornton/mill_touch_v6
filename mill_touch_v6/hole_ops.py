@@ -52,13 +52,16 @@ def coordListAppend(parent):
     coords = ''
     if len(parent.xCoordLbl.text()) > 0:
        coords = 'X' + parent.xCoordLbl.text() + ' '
-       parent.xCoordLbl.setText('')
+       if not parent.xCoordRetain.isChecked():
+         parent.xCoordLbl.setText('')
     if len(parent.yCoordLbl.text()) > 0:
        coords += 'Y' + parent.yCoordLbl.text() + ' '
-       parent.yCoordLbl.setText('')
+       if not parent.yCoordRetain.isChecked():
+         parent.yCoordLbl.setText('')
     if len(parent.zCoordLbl.text()) > 0:
        coords += 'Z' + parent.zCoordLbl.text()
-       parent.zCoordLbl.setText('')
+       if not parent.zCoordRetain.isChecked():
+         parent.zCoordLbl.setText('')
     parent.holeOpCoordList.addItem(coords)
 
 def coordListDelLine(parent):

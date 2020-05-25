@@ -1,5 +1,8 @@
 from functools import partial
 
+"""
+This is no longer used, code is in hole_ops.py
+
 def setupCoordList(parent):
     parent.coordListDownBtn.clicked.connect(partial(coordListDown, parent))
     parent.coordListUpBtn.clicked.connect(partial(coordListUp, parent))
@@ -27,15 +30,18 @@ def coordListAppend(parent):
     coords = ''
     if len(parent.xCoordLbl.text()) > 0:
        coords = 'X' + parent.xCoordLbl.text() + ' '
-       parent.xCoordLbl.setText('')
+       if not self.xCoordRetain.isChecked():
+         parent.xCoordLbl.setText('')
     if len(parent.yCoordLbl.text()) > 0:
        coords += 'Y' + parent.yCoordLbl.text() + ' '
-       parent.yCoordLbl.setText('')
+       if not self.yCoordRetain.isChecked():
+         parent.yCoordLbl.setText('')
     if len(parent.zCoordLbl.text()) > 0:
        coords += 'Z' + parent.zCoordLbl.text()
-       parent.zCoordLbl.setText('')
+       if not self.zCoordRetain.isChecked():
+         parent.zCoordLbl.setText('')
     parent.holeOpCoordList.addItem(coords)
 
-
+"""
 
 
