@@ -121,7 +121,7 @@ def gcode_titles():
 
 def gcode_words():
 
-    words = {'G0':['X', 'Y', 'Z'],
+    words = {'G0':['X', 'Y', 'Z', '', '', '', '', ''],
         'G1':['X', 'Y', 'Z'],
         'G2':['X', 'Y', 'Z', 'I', 'J', 'K', 'R', 'P'],
         'G3':['X', 'Y', 'Z', 'I', 'J', 'K', 'R', 'P'],

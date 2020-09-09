@@ -33,7 +33,7 @@ def main(opts=None):
                           vcp_name='mill_touch_v6',
                           vcp_version=__version__)
 
-    qtpyvcp.run_vcp(opts, VCP_CONFIG_FILE)
+    qtpyvcp.app.run(opts, VCP_CONFIG_FILE)
 
 
 if __name__ == '__main__':

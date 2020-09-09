@@ -4698,32 +4698,6 @@ Relative</string>
           <property name="spacing">
            <number>5</number>
           </property>
-          <item row="1" column="2">
-           <widget class="StatusLabel" name="statuslabel_6">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="StatusLabel" name="statuslabel_9">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
-            </property>
-           </widget>
-          </item>
           <item row="5" column="1" colspan="4">
            <widget class="StatusLabel" name="statuslabel_10">
             <property name="frameShape">
@@ -4734,15 +4708,29 @@ Relative</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="4" rowspan="2">
-           <widget class="HalButton" name="tool_changed">
-            <property name="enabled">
-             <bool>false</bool>
+          <item row="4" column="1">
+           <widget class="StatusLabel" name="statuslabel_23">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
             </property>
-            <property name="text">
-             <string>Press
-When
-Changed</string>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Spindle {:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Spindle RPM&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="StatusLabel" name="statuslabel_15">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
             </property>
            </widget>
           </item>
@@ -4763,58 +4751,6 @@ Changed</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="4">
-           <widget class="StatusLabel" name="statuslabel_8">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z {:.1f}'.format(ch[0] * 60)&quot;, &quot;name&quot;: &quot;Velocity&quot;}]</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <widget class="StatusLabel" name="statuslabel_15">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="StatusLabel" name="statuslabel_5">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y {:.1f}'.format(ch[0] * 60)&quot;, &quot;name&quot;: &quot;Velocity&quot;}]</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="StatusLabel" name="statuslabel_2">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X {:.1f}'.format(ch[0] * 60)&quot;, &quot;name&quot;: &quot;Velocity&quot;}]</string>
-            </property>
-           </widget>
-          </item>
           <item row="3" column="3" rowspan="2">
            <widget class="StatusLabel" name="statuslabel_20">
             <property name="frameShape">
@@ -4825,32 +4761,6 @@ Changed</string>
             </property>
             <property name="rules" stdset="0">
              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:pocket_prepped&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] &gt; 0 else False&quot;, &quot;name&quot;: &quot;Label Enable&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:pocket_prepped&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Insert\\nTool\\n{}'.format(ch[0]) if ch[0] &gt; 0 else ''&quot;, &quot;name&quot;: &quot;Label Text&quot;}]</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="StatusLabel" name="statuslabel_21">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Coordinate System&quot;}]</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="StatusLabel" name="statuslabel_11">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Loaded Tool&quot;}]</string>
             </property>
            </widget>
           </item>
@@ -4867,8 +4777,8 @@ Changed</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
-           <widget class="StatusLabel" name="statuslabel_23">
+          <item row="3" column="2">
+           <widget class="StatusLabel" name="statuslabel_11">
             <property name="frameShape">
              <enum>QFrame::Box</enum>
             </property>
@@ -4876,7 +4786,97 @@ Changed</string>
              <set>Qt::AlignCenter</set>
             </property>
             <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Spindle {:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Spindle RPM&quot;}]</string>
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Loaded Tool&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="StatusLabel" name="statuslabel_2">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X {:.1f}'.format(ch[0] * 60)&quot;, &quot;name&quot;: &quot;Velocity&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4" rowspan="2">
+           <widget class="HalButton" name="tool_changed">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Press
+When
+Changed</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="StatusLabel" name="statuslabel_8">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z {:.1f}'.format(ch[0] * 60)&quot;, &quot;name&quot;: &quot;Velocity&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="StatusLabel" name="statuslabel_5">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.velocity&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y {:.1f}'.format(ch[0] * 60)&quot;, &quot;name&quot;: &quot;Velocity&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="StatusLabel" name="statuslabel_21">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Coordinate System&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="StatusLabel" name="statuslabel_9">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="StatusLabel" name="statuslabel_6">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
             </property>
            </widget>
           </item>
@@ -4895,7 +4895,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>7</number>
          </property>
          <property name="buttonFont" stdset="0">
           <string>10</string>
@@ -8504,6 +8504,25 @@ Top</string>
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="page_43">
+          <widget class="HalButton" name="probelog">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>45</y>
+             <width>81</width>
+             <height>54</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Start
+Logging</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
          <widget class="QWidget" name="page_37">
           <layout class="QVBoxLayout" name="verticalLayout_12">
            <item>
@@ -8811,6 +8830,23 @@ Not Homed</string>
          <property name="text">
           <string>Homing
 Coord</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="page" stdset="0">
+          <number>9</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">sideNavBtns</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_172">
+         <property name="text">
+          <string>Probe
+Logging</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -9495,21 +9531,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="holeOpKeypad"/>
   <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="holeNavBtns"/>
   <buttongroup name="probeKeypad"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="toolSetKeypad"/>
   <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="g92Btns"/>
+  <buttongroup name="toolSetKeypad"/>
  </buttongroups>
 </ui>
