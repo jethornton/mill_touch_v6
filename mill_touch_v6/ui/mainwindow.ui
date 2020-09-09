@@ -4698,6 +4698,19 @@ Relative</string>
           <property name="spacing">
            <number>5</number>
           </property>
+          <item row="1" column="2">
+           <widget class="StatusLabel" name="statuslabel_6">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="rules" stdset="0">
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
+            </property>
+           </widget>
+          </item>
           <item row="5" column="1" colspan="4">
            <widget class="StatusLabel" name="statuslabel_10">
             <property name="frameShape">
@@ -4867,19 +4880,6 @@ Changed</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <widget class="StatusLabel" name="statuslabel_6">
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:dtg?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;DTG&quot;}]</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
@@ -4895,7 +4895,7 @@ Changed</string>
           <enum>QFrame::Box</enum>
          </property>
          <property name="currentIndex">
-          <number>7</number>
+          <number>0</number>
          </property>
          <property name="buttonFont" stdset="0">
           <string>10</string>
@@ -8522,6 +8522,19 @@ Logging</string>
             <bool>true</bool>
            </property>
           </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>45</x>
+             <y>105</y>
+             <width>116</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>#&lt;hal[problog]&gt;</string>
+           </property>
+          </widget>
          </widget>
          <widget class="QWidget" name="page_37">
           <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -9531,21 +9544,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="holeNavBtns"/>
   <buttongroup name="droNavBtns"/>
-  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="probeBtnGrp"/>
   <buttongroup name="jogBtnGroup"/>
   <buttongroup name="g92Btns"/>
-  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="mdiNavBtns"/>
  </buttongroups>
 </ui>
