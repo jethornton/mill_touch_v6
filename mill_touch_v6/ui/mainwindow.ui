@@ -8508,7 +8508,7 @@ Top</string>
           <widget class="HalButton" name="probelog">
            <property name="geometry">
             <rect>
-             <x>60</x>
+             <x>135</x>
              <y>45</y>
              <width>81</width>
              <height>54</height>
@@ -8525,14 +8525,14 @@ Logging</string>
           <widget class="QLabel" name="label_12">
            <property name="geometry">
             <rect>
-             <x>45</x>
-             <y>105</y>
-             <width>116</width>
+             <x>50</x>
+             <y>15</y>
+             <width>236</width>
              <height>16</height>
             </rect>
            </property>
            <property name="text">
-            <string>#&lt;hal[problog]&gt;</string>
+            <string>#&lt;hal[qtpyvcp.probelog.checked]&gt;</string>
            </property>
           </widget>
          </widget>
