@@ -4927,8 +4927,8 @@ Changed</string>
              </property>
              <widget class="QWidget" name="stackedWidgetPage1">
               <layout class="QGridLayout" name="gridLayout_26">
-               <item row="1" column="2">
-                <widget class="StatusLabel" name="statuslabel_32">
+               <item row="4" column="2">
+                <widget class="StatusLabel" name="statuslabel_33">
                  <property name="font">
                   <font>
                    <family>Bebas Kai</family>
@@ -4944,8 +4944,23 @@ Changed</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
                  </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="pushButton_164">
+                 <property name="text">
+                  <string>Change
+to
+Absolute</string>
+                 </property>
+                 <property name="page" stdset="0">
+                  <number>1</number>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">droNavBtns</string>
+                 </attribute>
                 </widget>
                </item>
                <item row="0" column="2">
@@ -4969,7 +4984,26 @@ Changed</string>
                  </property>
                 </widget>
                </item>
-               <item row="2" column="1">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="font">
+                  <font>
+                   <family>Bebas Kai</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Relative
+Coordinates</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
                 <widget class="StatusLabel" name="statuslabel_36">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -5005,24 +5039,11 @@ Changed</string>
                  </property>
                 </widget>
                </item>
-               <item row="2" column="2">
-                <widget class="StatusLabel" name="statuslabel_33">
-                 <property name="font">
-                  <font>
-                   <family>Bebas Kai</family>
-                   <pointsize>28</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::Box</enum>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+               <item row="4" column="0">
+                <widget class="QPushButton" name="clearInfoBtn">
+                 <property name="text">
+                  <string>Clear
+Info</string>
                  </property>
                 </widget>
                </item>
@@ -5068,41 +5089,35 @@ Changed</string>
                  </property>
                 </widget>
                </item>
-               <item row="2" column="0">
-                <widget class="QPushButton" name="pushButton_164">
-                 <property name="text">
-                  <string>Change
-to
-Absolute</string>
-                 </property>
-                 <property name="page" stdset="0">
-                  <number>1</number>
-                 </property>
-                 <attribute name="buttonGroup">
-                  <string notr="true">droNavBtns</string>
-                 </attribute>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_3">
+               <item row="3" column="2">
+                <widget class="StatusLabel" name="statuslabel_32">
                  <property name="font">
                   <font>
                    <family>Bebas Kai</family>
-                   <pointsize>14</pointsize>
+                   <pointsize>28</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
                  </property>
-                 <property name="text">
-                  <string>Relative
-Coordinates</string>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Reletive Position&quot;}]</string>
+                 </property>
                 </widget>
                </item>
-               <item row="1" column="1">
+               <item row="6" column="0">
+                <widget class="QLabel" name="currrentLineLbl">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
                 <widget class="StatusLabel" name="statuslabel_35">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -5138,10 +5153,27 @@ Coordinates</string>
                  </property>
                 </widget>
                </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="currrentLineLbl">
-                 <property name="text">
-                  <string/>
+               <item row="5" column="0" colspan="3">
+                <widget class="StatusLabel" name="infoLbl">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>3</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>DejaVu Sans Mono</family>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Box</enum>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;notifications:info_message&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                  </property>
                 </widget>
                </item>
@@ -9525,6 +9557,22 @@ Modes</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>clearInfoBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>infoLbl</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>909</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1003</x>
+     <y>437</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <designerdata>
   <property name="gridDeltaX">
@@ -9544,21 +9592,21 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="mdiNavBtns"/>
   <buttongroup name="droNavBtns"/>
   <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="probeKeypad"/>
   <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="mainNavBtns"/>
-  <buttongroup name="mdiKeypad"/>
-  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="sideNavBtns"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="toolSetKeypad"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="probeBtnGrp"/>
   <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="g92Btns"/>
-  <buttongroup name="mdiNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="probeBtnGrp"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="g5xBtnGrp"/>
+  <buttongroup name="mdiKeypad"/>
  </buttongroups>
 </ui>
