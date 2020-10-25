@@ -6575,7 +6575,7 @@ CCW</string>
                     <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
-                    <string notr="true">g5xBtnGrp</string>
+                    <string notr="true">g5xPresetGrp</string>
                    </attribute>
                   </widget>
                  </item>
@@ -6614,7 +6614,7 @@ CCW</string>
                     <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
-                    <string notr="true">g5xBtnGrp</string>
+                    <string notr="true">g5xPresetGrp</string>
                    </attribute>
                   </widget>
                  </item>
@@ -6627,7 +6627,7 @@ CCW</string>
                     <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
-                    <string notr="true">g5xBtnGrp</string>
+                    <string notr="true">g5xPresetGrp</string>
                    </attribute>
                   </widget>
                  </item>
@@ -6764,7 +6764,7 @@ CCW</string>
                     <string>20</string>
                    </property>
                    <attribute name="buttonGroup">
-                    <string notr="true">g5xBtnGrp</string>
+                    <string notr="true">g5xPresetGrp</string>
                    </attribute>
                   </widget>
                  </item>
@@ -9608,5 +9608,6 @@ Modes</string>
   <buttongroup name="holeNavBtns"/>
   <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="mdiKeypad"/>
+  <buttongroup name="g5xPresetGrp"/>
  </buttongroups>
 </ui>
