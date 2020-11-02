@@ -9048,6 +9048,16 @@ Modes</string>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
@@ -9592,22 +9602,22 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="probeKeypad"/>
-  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="mdiKeypad"/>
   <buttongroup name="mdiNavBtns"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="jogIncBtnGroup"/>
-  <buttongroup name="sideNavBtns"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="holeOpBtnGrp"/>
-  <buttongroup name="g92Btns"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="probeBtnGrp"/>
   <buttongroup name="holeNavBtns"/>
   <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="holeOpBtnGrp"/>
+  <buttongroup name="probeKeypad"/>
+  <buttongroup name="mainNavBtns"/>
   <buttongroup name="g5xPresetGrp"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="holeOpKeypad"/>
+  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="g92Btns"/>
  </buttongroups>
 </ui>
