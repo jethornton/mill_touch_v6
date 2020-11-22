@@ -3,6 +3,7 @@ from functools import partial
 def setupHoleOps(parent):
     parent.holeOpKeypad.buttonClicked.connect(partial(holeOpsKeypad, parent))
     parent.holeOpBkspBtn.clicked.connect(partial(holeOpsBackSpace, parent))
+    parent.holeOpClearBtn.clicked.connect(partial(holeOpsClear, parent))
     parent.coordListDownBtn.clicked.connect(partial(coordListDown, parent))
     parent.coordListUpBtn.clicked.connect(partial(coordListUp, parent))
     parent.coordListAppendBtn.clicked.connect(partial(coordListAppend, parent))
@@ -13,22 +14,27 @@ def setupHoleOps(parent):
 
 def holeOpsKeypad(parent, button):
     entryPoint = parent.holeOpBtnGrp.checkedButton().property('labelName')
-    drillLabel = getattr(parent, entryPoint)
+    holeLabel = getattr(parent, entryPoint)
     char = str(button.text())
-    text = drillLabel.text() or 'null'
+    text = holeLabel.text() or 'null'
     if text != 'null':
         text += char
     else:
         text = char
-    drillLabel.setText(text)
+    holeLabel.setText(text)
 
 
 def holeOpsBackSpace(parent):
     entryPoint = parent.holeOpBtnGrp.checkedButton().property('labelName')
-    drillLabel = getattr(parent, entryPoint)
-    if len(drillLabel.text()) > 0:
-        text = drillLabel.text()[:-1]
-        drillLabel.setText(text)
+    holeLabel = getattr(parent, entryPoint)
+    if len(holeLabel.text()) > 0:
+        text = holeLabel.text()[:-1]
+        holeLabel.setText(text)
+
+def holeOpsClear(parent):
+    entryPoint = parent.holeOpBtnGrp.checkedButton().property('labelName')
+    holeLabel = getattr(parent, entryPoint)
+    holeLabel.setText('')
 
 
 def coordListDown(parent):

@@ -3288,26 +3288,10 @@ Tap</string>
                            </property>
                           </widget>
                          </item>
-                         <item row="3" column="2">
-                          <widget class="QPushButton" name="gcodePostambleBtn">
-                           <property name="text">
-                            <string>Append
-Postamble</string>
-                           </property>
-                          </widget>
-                         </item>
                          <item row="3" column="3">
                           <widget class="QPushButton" name="gcodeLoadBtn">
                            <property name="text">
                             <string>Load
-G code</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item row="2" column="3">
-                          <widget class="QPushButton" name="gcodeSaveBtn">
-                           <property name="text">
-                            <string>Save
 G code</string>
                            </property>
                           </widget>
@@ -3318,6 +3302,22 @@ G code</string>
                             <string>Append
 Program
 End</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="3">
+                          <widget class="QPushButton" name="gcodePostambleBtn">
+                           <property name="text">
+                            <string>Append
+Postamble</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="2">
+                          <widget class="QPushButton" name="gcodeSaveBtn">
+                           <property name="text">
+                            <string>Save
+G code</string>
                            </property>
                           </widget>
                          </item>
@@ -3468,6 +3468,13 @@ End</string>
                         <widget class="QPushButton" name="holeOpBkspBtn">
                          <property name="text">
                           <string>Bksp</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="3">
+                        <widget class="QPushButton" name="holeOpClearBtn">
+                         <property name="text">
+                          <string>Clear</string>
                          </property>
                         </widget>
                        </item>
@@ -9602,22 +9609,22 @@ Modes</string>
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="toolSetKeypad"/>
+  <buttongroup name="jogBtnGroup"/>
+  <buttongroup name="sideNavBtns"/>
   <buttongroup name="mdiNavBtns"/>
   <buttongroup name="probeBtnGrp"/>
-  <buttongroup name="holeNavBtns"/>
-  <buttongroup name="g5xBtnGrp"/>
-  <buttongroup name="droNavBtns"/>
-  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="probeKeypad"/>
-  <buttongroup name="mainNavBtns"/>
   <buttongroup name="g5xPresetGrp"/>
-  <buttongroup name="jogBtnGroup"/>
-  <buttongroup name="droSmallNavBtns"/>
-  <buttongroup name="toolSetKeypad"/>
   <buttongroup name="jogIncBtnGroup"/>
+  <buttongroup name="mainNavBtns"/>
+  <buttongroup name="holeNavBtns"/>
+  <buttongroup name="droNavBtns"/>
+  <buttongroup name="droSmallNavBtns"/>
+  <buttongroup name="g5xBtnGrp"/>
   <buttongroup name="holeOpKeypad"/>
-  <buttongroup name="sideNavBtns"/>
+  <buttongroup name="mdiKeypad"/>
+  <buttongroup name="holeOpBtnGrp"/>
   <buttongroup name="g92Btns"/>
  </buttongroups>
 </ui>
