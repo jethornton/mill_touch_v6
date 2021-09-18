@@ -2,3 +2,5 @@
 *.pyc
 *.bak
 docs/build/*
+
+mill_touch_v6/ui/mainwindow_ui.py

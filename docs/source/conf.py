@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Mill Touch'
-copyright = u'2019, John Thornton'
-author = u'John Thornton'
+project = 'Mill Touch'
+copyright = '2019, John Thornton'
+author = 'John Thornton'
 
 # The short X.Y version
-version = u''
+version = ''
 # The full version, including alpha/beta/rc tags
-release = u'1.0'
+release = '1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -130,8 +130,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'MillTouch.tex', u'Mill Touch Documentation',
-     u'John Thornton', 'manual'),
+    (master_doc, 'MillTouch.tex', 'Mill Touch Documentation',
+     'John Thornton', 'manual'),
 ]
 
 
@@ -140,7 +140,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'milltouch', u'Mill Touch Documentation',
+    (master_doc, 'milltouch', 'Mill Touch Documentation',
      [author], 1)
 ]
 
@@ -151,7 +151,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'MillTouch', u'Mill Touch Documentation',
+    (master_doc, 'MillTouch', 'Mill Touch Documentation',
      author, 'MillTouch', 'One line description of project.',
      'Miscellaneous'),
 ]
